@@ -1,0 +1,64 @@
+json: {
+  // ===== VS CODE SETTINGS ===============================
+  // Prevent VS code from closing (and disconnecting live share) for updates
+  "update.mode": "none",
+  "extensions.autoUpdate": false,
+
+  // ===== LIVE SHARE SETTINGS ============================
+  "liveshare.publishDiagnostics": true, // Allow the gust to see "problems"
+  // Shared PDF viewer network (I would not change it)
+  "liveshare.sharedServers": [65051],
+  "liveshare.guestApprovalRequired": false,
+  "liveshare.defaultAccessMode": "readWrite",
+  "latex-workshop.view.pdf.viewer": "tab",
+  "latex-workshop.view.pdf.internal.port": 65051,
+  "latex-workshop.viewer.pdf.internal.token": "lamec",
+  "latex-workshop.view.pdf.external.host": "127.0.0.1",
+
+  // ===== LATEX WORKSHOP SETTINGS ========================
+  "latex-workshop.view.pdf.internal.synctex.keybinding": "double-click",
+  "latex-workshop.synctex.afterBuild.enabled": false,
+  "latex-workshop.latex.rootFile.useSubFile": true,
+  "latex-workshop.latex.rootFile.doNotPrompt": true,
+  "latex-workshop.bind.altKeymap.enabled": true,
+  "latex-workshop.latex.recipe.default": "lastUsed",
+  // Hide auxiliar files (except .synctex(busy) for progress tracking)
+  "files.exclude": {
+    "**/*.aux": true,         "**/*.bbl": true,            "**/*.bcf": true, "**/*.blg": true,
+    "**/*.fdb_latexmk": true, "**/*.fls": true,            "**/*.lof": true, "**/*.toc": true,
+    "**/*.run.xml": true,     "**/*.synctex.gz": true,     "**/*.out": true, "**/*.lot": true,
+    "**/*.log": true,         "**/*.bbl-SAVE-ERROR": true, "**/*.synctex(busy)": false // these two are interesting to see
+  },
+  // Build settings
+  "latex-workshop.latex.outDir": "%DIR%", // make possible the files tree for many people
+  "latex-workshop.latex.tools": [
+    {
+      "name": "lualatex",
+      "command": "lualatex",
+      "args": [
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-synctex=1",
+        "%DOC%"
+      ]
+    },
+    {
+      "name": "biber",
+      "command": "biber",
+      "args": [
+        "%DOCFILE%"
+      ]
+    }
+  ], // compile references properly and use lualatex as main compiler
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "lualatex -> biber -> lualatex*2",
+      "tools": [
+        "lualatex",
+        "biber",
+        "lualatex",
+        "lualatex"
+      ]
+    },
+  ] // make a functional recipe that use the tools and prevent errors
+}
