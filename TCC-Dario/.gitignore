@@ -1,0 +1,39 @@
+# LaTeX - Temporary and auxiliary files
+*.aux
+*.log
+*.toc
+*.lof
+*.lot
+*.out
+*.bbl
+*.blg
+*.bcf
+*.run.xml
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+
+# Build Folders
+build/
+bin/
+obj/
+
+# PDFs and Office Files (Optional - but recommended for light repos)
+*.pptx
+*.docx
+!normas/*.pdf  # Example: If you WANT to keep the specific lab PDFs in the normas folder
+
+# VS Code - Local environment
+.vscode/extensions.json
+.history/
+*.code-workspace
+
+# OS junk
+Thumbs.db
+.DS_Store
+
+# Programming Scripts (MATLAB/Python)
+*.asv
+*.m~
+__pycache__/
+*.pyc
