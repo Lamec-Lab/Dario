@@ -1,0 +1,288 @@
+% Title of section and summary ----------------------------------
+\renewcommand{\arraystretch}{2}
+\newpage\phantomsection
+\addcontentsline{toc}{section*}{\normalfont\bfseries \appendixtitle \ A - ARTICLE PUBLICATION}
+\begin{center}
+    \textbf{\appendixtitle \-\ Lista de Tipos de Referências}
+\end{center}
+
+
+\begin{lstlisting}
+REFERENCE TYPES =================================================================
+p.s.: - the fields with {*} are mandatory 
+      - fields that can be replaced, must have at least one of 
+        the options if it is mandatory, but can have all then.
+      - Prefix as "dos", "das", "von" need to be placed as {das}
+      - these references are the standards by ISO8859-15.
+      - accents and symbols must follow the LaTeX coding as:
+            - \`a = à
+            - \´a = á
+            - \~a = ã
+            - \^a = â
+            - \c c = ç
+
+Books -----------------------------------------------------------
+@book{book_code,
+    title={ *... }, 
+	author={ *... },
+    publisher={ *... },
+    year={ *... },
+    adress={ *... },
+    subtitle={ ... }, 
+    edition={ ... }, 
+    pages={ ... }, 
+    number={ ... }, 
+    series={ ... }, 
+    isbn={ ... },
+    volume={ ... }, 
+    org-short={ ... },  
+    url={ ... }, 
+    urlaccessdate={ ... }, 
+    note={ ... }
+}
+author={ ... } can be replaced by 
+organization={ ... }
+editor={ ... }
+-----------------------------------------------------------------
+
+Articles --------------------------------------------------------
+@article{article_code,
+    title={ *... },
+	author={ *... },
+    journal={ *... },
+    year={ *... },
+    volume={ *... }, 
+    number={ *... },
+    pages={ *... },
+    month={ ... },
+    part={ ... }, 
+    section={ ... }, 
+    url={ ... }, 
+    urlaccessdate={ ... }, 
+    note={ ... }
+}
+author={ ... } can be replaced by 
+organization={ ... }
+editor={ ... }
+-----------------------------------------------------------------
+
+Publication without publisher -----------------------------------
+@booklet{booklet_code,
+    title={ *... },
+	author={ *... },
+    year={ *... },
+    subtitle={ ... }, 
+    edition={ ... }, 
+    pages={ ... }, 
+    number={ ... }, 
+    volume={ ... }, 
+    org-short={ ... }, 
+    url={ ... }, 
+    urlaccessdate={ ... }, 
+    note={ ... }
+}
+author={ ... } can be replaced by 
+organization={ ... }
+editor={ ... }
+-----------------------------------------------------------------
+
+Electronic document ---------------------------------------------
+@eletronic{eletronic_code,
+    title={ *... },
+    url={ *... }, 
+    urlaccessdate={ *... }, 
+    year={ ... },
+    month={ ... },
+    part={ ... }, 
+    note={ ... }
+}
+title={ ... } can be replaced by 
+organization={ ... }
+author={ ... }
+-----------------------------------------------------------------
+
+Book chapter ----------------------------------------------------
+@inbook{inbook_code,
+    title={ *... },
+	author={ *... },
+    editor={ *... },
+    booktitle={ *... },
+    chapter = { *... },
+    publisher={ *... },
+    year={ *... },
+    adress={ *... },
+    booksubtitle={ ... }, 
+    edition={ ... }, 
+    number={ ... }, 
+    series={ ... }, 
+    isbn={ ... },
+    volume={ ... }, 
+    org-short={ ... }, 
+    editortype={ ... },
+    url={ ... }, 
+    urlaccessdate={ ... }, 
+    note={ ... }
+}
+editor={ ... } can be replaced by 
+organization={ ... }
+chapter={ ... } can be replaced by 
+pages={ ... }
+-----------------------------------------------------------------
+
+Book from a collection ------------------------------------------
+@incollection{incollection_code,
+    title={ *... },
+	author={ *... },
+    editor={ *... },
+    booktitle={ *... },
+    chapter = { *... },
+    publisher={ *... },
+    year={ *... },
+    adress={ *... },
+    booksubtitle={ ... }, 
+    edition={ ... }, 
+    number={ ... }, 
+    series={ ... }, 
+    isbn={ ... },
+    volume={ ... }, 
+    org-short={ ... }, 
+    editortype={ ... },
+    url={ ... }, 
+    urlaccessdate={ ... }, 
+    note={ ... }
+}
+editor={ ... } can be replaced by 
+organization={ ... }
+chapter={ ... } can be replaced by 
+pages={ ... }
+-----------------------------------------------------------------
+
+Articles and abstract from events -------------------------------
+@inproceedings{inproceedings_code,
+    title={ *... },
+	author={ *... },
+    organization={ *... },
+    conference-number= { *... },
+    year={ *... },
+    adress={ *... },
+    publisher={ ... },
+    booktitle={ ... },
+    pages={ ... }, 
+    month={ ... }, 
+    conference-location={ ... }, 
+    conference-year={ ... }, 
+    url={ ... }, 
+    urlaccessdate={ ... }, 
+    note={ ... }
+}
+-----------------------------------------------------------------
+
+Standards, reports, catalogs, plans and handouts ----------------
+@manual{manual_code,
+    title={ *... },
+    subtitle={ ... },
+	author={ ... },
+    organization={ ... },
+    year={ ... },
+    month={ ... }, 
+    adress={ ... },
+    edition={ ... }, 
+    series={ ... }, 
+    org-short={ ... }, 
+    url={ ... }, 
+    urlaccessdate={ ... }, 
+    note={ ... }
+}
+-----------------------------------------------------------------
+
+Monograph -------------------------------------------------------
+@monography{monography_code,
+    title={ *... },
+	author={ *... },
+    type={ *... },
+    year={ *... },
+    adress={ *... },
+    school={ *... }, 
+    pagename={ ... }, 
+    pages={ ... },
+    url={ ... }, 
+    urlaccessdate={ ... }, 
+    note={ ... }
+}
+-----------------------------------------------------------------
+
+Master thesis ---------------------------------------------------
+@masterthesis{masterthesis_code,
+    title={ *... },
+	author={ *... },
+    year={ *... },
+    adress={ *... },
+    school={ *... }, 
+    pagename={ ... }, 
+    pages={ ... },
+    url={ ... }, 
+    urlaccessdate={ ... }, 
+    note={ ... }
+}
+-----------------------------------------------------------------
+
+Doctorate thesis ------------------------------------------------
+@phdthesis{phdthesis_code,
+    title={ *... },
+	author={ *... },
+    year={ *... },
+    adress={ *... },
+    school={ *... }, 
+    pagename={ ... }, 
+    pages={ ... },
+    url={ ... }, 
+    urlaccessdate={ ... }, 
+    note={ ... }
+}
+-----------------------------------------------------------------
+
+Images, audios and videos ---------------------------------------
+@misc{misc_code,
+	author={ *... },
+    howpublished={ ... },
+    publisher={ ... },
+    year={ ... },
+    month={ ... },
+    adress={ ... },
+    subtitle={ ... }, 
+    number={ ... }, 
+    series={ ... }, 
+    pages={ ... },
+    pagename={ ... }, 
+    editortype={ ... },
+    url={ ... }, 
+    urlaccessdate={ ... }, 
+    note={ ... }
+}
+author={ ... } can be replaced by 
+organization={ ... }
+editor={ ... }
+title={ ... }
+-----------------------------------------------------------------
+
+Technical reports -----------------------------------------------
+@techreport{techreport_code,
+    title={ *... },
+	author={ *... },
+    year={ *... },
+    institution={ *... },
+    adress={ *... },
+    month={ ... },
+    number={ ... }, 
+    pages={ ... },
+    pagename={ ... }, 
+    org-short={ ... }, 
+    url={ ... }, 
+    urlaccessdate={ ... }, 
+    note={ ... }
+}
+institution={ ... } can be replaced by 
+school={ ... }
+-----------------------------------------------------------------
+=================================================================
+\end{lstlisting}

@@ -1,0 +1,118 @@
+% !TeX root = ../main.tex
+\documentclass[
+	article,                     % Document class
+	a4paper,                     % Document size
+	12pt,                        % Main text size 
+	oneside,                     % Only one side of paper
+  ]{abntex2}                   % ABNTtex2 for abnt norms
+
+% USEFULL PACKAGES -----------------------------------------
+\usepackage{animate}           % GIF images
+\usepackage{subfiles}          % Better organization of subfiles
+\usepackage[final]{pdfpages}   % Add pdf pages in the work
+\usepackage{enumitem}          % Best enumetare
+\usepackage{polyglossia}       % Language package
+\usepackage{tikz}              % Draw package
+\setdefaultlanguage{english}   % Default document language
+\SetLanguageKeys{english}{indentfirst=true}
+% ----------------------------------------------------------
+
+% SECTION TITLE FORMAT AND TOC -----------------------------
+\usepackage{titlesec}
+\usepackage{titletoc}
+% ----------------------------------------------------------
+
+% FONTS CONFIGURATION --------------------------------------
+\usepackage[no-math]{fontspec} % Add new fonts in document
+\setmainfont{Times New Roman}  % Main font of the document
+% ----------------------------------------------------------
+
+% PARAGRAPHS -----------------------------------------------
+\usepackage{parskip}		       % Space in between paragraphs
+\usepackage{microtype} 	       % Improves general appearance
+% ----------------------------------------------------------
+
+% MATH -----------------------------------------------------
+\usepackage{newtx}             % Math times new roman font
+\usepackage{amsmath}           % Add many configurations in the math space 
+\usepackage{bm}                % Bold mathematics 
+% ----------------------------------------------------------
+
+% IMAGES, POSICIONING AND LEGENDS --------------------------
+\usepackage{tabularx}          % Add better tables
+\usepackage{subcaption}        % Add a subcaption for figure
+\usepackage{float}             % Make the image fixed [H]
+\usepackage{multicol}          % Multiple columns text
+\usepackage{multirow}          % Multiple rows text
+\usepackage{longtable}         % Tables oversized
+% ----------------------------------------------------------
+
+% HYPERLINKS, METADATA AND PROGRAMATION --------------------
+\usepackage{hyperref}          % Create hyperlinks
+\usepackage{listings}          % Create algorithms
+% ----------------------------------------------------------
+
+% REFERENCES AND CITATIONS ---------------------------------
+\usepackage[
+  style=abnt,
+  language=english, 
+  repeatfields,
+  backend=biber,
+  useprefix=false, 
+  extrayear 
+]{biblatex}
+\usepackage{csquotes} % Used for multiple languages styles
+\addbibresource{references.bib} % Add here your .bib archive 
+% ----------------------------------------------------------
+
+% COVERS DATA ----------------------------------------------
+\orientador{Profa. Dra. Simone dos Santos Hoefel} % Professor name
+\titulo{TEMPLATE teste 17f/d} % Title
+\autor{Slepton \\ Masthierryi} % Author name 
+\local{TERESINA $-$ PI} % Local
+\preambulo{A natureza do trabalho fica aqui falando o curso e o que é esse trabalho} % Work nature text
+% ----------------------------------------------------------
+
+% CHANGES THE NAME OF CAPTIONS AND SECTIONS ----------------
+% Add some text here to change values for English text and leave empty for Portuguese text
+\def\english{on} 
+% ----------------------------------------------------------
+
+% ADDITIONAL PACKAGES AND USEFULL SETUPS FOR PACKAGES -----------
+\usepackage{configDir/configurations}  
+% ----------------------------------------------------------
+
+\begin{document} % DOCUMENT 
+% TEXTUAL SPACING ------------------------------------------
+\setSpacing{1.5} % Text spacing
+% COVERS AND PAGE NUMBERING --------------------------------
+\pagenumbering{gobble}\covercontent\newpage % Cover
+\pagenumbering{arabic}\backcovercontent\newpage % Back cover
+\aprocovercontent\newpage % Aprovement cover
+% ABSTRACT -------------------------------------------------
+\subfile{Textual/01_vernacular_abstract}\newpage
+\subfile{Textual/02_abstract}\newpage
+% LIST OF FIGURES AND TABLE --------------------------------
+\listoffigures* \newpage 
+\listoftables* \newpage
+\subfile{Textual/03_list_of_acronym}\newpage
+\subfile{Textual/04_list_of_variables}\newpage
+% SUMMARY --------------------------------------------------
+\tableofcontents*\newpage
+% TEXTUAL SPACE --------------------------------------------
+\textual % Textual start 
+\pagestyle{simple} % Header and footer style
+% TEXTUAL ELEMENTS -----------------------------------------
+\subfile{Textual/instructions.tex}
+%\subfile{Textual/05_introduction}         
+%\subfile{Textual/06_objective}  
+%\subfile{Textual/07_methodology}           
+%\subfile{Textual/08_results}
+%\subfile{Textual/09_conclusion}            
+% REFERENCES -----------------------------------------------
+\newpage\phantomsection
+\addcontentsline{toc}{section*}{\normalfont\bfseries \referenctitle}
+\printbibliography[title={\centering \referenctitle}]
+% APPENDICES AND ANNEXES -----------------------------------
+\subfile{Textual/10_appendix}              
+\end{document} % DOCUMENT 
