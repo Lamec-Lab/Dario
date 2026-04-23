@@ -1,0 +1,85 @@
+\makeatletter
+    \setlength{\absparsep}{18pt}
+\makeatother
+
+\begin{center}
+    \textbf{\variablestitle}
+\end{center}
+\vspace{.5cm}
+
+\begin{longtable}{llccc}
+
+\hline
+Symbol & Description & Order & Size & Units\\
+\hline
+\endfirsthead
+
+\hline
+Symbol & Description & Order & Size & Units\\
+\hline
+\endhead
+
+\hline
+\endfoot
+
+\hline
+\endlastfoot
+    $A$     & Cross-sectional area & Scalar & - & $m^2$ \\
+    $A_i$   & Mode shape sine amplitude constant & Scalar & - & - \\
+    $a$     & Reference length of Euler-Bernoulli beam element & Scalar & - & - \\
+    $b$     & Beam element width & Scalar & - & $m$ \\
+    $B_i$   & Mode shape cosine amplitude constant & Scalar & - & - \\
+    $C_i$   & Mode shape hyperbolic sine amplitude constant & Scalar & - & - \\
+    $c_i$   & Beam deflection approximation function constants & Scalar & - & - \\
+    $D_i$   & Mode shape hyperbolic cosine amplitude constant & Scalar & - & - \\
+    $d$     & Cross sectional diameter & Scalar & - & $m$ \\
+    $E$     & Young Modulus & Scalar & - & $Pa$ \\
+    $h$     & Beam element height & Scalar & - & $m$ \\
+    $I$     & Moment of Inertia & Scalar & - & $m^4$ \\
+    $\textbf{[K]}$
+            & Global stiffness matrix & Matrix & $4n\times 4n$ & - \\
+    $\{\textbf{k}\}_e$
+            & Elemental stiffness matrix & Matrix & $4\times 4$ & - \\
+    $k_R$   & Torsional spring constant & Scalar & - & $N\cdot \dfrac{m}{rad}$ \\
+    $k_T$   & Linear spring constant & Scalar & - & $N/m$ \\
+    $L$     & Total beam length & Scalar & - & $m$ \\
+    $l$     & Unit cell length & Scalar & - & $m$ \\
+    $l_e$   & Beam element length & Scalar & - & $m$ \\
+    $M_i$   & Inner Moment of beam element & Scalar & - & $N\cdot m$ \\
+    $\textbf{[M]}$
+            & Global mass matrix & Matrix & $4n\times 4n$ & - \\
+    $\{\textbf{m}\}_e$
+            & Elemental mass matrix & Matrix & $4\times 4$ & - \\
+    $\textbf{[N]}$
+            & Shape functions & Vector & $1\times 4$ & - \\
+    $n$     & Total number of beam segments or elements & Scalar & - & - \\
+    $n_c$   & Number of unit cells & Scalar & - & - \\
+    $Q_i$   & Sheer Force of beam element & Scalar & - & $N$ \\
+    $t$     & Time & Scalar & - & $s$ \\
+    $V$     & Beam element deflection & Scalar & - & $m$ \\
+    $V^e$   & Nodal deflection & Scalar & - & $m$ \\
+    $\tilde{V}^e$
+            & Elemental beam deflection approximation function & Scalar & - & $m$ \\
+    $\{\textbf{v}\}$
+            & Nodal displacement vector & Vector & $n\times 1$ & $m$ \\
+    $\{\textbf{v}\}_e$
+            & Elemental nodal displacement vector & Vector & $4\times 1$ & $m$ \\
+    $W_i$     & Gauss-Legendre integration weight functions & Scalar & - & - \\
+    $w$     & Beam mode shape & Scalar & - & $m$ \\
+    $w_i$   & Beam segment deflection & Scalar & - & $m$ \\
+    $x$     & Beam longitudinal coordinate & Scalar & - & $m$ \\
+    $x_i$   & Beam segment or elemental coordinate & Scalar & - & $m$ \\
+    $\alpha$
+            & Saturation parameter & Scalar & - & - \\
+    $\beta$ & Frequency parameter & Scalar & - & $m^{-4}$ \\
+    $\Delta\omega$
+            & Frequency Gap or Band Gap & Scalar & - & $rad/s$ \\
+    $\theta^e$
+            & Nodal rotation & Scalar & - & $rad$ \\
+    $\lambda$
+            & Beam natural frequency & Scalar & - & $rad/s$ \\
+    $\rho$  & Volumetric density & Scalar & - & $kg/m^3$ \\
+    $\omega$
+            & Beam natural frequency & Scalar & - & $rad/s$ \\
+\end{longtable}
+\setcounter{table}{0}

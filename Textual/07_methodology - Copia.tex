@@ -1,0 +1,193 @@
+\section{METHODOLOGY}
+
+The stepped Euler-Bernoulli beam formulation is developed using both analytical and finite element methods, highlighting its use for the analysis of periodic strucutres. MATLAB implementations of both methods are presented on appendices \hyperlink{appendix:A}{A} and \hyperlink{appendix:B}{B}. Validations of the analytical computational routines are discussed.
+
+\subsection{Analytical Stepped Beam Formulation}
+
+The Euler-Bernoulli theory (EBT) is used to develop the formulation for a stepped beam consisting of $n$ segments and total length $L$, as shown in Figure \ref{fig_stepped_beam}. Assuming one-dimensional and small magnitude deformation, the differential equation describing the motion of each segment in free vibration is given by:
+% -----------------------------------------------
+\begin{equation}
+EI(x_i)\frac{{\partial^4 w_i(x_i,t)}}{{\partial x_i^4}} + \rho A(x_i)\frac{{\partial^2 w_i(x_i,t)}}{{\partial t^2}} = 0;
+\label{eq:EBT.PDE}
+\end{equation}
+% -----------------------------------------------
+where, $EI(x_i)$ represents the transverse stiffness parameter, $\rho A(x_i)$ denotes the mass distribution. The analytical solution can be obtained by employing the method of separation of variables.
+
+% Stepped Beam General Model
+% -----------------------------------------------
+\begin{figure}[htbp] 
+    \caption{Beam with \textit{n} step changes in cross sectional area.}
+    \centering
+    \includegraphics[scale=.55]{viga-escalonada.pdf}
+
+    \label{fig_stepped_beam}
+\end{figure}
+% -----------------------------------------------
+
+The natural frequencies and mode shapes are determined using the False Position Method, as described by \textcite{koplow2006}. This method allows for accurate calculation of the vibration frequencies for each segment of the stepped beam. The chosen approach involves analyzing the mode shapes of each segment individually, considering their specific properties. Thus, the mode shapes can be expressed as follows:
+% -----------------------------------------------
+\begin{equation}   
+    w(x) = A_i\sin(\beta x_i) + B_i\cos(\beta x_i) + C_i\sinh(\beta x_i) + D_i\cosh(\beta x_i);
+\end{equation}
+% -----------------------------------------------
+where $\beta_i = \displaystyle \frac{{\rho A(x_i)\omega^2}}{{EI(x_i)}}$ represents the frequency parameter, and the subscripts $n$ and $i$ correspond to the segment number and the natural frequency number, respectively.
+
+The amplitude constants $A_i$, $B_i$, $C_i$, and $D_i$ are obtained by applying the appropriate boundary conditions. As stated by \textcite{soares2016}, various boundary conditions, such as fixed, hinged, or movable supports at the beam ends, can be simulated by manipulating the stiffness coefficient of a spring. This approach is used for the analytical stepped beam model.
+
+% Step Compatibility
+% -----------------------------------------------
+\begin{figure}[htbp] 
+    \caption{Compatibility of internal forces around steps.}
+    \centering
+    \includegraphics[scale=.65]{beam.compatibility.exploded.pdf}
+    \label{fig:beam.compatibility}
+\end{figure}
+% -----------------------------------------------
+
+Linear springs with stiffness coefficients $k_{T1}$ and $k_{Tn}$, along with torsional springs with coefficients $k_{R1}$ and $k_{Rn}$, are positioned at the ends of the element (as depicted in Figures \ref{fig_stepped_beam} and \ref{fig:beam.compatibility}). For this configuration, the applicable boundary conditions for $n$ segments are as follows:
+% -----------------------------------------------
+\begin{equation}
+\left.\frac{\partial^2 w_1}{\partial x_1^2}\right|_0 = \left. k_{R1}\frac{\partial w_1}{\partial x_1} \right|_0 , \quad \left. \frac{\partial^3 w_1}{\partial x_1^3}\right|_0 = -k_{T1}w_1(0);
+\end{equation}
+% -----------------------------------------------
+\begin{equation}
+\left. \frac{\partial^2 w_n}{\partial x_n^2}\right|^{l_n} = \left. k_{Rn}\frac{\partial w_n}{\partial x_n}\right|^{l_n}, \quad \left.\frac{\partial^3 w_n}{\partial x_n^3}\right|^{l_n} = -k_{Tn}w_n(l_n).
+\end{equation}
+% -----------------------------------------------
+
+The variations in cross-sectional area within each segment cause changes in the internal forces near the stepps (Figure \ref{fig:beam.compatibility}), making it necessary to apply compatibility conditions about these positions. For each junction between segments $i$ and $j$, the following compatibility conditions are established \cite{vaz2008}:
+% Compatibility Conditions
+% -----------------------------------------------
+\begin{itemize}
+
+\item [a)]The vertical deformation at the end of segment $i$ is equal to the vertical deformation at the beginning of segment $j$: $w_i(l_i) = w_j(0)$;
+
+\item [b)] The slope at the end of segment $i$ is equal to the slope at the beginning of segment $j$: $\displaystyle \left.\frac{\partial w_i}{\partial x_i}\right|^{l_i} = \left.\frac{\partial w_j}{\partial x_j}\right|_0 $;
+
+\item [c)]The resultant bending moment ($M$) at the end of segment $i$ is equal to the resultant bending moment at the beginning of segment $j$: $\displaystyle E_i I_i \left.\frac{\partial^2 w_i}{\partial x_i^2}\right|^{l_i} = E_j I_j \left.\frac{\partial^2 w_j}{\partial x_j^2}\right|_0$;
+
+\item [d)] The resultant shear ($Q$) at the end of segment $i$ is equal to the resultant shear at the beginning of segment $j$: $\displaystyle E_i I_i \left.\frac{\partial^3 w_i}{\partial x_i^3}\right|^{l_i} = E_j I_j \left.\frac{\partial^3 w_j}{\partial x_j^3}\right|_0$.
+\end{itemize}
+% -----------------------------------------------
+
+These compatibility conditions ensure the continuity of deformations, slopes, sheer forces, and bending moments along the beam, allowing for a coherent and accurate analysis of the structural behavior. The combination of boundary conditions and compatibility conditions forms a system of $4n \times 4n$ equations, whose nontrivial solution can be obtained using the Regula Falsi Method and corresponds to the natural frequencies of the system.
+
+% -----------------------------------------------
+\subsection{Modeling Periodic Structures via Stepped Beam Theory}
+
+To capture the spatial configuration of a periodic beam, a repeating unit cell of total length $l$ is used. As shown in Figure \ref{fig:unit_cell}, the unit cell is symmetric and composed of three segments, denoted as: left segment ($k-1$), central segment ($k$), right segment ($k+1$); where $k$ ranges from $2$ to $n-1$. Repetition of this triad allows for assembling of the final periodic structure as a stepped beam of $n=3n_c$ segments, where $n_c$ is the number of unit cells.
+% -----------------------------------------------
+\begin{figure}[htbp]
+    \centering
+    \caption{Three-segment unit cell for (a) stepped and (b) bi-material beam configurations, with total length $l$.}
+    \includegraphics[scale=1]{beam.unit_cell.pdf}
+    {\\ \hfill (a) \hfill (b) \hfill } %
+    \label{fig:unit_cell}
+\end{figure}
+% -----------------------------------------------
+
+The geometry of the unit cell is controlled by the saturation parameter $\alpha$ \cite{Domagalski2021}, which defines the segment length relative to the total unit cell length. Segment lengths are therefore defined, for each component of the triplet, as depicted on Figure \ref{fig:unit_cell}.
+
+Different periodic configurations may be analysed using this approach. Geometric periodicity will be introduced by using equal areas and moments of inertia for the left and right segments, but different for the middle ($A_{k-1}=A_{k+1}\neq A_k;\: I_{k-1}=I_{k+1}\neq I_k$). The unit cell mass density and elastic modulus are kept constant ($\rho_i = \rho;\: E_i=E$).
+
+Periodicity of material properties will be obtained by employing left and right segments with equal elastic modulus and mass density, but different to the middle one ($E_{k-1}=E_{k+1}\neq E_k;\: \rho_{k-1}=\rho_{k+1}\neq \rho_k$). While the area and moment of inertia of the unit cell are kept constant ($A_i=A;\: I_i=I$).
+
+% 
+\subsection{Modeling Periodic Structures Via FEM}
+
+The Euler-Bernoulli beam element consists of a one-dimentional finite element with two nodes, and two degrees of freedom per node: the transverse deflection $V^e_i$ and the slope $\theta^e_i$, as shown in Figure \ref{FEM2}. The nodal displacement vector for the element is $\{\vecc{v}\}_e^T = [V^e_1 \quad \theta^e_1 \quad V^e_2 \quad \theta^e_2]$. 
+
+% The energy expressions for an Euler-Bernoulli beam element neglect shear deformation and rotational inertia. The kinetic and potential energies are given by:
+% % -----------------------------------------------
+% \begin{gather}
+%     T_e = \dfrac{1}{2}\int_{0}^{L}\rho A \left(\dfrac{\partial V}{\partial t}\right)^2 dx, \label{EBT_Te}\\
+%     U_e = \dfrac{1}{2}\int_{0}^{L}E I_z \left(\dfrac{\partial^2 V}{\partial x^2}\right)^2 dx. \label{EBT_Ue}
+% \end{gather}
+% % -----------------------------------------------
+
+% -----------------------------------------------
+\begin{figure}[htbp]
+    \centering
+    \caption{Euler-Bernoulli beam element with nodal degrees of freedom: deflection ($V^e$) and slope ($\theta^e$).}
+    \includegraphics[scale=1]{fem.beam_element.pdf}
+    \label{FEM2}
+\end{figure}
+% -----------------------------------------------
+
+The general solution of equation \ref{eq:EBT.PDE} is obtained numerically by employing a approximation function $\tilde{V}^e(x)$. The following cubic polynomial solution will be assumed:
+% -----------------------------------------------
+\begin{equation}
+    \tilde{V}^e(x) = c_1 + c_2 x + c_3 x^2 + c_4 x^3 \approx V^e(x).
+\end{equation}
+% -----------------------------------------------
+
+Determination of the four unknown constants ($c_1,\: c_2,\: c_3,\: c_4$) is achieved by enforcing nodal displacements at both ends, i.e., at $x=-a$, and $x=a$:
+\begin{equation}
+    V^e(-a)=V^e_i,\: \left.\frac{dV^e}{dx}\right|_{-a}=\theta^e_i; 
+\end{equation}
+\begin{equation}
+    V^e(a)=V^e_j,\: \left.\frac{dV^e}{dx}\right|^{a}=\theta^e_j.
+\end{equation}
+
+This process yields the cubic Hermite shape functions, which allow the displacement field to be expressed in terms of the nodal degrees of freedom:
+% -----------------------------------------------
+\begin{equation}
+    V(\xi) = [N_1(\xi) \quad N_2(\xi) \quad N_3(\xi) \quad N_4(\xi)]\{\vecc{v}\}_e = [\mat{N}(\xi)]\{\vecc{v}\}_e;
+    \label{EBT_V}
+\end{equation}
+% -----------------------------------------------
+where $\xi = \dfrac{x}{l_e}$ is the non-dimensional coordinate, $\{\vecc{v}\}_e$ is the nodal displacement vector, and the shape functions $[\mat{N}(\xi)]$ are:
+\begin{align}
+    N_1(\xi) &= 1 - 3\xi^2 + 2\xi^3, \\
+    N_2(\xi) &= l_e(\xi - 2\xi^2 + \xi^3), \\
+    N_3(\xi) &= 3\xi^2 - 2\xi^3, \\
+    N_4(\xi) &= l_e(-\xi^2 + \xi^3).
+\end{align}
+% -----------------------------------------------
+
+Substitution of the displacement function \ref{EBT_V} into the expressions of kinetic energy and strain energy, yields the elemental mass matrix $[\mat{m}]_e$, and elemental stiffness matrix $[\mat{k}]_e$:
+\begin{align}
+    T_e &= \frac{1}{2} \{\dot{\vecc{v}}\}_e^T \left( \int_{-l_e/2}^{l_e/2} \rho A [\mat{N}]^T [\mat{N}] dx \right) \{\dot{\vecc{v}}\}_e = \frac{1}{2} \{\dot{\vecc{v}}\}_e^T [\mat{m}]_e \{\dot{\vecc{v}}\}_e, \\
+    U_e &= \frac{1}{2} \{\vecc{v}\}_e^T \left( \int_{l_e/2}^{l_e/2} EI_z [\mat{B}]^T [\mat{B}] dx \right) \{\vecc{v}\}_e = \frac{1}{2} \{\vecc{v}\}_e^T [\mat{k}]_e \{\vecc{v}\}_e.
+\end{align}
+Where $[\mat{B}] = \dfrac{d^2}{dx^2}[\mat{N}]$. For elements with constant material properties ($E, \rho$) and uniform cross-section ($A,\: I_z$), these integrals can be solved analytically. However, for more complex elements where these properties vary along the length, or to allow for changes of shape functions, numerical integration can be employed.
+
+The Gauss-Legendre Quadrature is a powerful numerical integration technique. It approximates the definite integral of a function as a weighted sum of its values at specific points, known as Gauss points. For an integral over the one-dimensional domain $\xi$, ranging from -1 to 1, the integral of a function $f(\xi)$ is evaluated by the approximation:
+% -----------------------------------------------
+\begin{equation}
+    \int_{-1}^{1} f(\xi) d\xi \approx \sum_{i=1}^{p} W_i f(\xi_i);
+\end{equation}
+where $p$ is the number of Gauss points, $\xi_i$ are the coordinates of the Gauss points, and $W_i$ are the corresponding weights. A change of variables ($x = l_e\xi/2$) is used to map the element's physical domain $[-l_e/2, +l_e/2]$ to the natural coordinate domain $[-1, 1]$.
+
+Applying this to the matrix definitions, the stiffness and mass matrices are computated numerically as:
+% -----------------------------------------------
+\begin{equation}
+    [\mat{k}]_e = \int_{-l_e/2}^{l_e/2} EI_z [\mat{B}(x)]^T [\mat{B}(x)] dx = \frac{{l_e}}{2} \sum_{i=1}^{p} W_i (EI_z)_i [\mat{B}(\xi_i)]^T [\mat{B}(\xi_i)],
+    \label{exp:k_e}
+\end{equation}\begin{equation}
+    [\mat{m}]_e = \int_{l_e/2}^{l_e/2} \rho A [\mat{N}(x)]^T [\mat{N}(x)] dx = \frac{{l_e}}{2} \sum_{i=1}^{p} W_i (\rho A)_i [\mat{N}(\xi_i)]^T [\mat{N}(\xi_i)];
+    \label{exp:m_e}
+\end{equation}
+% -----------------------------------------------
+for every element $e$ of the discretized beam domain. The sum of which gives the local mass ($[\mat{m}]$) and stiffness ($[\mat{k}]$) matrices. Substitution of these matrices in the generalized equation of motion gives the following eigenvalue problem. By enforcing boundary conditions at both ends of the beam, the eigenvalue problem is solved for the degrees of freedom $\{\vecc{v}\}$ in free vibration:
+% -----------------------------------------------
+\begin{equation}
+    (-\omega^2[\mat{m}] + [\mat{k}] ) \{\vecc{v}\} = \{0\}.
+    \label{fem:eigenvalue_problem}
+\end{equation}
+% -----------------------------------------------
+
+For the analytical case, periodicity was introduced on the beam by repetition of a segment triad (Figure \ref{fig:unit_cell}). Using the Finite Elements Method, a separation of the unit cell into three subdomains can be employed. Each subdomain is split into a number of finite elements (Figure \ref{fig:fem.unit_cell}). The outter subdomains share the same properties, while the middle subdomain presents a different configuration. Subdomain lengths, as well as element length, are defined based on the saturation parameter $\alpha$. A similar approach was developed by \textcite{Domagalski2021}. This collection of elements is repeated $N=10$ times in order to create an assembly of unit cells, amounting to $n=100$ elements, that represents a periodic beam of unitary length. Geometric and material periodicity can be introduced by properly setting element properties for each subdomain of the unit cell, as depicted in Figure \ref{fig:fem.unit_cell}, and in agreement with the analytical configuration (Figure \ref{fig:unit_cell}).
+% -----------------------------------------------
+\begin{figure}[htbp]
+    \centering
+    \caption{Unit cell meshing for (a) stepped and (b) bi-material configuration.}
+    \includegraphics[scale=1]{fem.periodicity_cell.pdf}
+    {\\ \hfill (a) \hfill (b) \hfill } %
+    \label{fig:fem.unit_cell}
+\end{figure}
+% -----------------------------------------------
+
+The local mass and stiffness matrices are then built by executing the direct sum of the elemental matrices \ref{exp:k_e} and \ref{exp:m_e} for each element relative to the generelized displacement vector $\{\vecc{v}\}$. After which the resulting eivenvalue problem in Equation \ref{fem:eigenvalue_problem} is solved for the translation and rotation degrees of freedom $\{\vecc{v}\}$. Natural frequencies $\omega$ of the periodic beam structure are obtained from this procedure.
+
+The ``direct approach'' of frequency clustering is employed, as detailed by \textcite{Domagalski2021}. By solving the eigenvalue problem for a finite assembly of $N$ unit cells, the resulting natural frequencies are observed to group into discrete clusters corresponding to the theoretical passbands. Conversely, the attenuation zones predicted by the dispersion relation manifest as distinct spectral gaps, i.e., frequency ranges entirely devoid of resonance modes. This correlation between the analytical propagation constants and the numerical frequency distribution serves to confirm the existence of band gaps in the physical tendon model.

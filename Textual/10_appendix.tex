@@ -1,0 +1,47 @@
+% Title of section and summary ------------------
+\renewcommand{\arraystretch}{2}
+
+% -----------------------------------------------
+\newpage\phantomsection\hypertarget{appendix:A}{}
+
+\makeatletter
+% APPENDIX LETTER
+\newcommand{\thisAppendix}{A}
+% APPENDIX NAME
+\newcommand{\thisApppendixTitle}{ANALYTICAL MATLAB ROUTINES}
+
+\makeatother\addcontentsline{toc}{section*}{\normalfont\bfseries \appendixtitle \ \thisAppendix \ -- \thisApppendixTitle}
+\begin{center}
+    \textbf{\appendixtitle \ \thisAppendix -- \thisApppendixTitle}
+\end{center}
+
+% 
+\lstinputlisting[language=matlab,caption={Beam Setup.}]{scripts/analytical/viga.m}
+% 
+\lstinputlisting[language=matlab,caption={Boundary Conditions Setup.}]{scripts/analytical/boundaryConditions.m}
+% 
+\lstinputlisting[language=matlab,caption={Analytical Beam: Frequency Display.}]{scripts/analytical/getFrequencies.m}
+% 
+\lstinputlisting[language=matlab,caption={Regula Falsi Method.}]{scripts/analytical/falsaposicao.m}
+% 
+\lstinputlisting[language=matlab,caption={Characteristic Matrix Function.}]{scripts/analytical/func.m}
+% 
+\lstinputlisting[language=matlab,caption={Mass Depletion Dynamic Analysis for Rocket Applications.}]{scripts/analytical/dynamicAnalysis.m}
+
+% -----------------------------------------------
+\newpage\phantomsection\hypertarget{appendix:B}{}
+
+% APPENDIX LETTER
+\renewcommand{\thisAppendix}{B}
+% APPENDIX NAME
+\renewcommand{\thisApppendixTitle}{FEM MATLAB ROUTINES}
+
+\addcontentsline{toc}{section*}{\normalfont\bfseries \appendixtitle \ \thisAppendix \ -- \thisApppendixTitle}
+\begin{center}
+    \textbf{\appendixtitle \ \thisAppendix -- \thisApppendixTitle}
+\end{center}
+
+%
+\lstinputlisting[language=matlab,caption={Beam Element Setup.}]{scripts/FEM/menu.m}
+% 
+\lstinputlisting[language=matlab,caption={Object Oriented FEM Class.}]{scripts/FEM/calculations.m}

@@ -1,0 +1,238 @@
+\section{RESULTS}
+
+On this section, validations of the analytical computational routines are presented and discussed. Numerical results obtained using the FEM framework developed for the analysis of periodic EBT beams are then discussed. The later focuses on how geometric periodicity and segment saturation parameters influence the dynamic behavior, particularly the distribution of natural frequencies and the formation of band gaps.
+
+% Validations of Analytical Code ----------------
+\subsection{Validations of Analytical Routines}
+
+In order to validate the computational routines developed, a numerical example is presented, proposed by \textcite{vaz2008}. It involves a Free-Free beam ($k_{T1} = k_{T2} = k_{R1} = k_{R2} = 0$), as illustrated in Figure \ref{fig_ex_vaz}. The following characteristics are considered: circular cross-sectional area (detailed below), total length $L = 321.22$ mm, mass density $\rho = 2710.3$ kg/m\textsuperscript{3}, and elastic modulus $E = 68.73$ GPa.
+
+Three beam configurations are analyzed, each with varying cross-sectional area, where the sum of all segment lengths equals one unit:
+\begin{itemize}
+    \item[\blacktriangleright] Beam 1: $L_1 = L_2 = L/2$ and diameters $d_1 = 14.996$ mm and $d_2 = 20.005$ mm;
+    \item[\blacktriangleright] Beam 2: $L_1 = 2L/3$, $L_2 = L/3$, and diameters $d_1 = 14.967$ mm and $d_2 = 20.007$ mm;
+    \item[\blacktriangleright] Beam 3: $L_1 = L_2 = L_3 = L/3$ and diameters $d_1 = 9.941$ mm, $d_2 = 14.976$ mm, and $d_3 = 20.008$ mm.
+\end{itemize}
+
+%---------------------------------------------------------
+The values obtained in Table \ref{tab_ex_vaz} show good agreement between the obtained results and the previously recorded experimental and numerical results by \textcite{vaz2008}. 
+%---------------------------------------------------------
+\begin{table}[h]
+\centering
+\caption{Fundamental frequencies for three types of segmented beams.}
+\begin{tabular}{cccccc}
+\hline 
+\multirow{2}{*}{Beam type} & \multicolumn{3}{c}{Vaz} & \multicolumn{2}{c}{Author}  \\ \cline{2-6}
+     & Experimental (Hz)            & Numeric (Hz) & Error (\%) & Numeric (Hz) & Error (\%) \\ \hline
+1    & 709.4                        & 646.4         & 8.88      & 752.2         & 6.04      \\
+2    & 643.7                        & 578.6         & 10.11     & 671.7         & 4.35      \\
+3    & 587.1   & 518.0           & 11.77     & 691.0         & 17.7 \\ \hline
+\label{tab_ex_vaz}
+\end{tabular}
+\end{table}
+%---------------------------------------------------------
+\begin{figure}[htbp] 
+    \caption{Beam with one step change in cross sectional area.}
+    \centering
+    \includegraphics[scale=.45]{viga-ex-vaz.pdf}
+    \label{fig_ex_vaz}
+\end{figure}
+%---------------------------------------------------------
+
+Table \ref{tab_ex_jang} shows data relating the influence of the diameter ratio ($d_2/d_1$) and the natural frequencies for the one step beam on Figure \ref{fig_ex_vaz}. This investigation was previously conducted by \textcite{jang1989b}, who explored four different boundary conditions: Hinged-Hinged ($k_{T1} = k_{T2} \approx 0$, $k_{R1} = k_{R2} \rightarrow \infty$), Clamped-Clamped ($k_{T1} = k_{T2} = k_{R1} = k_{R2} \rightarrow \infty$), and Clamped-Free ($k_{T1} = k_{R1} \rightarrow \infty$, $k_{T2} = k_{R2} \approx 0$). Notably, a diameter ratio of $1$ corresponds to the case of a prismatic beam. Upon analyzing the results, we find agreement between the authors' findings and the existing literature, validating the reliability of the developed routine.
+%--------------------------------------------------
+\begin{table}[h]
+%\caption{Ratio of Diameter Ratios and Natural Frequencies.}
+\caption{Diameter ratios relation to natural frequencies for various boundary conditions.}
+\centering
+\begin{tabular}{cccccccccc}
+\toprule
+$d_2/d_1$ & S-S & Jang & H-H & Jang & C-C & Jang & C-F & Jang \\
+\midrule
+0.1 & 2.2435 & 2.2435 & 0.2376 & 0.2376 & 8.9123  & 8.9213  & 1.4056 & 1.4056 \\
+0.2 & 4.4875 & 4.4875 & 0.9218 & 0.9218 & 13.2701 & 13.2701 & 2.7851 & 2.7851 \\
+0.3 & 6.5555 & 6.5555 & 1.9715 & 1.9715 & 13.2811 & 13.2811 & 4.0110 & 4.0110 \\
+0.4 & 8.0567 & 8.0567 & 3.2680 & 3.2680 & 13.6651 & 13.6651 & 4.8249 & 4.8249 \\
+0.5 & 8.7794 & 8.7794 & 4.6769 & 4.6769 & 14.6697 & 14.6697 & 5.0700 & 5.0700 \\
+0.6 & 8.9907 & 8.9907 & 6.0706 & 6.0706 & 16.1756 & 16.1456 & 4.9033 & 4.9033 \\
+0.7 & 9.0572 & 9.0572 & 7.3431 & 7.3431 & 17.9092 & 17.9092 & 4.5635 & 4.5635 \\
+0.8 & 9.1843 & 9.1843 & 8.4202 & 8.4202 & 19.6133 & 19.6133 & 4.1886 & 4.1886 \\
+0.9 & 9.4500 & 9.4500 & 9.2635 & 9.2635 & 21.1232 & 21.1232 & 3.8338 & 3.8338 \\
+1.0 & 9.8696 & 9.8696 & 9.8696 & 9.8696 & 22.3733 & 22.3733 & 3.5160 & 3.5160 \\
+\bottomrule
+\end{tabular}
+\\ \vspace{2pt} \footnotesize{* S-S: Sliding-Sliding, H-H: Hinged-Hinged, C-C: Clamped-Clamped, C-F: Clamped-Free.}
+\label{tab_ex_jang} 
+\end{table}
+%--------------------------------------------------
+
+When steps are introduced to a originally prismatic beam ($d_2/d_1=1$), the frequency behaviour is similar to that of a continuous prismatic beam. As the step ratio approachs $0$, a gradual change in dynamic behaviour is observed, building up to the elements near the step behaving independently. The stiffer section of the structure transitions from being an integral part of the structure, to acting as if a supportive element. This phenomenon is referred to as the ``local effect,'' and the corresponding mode is known as the ``local mode'' or ``component mode'', as explained in \textcite{SN87}.
+%================================================
+% First Mode
+%================================================
+\begin{figure}[htbp] 
+    \caption{Natural modes number (a) one and (b) two: Frequency ratios of a stepped circular rod for various boundary conditions.}
+    \centering
+    \includegraphics[scale=.53]{primeiro-modo.pdf}
+    \includegraphics[scale=.53]{segundo-modo.pdf}
+    {\\ \hfill (a) \hfill (b) \hfill } %
+    \label{fig_ex2_p1}
+\end{figure}
+%================================================
+
+To understand the effect of steps on vibration frequencies, an example presented by \textcite{SN87} was analyzed. The same beam (Figure \ref{fig_ex_vaz}) with a step in the middle was examined under various boundary conditions. Half of the beam had its dimension reduced or increased by a factor $H$ (where $H = 4/d$). Results are presented in Table \ref{tab_ex_jang}.  
+%================================================
+% 2nd Mode
+%================================================
+% \begin{figure}[htbp] 
+%     \caption{Second Mode: Frequency ratios of a stepped circular rod for various end conditions.}
+%     \centering
+%     \includegraphics[scale=.6]{segundo-modo.pdf}
+%     \label{fig_ex2_p2}
+% \end{figure}
+%================================================
+
+The study reveals that reducing the diameter in a specific section of the beam leads to a decrease in natural frequencies. Although the presented results focus on these three beam configurations, the developed methodology can be applied to any type of cross-sectional change, considering different elastic end support conditions. 
+
+Increases in the number of segments resulted in the highest percentage error among the three configurations. This observation aligns with previous studies conducted by \textcite{jang1989a}, \textcite{jang1989b}, and \textcite{lu2009}, who reported similar findings.
+%====================================================
+% 3rd Mode
+%====================================================
+\begin{figure}[htbp] 
+    \caption{Third mode: Frequency ratios of a stepped circular rod for various boundary conditions.}
+    \centering
+    \includegraphics[scale=.53]{terceiro-modo.pdf}
+    \label{fig_ex2_p3}
+\end{figure}
+%====================================================
+
+% Figures \ref{fig_ex2_p1}, \ref{fig_ex2_p2}, and \ref{fig_ex2_p3} show the effect of changes in beam dimension on natural frequencies. The ratio $\lambda_1/\lambda_2$ represents the ratio between the natural frequency of the prismatic beam ($\lambda_2$) and the stepped beam ($\lambda_1$), and $H$ represents the change in diameter of the second segment. Different boundary conditions are considered, and a comparison between the first, second, and third modes of vibration is presented, respectively. 
+
+Figures \ref{fig_ex2_p1}a, \ref{fig_ex2_p1}b, and \ref{fig_ex2_p3} show the effect of changes in beam dimension on natural frequencies. The ratio $\lambda_1/\lambda_2$ represents the ratio between the natural frequency of the prismatic beam ($\lambda_2$) and the stepped beam ($\lambda_1$), and $H$ represents the change in diameter of the second segment. Different boundary conditions are considered, and a comparison between the first, second, and third modes of vibration is presented, respectively. 
+
+The ratio $\lambda_1/\lambda_2$ can also be interpreted as the relative dynamic rigidity of the structure. Values below $1$ (with $\lambda_1<\lambda_2$), indicate a decrease in dynamic rigidity. Whereas values above $1$ (with $\lambda_1>\lambda_2$), entail an increase in beam dynamic rigidity. It is noticeable for the first vibration mode, that reduction in thickness (thinning) can, for some boundary conditions and step configurations, increase dynamic rigidity of beam structures. This effect is in agreement with \textcite{SN87}, which investigated beam frequency tuning via introduction of steps in the beam's geometric configuration. 
+% -----------------------------------------------
+
+\subsection{Passive Mitigation Analysis}
+
+Numerical simulations were performed for both stepped and bi-material beam configurations via FEM, considering hinged-hinged boundary conditions ($k_{T1} = k_{T2} \approx 0$, $k_{R1} = k_{R2} \rightarrow \infty$). Table \ref{tab:sim1_values} shows the geometric and material properties adopted for the TLP simulations \cite{Domagalski2021}. For simplification, both configurations consist of square sectioned segments. The stepped beam has constant height and varying widths, while material properties are kept homogeneous. The bi-material beam configuration has equal segment dimensions, but varying material properties.
+
+% Stepped and bimat config -------------
+\begin{table}[htbp]
+\centering
+\caption{Stepped and bimaterial configurations for Tension Leg Platform.}
+\label{tab:sim1_values}
+\begin{tabular}{ccccc}
+\toprule
+\multicolumn{5}{c}{Bi-material Beam} \\
+\cmidrule(r){1-5}
+Segment & Height ($h$) & Width ($b$) & Young Modulus ($E$) & Density ($\rho$) \\
+\midrule
+Middle Segment ($k$)         & $0.01$ m & $0.0250$ m & $205$ GPa & $7850$ kg/m$^3$ \\
+Outter Segments ($k\pm1$) & $0.01$ m & $0.0250$ m & $69$ GPa  & $2700$ kg/m$^3$ \\
+\midrule
+\multicolumn{5}{c}{Stepped Beam} \\
+\cmidrule(r){1-5}
+Segment & Height ($h$) & Width ($b$) & Young Modulus ($E$) & Density ($\rho$) \\
+\midrule
+Middle Segment ($k$)         & $0.01$ m & $0.0375$ m & $205$ GPa & $7850$ kg/m$^3$ \\
+Outter Segments ($k\pm1$) & $0.01$ m & $0.0250$ m & $205$ GPa & $7850$ kg/m$^3$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+% --------------------------------------
+
+The first 10 natural frequencies are calculated for a fixed saturation parameter $\alpha=1/2$, which defines the relative length of the central segment within each unit cell. A comparison between analytical and FEM results is presented in Table \ref{tab:sim1}. The two models show good agreement and maximum percentil error of 0.0006029\% for the bi-material configuration, and 0.000688\% for the stepped configuration. There is a notable increase in percentil error with increased mode numbers. A similar analysis by \textcite{Domagalski2021} yielded similar results.
+% Frequências Naturais + erro --------
+\begin{table}[htbp]
+\centering
+\caption{First 10 natural frequencies (in rad/s) for stepped and bi-material configurations, with $\alpha=1/2$.}
+\label{tab:freq_validation}
+\begin{tabular}{c ccc ccc}
+\toprule
+\multirow{2}{*}{Mode} & \multicolumn{3}{c}{Bi-material Beam} & \multicolumn{3}{c}{Stepped Beam} \\
+\cmidrule(lr){2-4} \cmidrule(lr){5-7}
+ & Analytic & FEM & Error (\%) & Analytic & FEM & Erro (\%) \\
+\midrule
+1 & 315.2802 & 315.2802 & 0.0000026 & 404.4794 & 404.4794 & 0.0000014 \\
+2 & 1263.0599 & 1263.0600 & 0.0000028 & 1619.0215 & 1619.0216 & 0.0000036 \\
+3 & 2849.4788 & 2849.4789 & 0.0000031 & 3647.0420 & 3647.0422 & 0.0000048 \\
+4 & 5085.7799 & 5085.7807 & 0.0000149 & 6494.4482 & 6494.4494 & 0.0000186 \\
+5 & 7989.5603 & 7989.5633 & 0.0000375 & 10169.3888 & 10169.3935 & 0.0000465 \\
+6 & 11585.8390 & 11585.8480 & 0.0000779 & 14680.1879 & 14680.2025 & 0.0000994 \\
+7 & 15906.9949 & 15907.0185 & 0.0001480 & 20027.2895 & 20027.3276 & 0.0001903 \\
+8 & 20990.2931 & 20990.3477 & 0.0002602 & 26171.8004 & 26171.8893 & 0.0003397 \\
+9 & 26871.9545 & 26872.0700 & 0.0004297 & 32855.4483 & 32855.6399 & 0.0005831 \\
+10 & 33679.3825 & 33679.5855 & 0.0006029 & 47348.2847 & 47348.6104 & 0.0006880 \\
+\bottomrule
+\end{tabular}
+% \\ \vspace{2pt} \footnotesize{* ... .}
+\label{tab:sim1} 
+\end{table}
+% ---------------------------------------
+
+To characterize the periodic effects on the TLP structure, the first $22$ natural frequencies were computed for a fixed saturation parameter $\alpha=1/2$. For the bi-material configuration, a single Bragg scattering band gap ($\Delta\omega=34422.19$ rad/s) was detected between modes $20$ and $21$ (Figure \ref{fig:sim1}a). Analysis of the stepped beam configuration revealed two distinct gaps: one between modes $9$ and $10$ ($\Delta\omega=14493.25$ rad/s), and a second between modes $20$ and $21$ ($\Delta\omega=34728.40$ rad/s) (Figure \ref{fig:sim1}b).
+%--------------------------------------
+\begin{figure}[htbp]
+    \centering
+    \caption{Band gaps for (a) bimaterial and (b) stepped beam configuration, with $\alpha=1/2$.}
+    \includegraphics[scale=.53]{bandgap-bimat-8_16.png}
+    \includegraphics[scale=.53]{bandgap-stepped-8_16.png}
+    {\\ \hfill (a) \hfill (b) \hfill } %
+    \label{fig:sim1}
+\end{figure}
+%----------------------------------------
+
+Changes in the saturation parameter $\alpha$ lead to noticeable shifts and broadening of band-gap positions over the frequency spectrum. This result can be seen on Figures \ref{fig:sim2} and \ref{fig:sim3}. The former shows evolution of band gaps in natural frequencies between modes number $7$ and $11$, for $\alpha=i/16$, where $i=1,2,\cdots,15$. The latter shows the same for modes $18$ through $22$.
+% Saturation parameter (modes 7 through 11)
+%--------------------------------------
+\begin{figure}[htbp]
+    \centering
+    \caption{Frequency gaps broadening by saturation parameter $\alpha$ for (a) bi-material and (b) stepped beams, for natural modes $7$ through $11$.}
+    \includegraphics[scale=.53]{natfreq_7-11_bimaterial.png}
+    \includegraphics[scale=.53]{natfreq_7-11_stepped.png}
+    {\\ \hfill (a) \hfill (b) \hfill } %
+    \label{fig:sim2}
+\end{figure}
+%----------------------------------------
+
+Band gap formation in the bi-material configuration is analyzed in Figure \ref{fig:sim2}a via the spectral spacing between modes for varying $\alpha$. In the range of modes $7$ to $11$, the frequency gap peaks between modes $10$ and $11$ at $\alpha=3/16$ ($\Delta\omega=9363.2$ rad/s). For $\alpha>8/16$, the primary spectral gap shifts to modes $9$ and $10$, peaking at $\alpha=13/16$ ($\Delta\omega=8846.2$ rad/s). Despite these spectral distortions, a comparison with prismatic beam frequencies (Figures \ref{fig:sim1} and \ref{fig:sim2.check.bimat}) indicates that no effective band gaps are formed in the lower frequency spectrum.
+% Bi-mat config for lower freq showing no bandgaps
+%--------------------------------------
+\begin{figure}[htbp]
+    \centering
+    \caption{Band gap absence for bi-material beam configuration on points (a) $\alpha=3/16$ and (b) $\alpha=13/16$.}
+    \includegraphics[scale=.53]{bandgap-bimat-3_16.png}
+    \includegraphics[scale=.53]{bandgap-bimat-13_16.png}
+    {\\ \hfill (a) \hfill (b) \hfill } %
+    \label{fig:sim2.check.bimat}
+\end{figure}
+%----------------------------------------
+
+The stepped beam configuration exhibits a monotonically increasing frequency gap between modes $9$ and $10$ (Figure \ref{fig:sim2}b), peaking at $\Delta\omega=17044.0$ rad/s for $\alpha=11/16$. Comparative analysis with the prismatic spectrum confirms the onset of band gaps for $\alpha\geq 6/16$ (Figure \ref{fig:sim2.check.stepped}a).
+% Stepped config for lower and higher freq showing bandgaps
+%--------------------------------------
+\begin{figure}[htbp]
+    \centering
+    \caption{Band gaps for stepped beam configuration for (a) $\alpha=6/16$ and (b) $\alpha=14/16$.}
+    \includegraphics[scale=.53]{bandgap-stepped-6_16.png}
+    \includegraphics[scale=.53]{bandgap-stepped-14_16.png}
+    {\\ \hfill (a) \hfill (b) \hfill } %
+    \label{fig:sim2.check.stepped}
+\end{figure}
+%----------------------------------------
+
+Analysis of modes $18$ through $22$ in the bi-material configuration (Figure \ref{fig:sim3}a) reveals minor frequency gaps between modes $19$ and $20$ for $\alpha\in[1/10,3/16]$. These are subsequently shifted to modes $20$ and $21$. For $\alpha\in[3/16,8/16]$, the gap broadens spectrally, reaching a maximum $\Delta\omega=34434.56$ rad/s at $\alpha=8/16$. The behavior is symmetric about $\alpha=8/16$, narrowing for $\alpha\in[8/16,15/16]$, as the mode shapes evolve and the stopband boundaries shift relative to the discrete natural frequencies. As proved from Figure \ref{fig:sim2.check.bimat}, these spectral gaps only manifest as true band gaps for saturation parameters near $\alpha=8/16$. Thus, material periodicity shows limited capabilities for band gap generation, resulting in restricted tunability.
+% Saturation parameter (modes 18 through 22)
+%----------------------------------------
+\begin{figure}[htbp]
+    \centering
+    \caption{Band gap broadening by saturation parameter for (a) bi-material and (b) stepped beams, for natural modes $18$ through $22$.}
+    \includegraphics[scale=.53]{natfreq_18-22_bimaterial.png}
+    \includegraphics[scale=.53]{natfreq_18-22_stepped.png}
+    {\\ \hfill (a) \hfill (b) \hfill } %
+    \label{fig:sim3}
+\end{figure}
+%----------------------------------------
+
+The stepped configuration exhibits distinct behavior for higher modes (Figure \ref{fig:sim3}b). The frequency gap widens starting at $\alpha=2/16$, reaching an absolute maximum ($\Delta\omega=37024.0$ rad/s) at $\alpha=7/16$ between modes $20$ and $21$. This gap shifts spectrally upwards for $\alpha\in[1/16,10/16]$. However, for $\alpha>8/16$, the attenuation zone shifts to lower mode orders, achieving a local maximum of $\Delta\omega=35502.0$ rad/s (at $\alpha=14/16$) between modes $19$ and $20$. Analysis of Figures \ref{fig:sim2}, \ref{fig:sim2.check.stepped}, and \ref{fig:sim3} confirms that geometric periodicity induces two distinct band gaps across various saturation parameters. This establishes the stepped beam as a superior, more tunable structure compared to the bi-material configuration for vibration control in TLP.

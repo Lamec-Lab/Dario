@@ -1,0 +1,25 @@
+\changetocdepth {4}
+\xpg@aux {}{english}
+\xpg@aux {}{english}
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
+\contentsline {section}{\numberline {1}INTRODUCTION}{14}{section.0.1}%
+\contentsline {subsection}{\numberline {1.1}Contextualization And Motivation}{14}{subsection.0.1.1}%
+\contentsline {subsection}{\numberline {1.2}Work Details}{15}{subsection.0.1.2}%
+\contentsline {subsection}{\numberline {1.3}Objectives}{15}{subsection.0.1.3}%
+\contentsline {section}{\numberline {2}THEORETICAL BACKGROUND}{16}{section.0.2}%
+\contentsline {subsection}{\numberline {2.1}Historic Prospects Of TLP Tendon Modeling}{16}{subsection.0.2.1}%
+\contentsline {subsection}{\numberline {2.2}Application Of Metamaterials For Vibration Mitigation In TLPs}{17}{subsection.0.2.2}%
+\contentsline {section}{\numberline {3}METHODOLOGY}{20}{section.0.3}%
+\contentsline {subsection}{\numberline {3.1}Analytical Stepped Beam Formulation}{20}{subsection.0.3.1}%
+\contentsline {subsection}{\numberline {3.2}Modeling Periodic Structures via Stepped Beam Theory}{22}{subsection.0.3.2}%
+\contentsline {subsection}{\numberline {3.3}Modeling Periodic Structures Via FEM}{23}{subsection.0.3.3}%
+\contentsline {section}{\numberline {4}RESULTS}{26}{section.0.4}%
+\contentsline {subsection}{\numberline {4.1}Validations of Analytical Routines}{26}{subsection.0.4.1}%
+\contentsline {subsection}{\numberline {4.2}Passive Mitigation Analysis}{29}{subsection.0.4.2}%
+\contentsline {section}{\numberline {5}CONCLUSIONS}{33}{section.0.5}%
+\contentsline {section*}{\normalfont \bfseries REFERENCES}{35}{section*.23}%
+\contentsline {section*}{\normalfont \bfseries APPENDIX\ A\ -- ANALYTICAL MATLAB ROUTINES}{38}{section*.24}%
+\contentsline {section*}{\normalfont \bfseries APPENDIX\ B\ -- FEM MATLAB ROUTINES}{52}{section*.25}%
+\contentsfinish 

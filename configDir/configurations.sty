@@ -1,0 +1,398 @@
+% CHANGE TITLES FROM ENGLISH TO PORTUGUESE ----------------------
+\ifx\english\empty
+    \RequirePackage[figurename=Figura]{caption} % Change the caption for images
+    \RequirePackage[tablename=Tabela]{caption}   % Change the caption for tables
+    \addto\captionsbrazil{%
+    \renewcommand{\listfigurename}{Lista de figuras}%
+    \renewcommand{\listtablename}{Lista de Tabelas} %
+    \renewcommand{\contentsname}{Sumário}%
+    }
+    \newcommand{\abstractitle}{RESUMO}
+    \newcommand{\appendixtitle}{APÊNDICE}
+    \newcommand{\referenctitle}{REFERÊNCIAS}
+    \newcommand{\variablestitle}{LISTA DE SÍMBOLOS}
+    \newcommand{\acrotitle}{LISTA DE ABREVIAÇÕES E SIGLAS}
+    \DeclareCaptionFormat{subcustom}{#3}
+    \newcommand{\source}[1]{\vspace{-0.5em}\begin{center}\footnotesize Fonte: \citeauthor*{#1}, \citeyear{#1}\end{center}}
+
+    % BACK COVER ----------------------------------------------------
+    \newcommand{\backcovercontent}{
+        \begin{center}
+            \vspace*{-2cm}
+            \normalfont\imprimirautor\vspace{1.5\baselineskip}\\  % Author name
+            \textbf{\imprimirtitulo}\vspace{2\baselineskip} % Title
+            
+            \hfill
+            \begin{minipage}{8cm} % Work nature minipage
+                \normalfont\imprimirpreambulo\vspace{0.3cm} % Preamble text
+
+                {Orientador(a):~\imprimirorientador.} % Professor name
+            \end{minipage}\vfill % End of minipage
+            \imprimirlocal\\\the\year % Location and date
+        \end{center}
+    } % -------------------------------------------------------------
+
+    % APROVATION COVER ------------------------------------------
+    \newcommand{\aprocovercontent}{
+        \begin{center}
+            \vspace*{-2cm}
+            \normalfont\imprimirautor\vspace{1.5\baselineskip}\\ % Author name
+            \textbf{\imprimirtitulo}\vspace{2\baselineskip} % Title
+            
+            \hfill
+            \begin{minipage}{8cm} % Work nature minipage
+                \normalfont\imprimirpreambulo\vspace{0.3cm} % Preamble text
+
+                {Orientador(a):~\imprimirorientador.} % Professor name
+            \end{minipage}\\ % End of minipage
+            \vspace{1.5\baselineskip} 
+            Aprovado em \rule{1.5cm}{0.4pt} de \rule{3.5cm}{0.4pt} de \rule{1.5cm}{0.4pt}. \\
+            \vspace{1.5\baselineskip} 
+            BANCA EXAMINADORA \\
+            \vspace{2\baselineskip}
+            \rule{8cm}{0.4pt} \\
+            Profa. Dra. Simone dos Santos Hoefel\\
+            Universidade Federal do Piauí \\
+            \vspace{2\baselineskip}
+            \rule{8cm}{0.4pt} \\
+            Dr. Anderson Soares da Costa Azevêdo\\
+            Universidade de São Paulo \\
+            \vspace{2\baselineskip}
+            \rule{8cm}{0.4pt} \\
+            MsC. José Pereira Ramos Junior\\
+            Universidade de São Paulo \\
+        \end{center}
+    }
+\else
+    \RequirePackage[figurename=Figure]{caption} % Change the caption for images
+    \RequirePackage[tablename=Table]{caption}   % Change the caption for tables
+    \addto\captionsbrazil{%
+    \renewcommand{\listfigurename}{List of figures}%
+    \renewcommand{\listtablename}{List of Tables} %
+    \renewcommand{\contentsname}{Summary}
+    }
+    \newcommand{\abstractitle}{ABSTRACT}
+    \newcommand{\appendixtitle}{APPENDIX}
+    \newcommand{\referenctitle}{REFERENCES}
+    \newcommand{\variablestitle}{LIST OF SYMBOLS}
+    \newcommand{\acrotitle}{ABBREVIATIONS AND ACRONYMS}
+    \DeclareCaptionFormat{subcustom}{#3}
+    \newcommand{\source}[1]{\vspace{-0.5em}\begin{center}\footnotesize Source: \citeauthor*{#1}, \citeyear{#1}\end{center}}
+
+    \renewcommand{\epigraphname}{Epigraph}
+    % BACK COVER ----------------------------------------------------
+    \newcommand{\backcovercontent}{
+        \begin{center}
+            \vspace*{-2cm}
+            \normalfont\imprimirautor\vspace{1.5\baselineskip}\\  % Author name
+            \textbf{\imprimirtitulo}\vspace{2\baselineskip} % Title
+            
+            \hfill
+            \begin{minipage}{8cm} % Work nature minipage
+                \normalfont\imprimirpreambulo\vspace{0.3cm} % Preamble text
+
+                {Advisor:~\imprimirorientador.} % Professor name
+            \end{minipage}\vfill % End of minipage
+            \imprimirlocal\\\the\year % Location and date
+        \end{center}
+    } % -------------------------------------------------------------
+
+    % APROVATION COVER ------------------------------------------
+    \newcommand{\aprocovercontent}{
+        \begin{center}
+            \vspace*{-2cm}
+            \normalfont\imprimirautor\vspace{1.5\baselineskip}\\ % Author name
+            \textbf{\imprimirtitulo}\vspace{2\baselineskip} % Title
+            
+            \hfill
+            \begin{minipage}{8cm} % Work nature minipage
+                \normalfont\imprimirpreambulo\vspace{0.3cm} % Preamble text
+
+                {Advisor:~\imprimirorientador.} % Professor name
+            \end{minipage}\\ % End of minipage
+            \vspace{1.5\baselineskip}
+            % Approved on \rule{1.5cm}{0.4pt} / \rule{3.5cm}{0.4pt} / \rule{1.5cm}{0.4pt}. \\
+            Approved on \underline{10} / \underline{December} / \underline{2025}. \\
+            \vspace{1.5\baselineskip} 
+            EXAMINATION COMMITTEE \\
+            \vspace{2\baselineskip}
+            \rule{8cm}{0.4pt} \\
+            Prof. Simone dos Santos Hoefel, Ph.D.\\
+            Universidade Federal do Piauí \\
+            \vspace{2\baselineskip}
+            \rule{8cm}{0.4pt} \\
+            Anderson Soares da Costa Azevêdo, Ph.D.\\
+            Universidade de São Paulo \\
+            \vspace{2\baselineskip}
+            \rule{8cm}{0.4pt} \\
+            José Pereira Ramos Junior, M.Sc.\\
+            Universidade de São Paulo \\
+        \end{center}
+    }
+\fi
+% ---------------------------------------------------------------
+% REORDERING THE TITLE OF THE REFERENCES SECTION ----------------
+\defbibheading{bibliography}[\bibname]{\section*{#1}\markboth{#1}{#1}}
+% ---------------------------------------------------------------
+% HYPERLINK SETUP -----------------------------------------------
+\ifdefined\hyperref
+\hypersetup{
+	%hyperindex=true,                        % Adds the page numbers into hyperlinks
+    % PDF data
+	pdftitle={},                            % PDF title
+	pdfauthor={},                           % PDF author
+	pdfsubject={},                          % PDF subject
+	pdfkeywords={},                         % PDF keywords
+	pdfcreator={},                          % PDF creator
+	pdfproducer={},                         % PDF producer
+	colorlinks=false,                       % True adds color to the links
+    % Internal links
+    linkcolor=red,                          % color of internal links
+    linkbordercolor={1 1 1},                % RGB colors for normal links borders
+    % Citations links
+    citecolor=green,                        % color of links to bibliography
+    citebordercolor={1 1 1},                % RGB colors for citations borders
+    % File links
+    filecolor=magenta,                      % color of file links
+    filebordercolor={1 1 1},                % RGB colors for files links borders
+    % URL links
+    urlcolor=cyan,                          % color of external links
+    urlbordercolor={1 1 1},                 % RGB colors for external links borders
+	breaklinks=true,                        % Allows links to break in multiple lines
+    bookmarksdepth=4
+}
+\fi
+% ---------------------------------------------------------------
+% LISTINGS SETUP ------------------------------------------------
+\ifdefined\lstinputlisting
+% CHANGE DEFAULT 'Listing' NAME TO 'Routine' --------------------
+\renewcommand\lstlistingname{Routine}
+% ---------------------------------------------------------------
+% COLORS USED IN LISTINGS CODE ----------------------------------
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{marfim}{rgb}{1,1,0.9412}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+% ---------------------------------------------------------------
+\lstdefinestyle{mystyle}{                     % Change the style
+    backgroundcolor=\color{marfim},           % Background color and style
+    commentstyle=\color{codegreen},           % Comment colors and style
+    keywordstyle=\color{magenta},             % Keywords colors and style
+    numberstyle=\tiny\color{codegray},        % Numbers color and style
+    stringstyle=\color{codepurple},           % Strings color and style
+    basicstyle=\ttfamily\scriptsize,        % Basic style
+    breakatwhitespace=false,                  % If will automaticaly break in white  
+    breaklines=true,                          % Automatic line-breaking
+    captionpos=t,                             % Position of caption (top/bottom) 
+    keepspaces=true,                          % Keep spaces in the code
+    numbers=none,                             % Line numbers positions (left/right/none
+    numbersep=5pt,                            % Distance of line-numbers 
+    showspaces=false,                         % Emphasize spaces in code
+    showstringspaces=false,                   % Emphasize spaces in strings
+    showtabs=false,                           % Emphasize tabulators in code
+    tabsize=2                                 % Default tabsize
+}
+\lstset{
+    style=mystyle,
+    inputencoding=utf8,
+    extendedchars=true,
+    literate=
+        {ã}{{\~a}}1 {Ã}{{\~A}}1
+        {á}{{\'a}}1 {Á}{{\'A}}1
+        {à}{{\`a}}1 {À}{{\`A}}1
+        {â}{{\^a}}1 {Â}{{\^A}}1
+        {é}{{\'e}}1 {É}{{\'E}}1
+        {ê}{{\^e}}1 {Ê}{{\^E}}1
+        {í}{{\'i}}1 {Í}{{\'I}}1
+        {ó}{{\'o}}1 {Ó}{{\'O}}1
+        {ô}{{\^o}}1 {Ô}{{\^O}}1
+        {õ}{{\~o}}1 {Õ}{{\~O}}1
+        {ú}{{\'u}}1 {Ú}{{\'U}}1
+        {ç}{{\c{c}}}1 {Ç}{{\c{C}}}1
+    }% Set your style
+\fi
+% ---------------------------------------------------------------
+% CUSTOM COVERS FOR ABNT-2025 ===================================
+% COVER ---------------------------------------------------------
+\newcommand{\covercontent}{
+        \begin{center}
+            \includegraphics[scale=.35]{images/logo-ufpi.jpg} \\
+            UNIVERSIDADE FEDERAL DO PIAUÍ $-$ UFPI\\
+            CENTRO DE TECNOLOGIA $-$ CT\\
+            CAMPUS MINISTRO PETRÔNIO PORTELLA\\
+            BACHARELADO EM ENGENHARIA MECÂNICA\vspace{2\baselineskip}\\ % University and degree
+            \normalfont\imprimirautor\\ \vfill % Author
+            \textbf{\imprimirtitulo}\vfill % Title
+            \imprimirlocal\\ % Local
+            \the\year % Date
+        \end{center}
+} % -------------------------------------------------------------
+% ===============================================================
+% SUBTITLE SETTINGS ---------------------------------------------
+% Figure subtitles
+\captionsetup[figure]{font={footnotesize}, labelsep=endash, singlelinecheck=off, justification=centering}
+% Subfigures subtitles
+\captionsetup[subfigure]{format=subcustom, labelsep=none, font={footnotesize}, justification=centering} % labelformat=empty , format=subcustom
+% Tables subtitles
+\captionsetup[table]{font={footnotesize}, labelsep=endash, singlelinecheck=off, justification=centering}
+% Subtitle of algorithm
+\captionsetup[lstlisting]{font={footnotesize}, labelsep=endash, singlelinecheck=off, justification=centering}
+% ---------------------------------------------------------------
+% CREATING MODIFIED PARAGRAPH -----------------------------------
+\setcounter{secnumdepth}{4}
+\titleformat{\paragraph}
+{\normalfont\MakeUppercase}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+% ---------------------------------------------------------------
+% ABSTRACT STYLE ------------------------------------------------
+% TITLE (CONTENT) IN BOLD + UPPERCASE + CENTERED
+\renewcommand{\printtoctitle}[1]{\centering\normalfont\bfseries\MakeUppercase #1}
+% SECTIONS IN BOLD + UPPERCASE (UFPI):
+\titlecontents{section}[0cm]
+    {\vspace*{3pt}\smallskip\normalfont}
+    {\bfseries\thecontentslabel.\hspace*{26pt}\normalfont\fontseries{b}\scshape\enspace\MakeUppercase}
+    {\hspace*{2cm}}
+    {\titlerule*[.15cm]{.}\bfseries\contentspage\vspace*{3pt}}% 
+% SUBSECTIONS IN BOLD + LOWERCASE (UFPI):
+\titlecontents{subsection}[0cm]
+	{\smallskip\normalfont}
+	{\bfseries\thecontentslabel.\hspace*{17pt}\normalfont\bfseries\enspace}
+	{\hspace*{2cm}}
+	{\titlerule*[.15cm]{.}\bfseries\contentspage}%
+% SUBSUBSECTIONS NORMAL + UPPERCASE (UFPI):
+\titlecontents{subsubsection}[0cm]
+	{\smallskip\normalfont}
+	{\thecontentslabel.\hspace*{8pt}\normalfont\enspace}
+	{\hspace*{2cm}}
+	{\titlerule*[.15cm]{.}\contentspage}%
+ %  PARAGRAPH (UFPI, 3RD+ SECTION RULE):
+ \titlecontents{paragraph}[0cm]
+	{\smallskip\normalfont}
+	{\thecontentslabel.\normalfont\enspace}
+	{\hspace*{2cm}}
+	{\titlerule*[.15cm]{.}\contentspage}%
+ % REFERENCES IN BOLD + UPPERCASE:
+\titlecontents{section*}[42pt]
+	{\smallskip\normalfont}
+	{}
+	{\hspace*{0cm}}
+	{\titlerule*[.15cm]{.}\bfseries\contentspage}%	
+% ---------------------------------------------------------------
+% CHANGING THE LIST OF FIGURES ----------------------------------
+% TITLE IN CAPS LOCK, BOLD AND CENTERED:
+\renewcommand{\printloftitle}[1]{\centering\normalfont\bfseries\MakeUppercase #1}
+% CHANGE THE VIEW OF LINES
+\titlecontents{figure}[0cm]
+	{\smallskip}
+	{\figurename\space\normalfont\thecontentslabel\space -\space}
+	{\hspace*{2cm}}
+	{\titlerule*[.15cm]{.}\contentspage}%
+% ---------------------------------------------------------------
+% CHANGING THE LIST OF TABLES -----------------------------------
+% TITLE IN CAPS LOCK, BOLD AND CENTERED:
+\renewcommand{\printlottitle}[1]{\centering\normalfont\bfseries\MakeUppercase #1}
+% CHANGE THE VIEW OF LINES
+\titlecontents{table}[0cm]
+	{\smallskip}
+	{\tablename\space\normalfont\thecontentslabel\space -\space}
+	{\hspace*{2cm}}
+	{\titlerule*[.15cm]{.}\contentspage}%
+% ---------------------------------------------------------------
+% ADJUSTING TITLES FOR 12PT TIMES -------------------------------
+\titleformat*{\section}{\normalfont\bfseries\MakeUppercase}
+\titleformat*{\subsection}{\normalfont\bfseries}
+\titleformat*{\subsubsection}{\normalfont}
+% ---------------------------------------------------------------
+% PARAGRAPH SIZE SETTING ----------------------------------------
+\setlength{\parindent}{1.3cm}
+\setlength{\parskip}{0cm}
+% ---------------------------------------------------------------
+% ABNT MARGINS AND NUMBERING ------------------------------------
+\setlrmarginsandblock{3cm}{2cm}{*}
+\setulmarginsandblock{3cm}{2cm}{*}
+\checkandfixthelayout
+% ---------------------------------------------------------------
+% ENVIROMENTS FOR BILLS AND RESOLUTIONS -------------------------
+\newenvironment{resolution}{%
+\begin{enumerate}[%
+style=nextline,%
+labelsep=0pt,%
+labelindent=-0.55cm,% Change the location of the label
+label={\textbf{Capítulo. \Roman*}},%
+align=left,%
+before=\bfseries,%
+leftmargin=3cm]% Change the location of all itens
+\item[]}%
+{\end{enumerate}%
+\vspace{1ex}\normalfont%
+}% --------------------------------------------------------------
+\newenvironment{article}{%
+\begin{enumerate}[%
+style=nextline,%
+labelsep=0pt,%
+labelindent=-3.55cm,% Change the location of the label
+label={Art. \arabic*º},%
+align=left,%
+before=\normalfont,%
+leftmargin=0cm]% Change the location of all itens
+\item[]}%
+{\end{enumerate}%
+\vspace{1ex}\normalfont%
+}% --------------------------------------------------------------
+\newenvironment{subarticle}{%
+\vspace{-3ex}%
+\begin{enumerate}[%
+style=nextline,%
+labelsep=3ex,% Change the location of the label
+label={\alph*}),%
+align=left]%
+\item[]}%
+{\end{enumerate}%
+}% --------------------------------------------------------------
+\newenvironment{ressection}{%
+\vspace{-3ex}%
+\begin{enumerate}[
+style=standard,%
+labelsep=2.75cm,% Change the location of the label
+itemindent=0cm,%
+align=left,%
+leftmargin=0cm,rightmargin=0cm,
+label={$\S$ \arabic*º}]%
+\item[]}%
+{\end{enumerate}%
+\vspace{1ex}\normalfont
+}% --------------------------------------------------------------
+\newenvironment{resparagraph}{%
+\vspace{-3ex}%
+\begin{enumerate}[%
+style=standard,%
+labelsep=0.5cm,% Change the location of the label
+itemindent=0pt,%
+leftmargin=0cm,rightmargin=0cm,%
+label={\textbf{Parágrafo Único.}}]%
+\item[]}%
+{\end{enumerate}%
+}% --------------------------------------------------------------
+% DOUBLE CITATION -----------------------------------------------
+\newcommand{\dcite}[2]{(\citeauthor*{#1}, \citeyear*{#1} \textit{apud} \citeauthor*{#2}, \citeyear*{#2})}
+\newcommand{\textdcite}[2]{\citeauthor*{#1}, (\citeyear*{#1}) \textit{apud} \citeauthor*{#2}, (\citeyear*{#2})}
+% ---------------------------------------------------------------
+% ARABIC SECTIONS (APPENDIX USE) --------------------------------
+\newlength{\myAppendixLen} % New length
+\newlength{\resultlen}
+\newcommand{\asection}[2]{% 
+  \expandafter\ifcsname c@asectioncounter@#1\endcsname
+  \else % Counter already exists, do nothing
+    \newcounter{asectioncounter@#1} 
+  \fi % Creates the counter if it does not exist
+  \settowidth{\myAppendixLen}{#1} % Add the horizontal length of #1
+  \setlength{\resultlen}{1.3\dimexpr\myAppendixLen} % Correct mylen
+  \stepcounter{asectioncounter@#1} % Increments the counter
+  \setcounter{section}{\value{asectioncounter@#1}}
+  \renewcommand{\thesection}{#1.\arabic{section}} 
+  \setcounter{equation}{0}%
+  \section*{\thesection\quad #2}%
+  \addcontentsline{toc}{section}{\protect\numberline{\thesection}\hspace{-\the\resultlen}#2}%
+}
+% ---------------------------------------------------------------

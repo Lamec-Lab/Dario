@@ -1,0 +1,1050 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global/global}
+    \entry{Adrezin1999}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=bd6fbb884289b2238f48907e4d84f54c}{%
+           family={Adrezin},
+           familyi={A\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=452a5a5661fe8d5f8c6c3fdf0defb6dc}{%
+           family={Benaroya},
+           familyi={B\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{9373707bd46ca93d1371352008e8e15d}
+      \strng{fullhash}{9373707bd46ca93d1371352008e8e15d}
+      \strng{fullhashraw}{9373707bd46ca93d1371352008e8e15d}
+      \strng{bibnamehash}{9373707bd46ca93d1371352008e8e15d}
+      \strng{authorbibnamehash}{9373707bd46ca93d1371352008e8e15d}
+      \strng{authornamehash}{9373707bd46ca93d1371352008e8e15d}
+      \strng{authorfullhash}{9373707bd46ca93d1371352008e8e15d}
+      \strng{authorfullhashraw}{9373707bd46ca93d1371352008e8e15d}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Probabilistic Engineering Mechanics}
+      \field{title}{Response of a Tension Leg Platform to Stochastic Wave Forces}
+      \field{volume}{14}
+      \field{year}{1999}
+      \field{pages}{3\bibrangedash 17}
+      \range{pages}{15}
+      \verb{doi}
+      \verb https://doi.org/10.1016/s0266-8920(98)00012-5
+      \endverb
+    \endentry
+    \entry{Asiri2014}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=763ce0633d660c26f98db101da7b17ed}{%
+           family={Asiri},
+           familyi={A\bibinitperiod},
+           given={Saeed\bibnamedelima A.},
+           giveni={S\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=95928f1191936fbbcf841f33ef177eab}{%
+           family={Al-Zahrani},
+           familyi={A\bibinithyphendelim Z\bibinitperiod},
+           given={Yousuf\bibnamedelima Z.},
+           giveni={Y\bibinitperiod\bibinitdelim Z\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Scientific Research}%
+      }
+      \strng{namehash}{8f29474ef759c48aacb72b801b8e2385}
+      \strng{fullhash}{8f29474ef759c48aacb72b801b8e2385}
+      \strng{fullhashraw}{8f29474ef759c48aacb72b801b8e2385}
+      \strng{bibnamehash}{8f29474ef759c48aacb72b801b8e2385}
+      \strng{authorbibnamehash}{8f29474ef759c48aacb72b801b8e2385}
+      \strng{authornamehash}{8f29474ef759c48aacb72b801b8e2385}
+      \strng{authorfullhash}{8f29474ef759c48aacb72b801b8e2385}
+      \strng{authorfullhashraw}{8f29474ef759c48aacb72b801b8e2385}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{World Journal of Mechanics}
+      \field{title}{Theoretical Analysis of Mechanical Vibration for Offshore Platform Structures}
+      \field{volume}{4}
+      \field{year}{2014}
+      \field{pages}{1\bibrangedash 11}
+      \range{pages}{11}
+      \verb{doi}
+      \verb http://dx.doi.org/10.4236/wjm.2014.41001
+      \endverb
+    \endentry
+    \entry{Chakrabarti2005}{book}{}{}
+      \name{editor}{1}{}{%
+        {{un=0,uniquepart=base,hash=6b8a706ba86980a115b8f8ed81923526}{%
+           family={Chakrabarti},
+           familyi={C\bibinitperiod},
+           given={Subrata\bibnamedelima K.},
+           giveni={S\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Amsterdam}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{6b8a706ba86980a115b8f8ed81923526}
+      \strng{fullhash}{6b8a706ba86980a115b8f8ed81923526}
+      \strng{fullhashraw}{6b8a706ba86980a115b8f8ed81923526}
+      \strng{bibnamehash}{6b8a706ba86980a115b8f8ed81923526}
+      \strng{editorbibnamehash}{6b8a706ba86980a115b8f8ed81923526}
+      \strng{editornamehash}{6b8a706ba86980a115b8f8ed81923526}
+      \strng{editorfullhash}{6b8a706ba86980a115b8f8ed81923526}
+      \strng{editorfullhashraw}{6b8a706ba86980a115b8f8ed81923526}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{editor}
+      \field{labeltitlesource}{title}
+      \field{edition}{1}
+      \field{isbn}{978-0-08-044381-2}
+      \field{title}{Handbook of Offshore Engineering}
+      \field{year}{2005}
+    \endentry
+    \entry{soares2016}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=90fee3547d856690a1cd27dc966fdca4}{%
+           family={Costa\bibnamedelima Azevêdo},
+           familyi={C\bibinitperiod\bibinitdelim A\bibinitperiod},
+           given={A.\bibnamedelimi S.\bibnamedelimi da},
+           giveni={A\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim d\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=205b34bf121756e2bc676bc6b2d68623}{%
+           family={Vasconcelos},
+           familyi={V\bibinitperiod},
+           given={A.\bibnamedelimi C.\bibnamedelimi A.},
+           giveni={A\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8a7b67aed3ffd51ae6515f2e169641de}{%
+           family={Hoefel},
+           familyi={H\bibinitperiod},
+           given={S.\bibnamedelimi dos\bibnamedelima S.},
+           giveni={S\bibinitperiod\bibinitdelim d\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{78730b390c23cbe54da022b39baec42a}
+      \strng{fullhash}{78730b390c23cbe54da022b39baec42a}
+      \strng{fullhashraw}{78730b390c23cbe54da022b39baec42a}
+      \strng{bibnamehash}{78730b390c23cbe54da022b39baec42a}
+      \strng{authorbibnamehash}{78730b390c23cbe54da022b39baec42a}
+      \strng{authornamehash}{78730b390c23cbe54da022b39baec42a}
+      \strng{authorfullhash}{78730b390c23cbe54da022b39baec42a}
+      \strng{authorfullhashraw}{78730b390c23cbe54da022b39baec42a}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Revista Interdisciplinar de Pesquisa em Engenharia}
+      \field{month}{ago.}
+      \field{number}{34}
+      \field{title}{Dynamic analysis of elastically supported Timoshenko beam}
+      \field{volume}{2}
+      \field{year}{2017}
+      \field{pages}{71\bibrangedash 85}
+      \range{pages}{15}
+      \verb{urlraw}
+      \verb https://periodicos.unb.br/index.php/ripe/article/view/21809
+      \endverb
+      \verb{url}
+      \verb https://periodicos.unb.br/index.php/ripe/article/view/21809
+      \endverb
+    \endentry
+    \entry{Domagalski2021}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f08e7e72d3547216ecb76241a0370dcf}{%
+           family={Domagalski},
+           familyi={D\bibinitperiod},
+           given={{Ł}ukasz},
+           giveni={Ł\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {MDPI}%
+      }
+      \strng{namehash}{f08e7e72d3547216ecb76241a0370dcf}
+      \strng{fullhash}{f08e7e72d3547216ecb76241a0370dcf}
+      \strng{fullhashraw}{f08e7e72d3547216ecb76241a0370dcf}
+      \strng{bibnamehash}{f08e7e72d3547216ecb76241a0370dcf}
+      \strng{authorbibnamehash}{f08e7e72d3547216ecb76241a0370dcf}
+      \strng{authornamehash}{f08e7e72d3547216ecb76241a0370dcf}
+      \strng{authorfullhash}{f08e7e72d3547216ecb76241a0370dcf}
+      \strng{authorfullhashraw}{f08e7e72d3547216ecb76241a0370dcf}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Materials}
+      \field{number}{24}
+      \field{title}{Comparison of the Natural Vibration Frequencies of {Timoshenko} and {Bernoulli} Periodic Beams}
+      \field{volume}{14}
+      \field{year}{2021}
+      \field{pages}{7628}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3390/ma14247628
+      \endverb
+    \endentry
+    \entry{hussein2014}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=da4e02e401e0e32571185959ddc28ae0}{%
+           family={Hussein},
+           familyi={H\bibinitperiod},
+           given={Mahmoud\bibnamedelima I},
+           giveni={M\bibinitperiod\bibinitdelim I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e98f82d8cdce90932c33329c4bcec0f1}{%
+           family={Leamy},
+           familyi={L\bibinitperiod},
+           given={Michael\bibnamedelima J},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e3ac406644699cceee6c1f7379adcee8}{%
+           family={Ruzzene},
+           familyi={R\bibinitperiod},
+           given={Massimo},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{7d4dee44b79b332b469ce16d7ba0efa9}
+      \strng{fullhash}{7d4dee44b79b332b469ce16d7ba0efa9}
+      \strng{fullhashraw}{7d4dee44b79b332b469ce16d7ba0efa9}
+      \strng{bibnamehash}{7d4dee44b79b332b469ce16d7ba0efa9}
+      \strng{authorbibnamehash}{7d4dee44b79b332b469ce16d7ba0efa9}
+      \strng{authornamehash}{7d4dee44b79b332b469ce16d7ba0efa9}
+      \strng{authorfullhash}{7d4dee44b79b332b469ce16d7ba0efa9}
+      \strng{authorfullhashraw}{7d4dee44b79b332b469ce16d7ba0efa9}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Applied Mechanics Reviews}
+      \field{number}{4}
+      \field{title}{Dynamics of Phononic Materials and Structures: Historical Origins, Recent Progress, and Future Outlook}
+      \field{volume}{66}
+      \field{year}{2014}
+      \verb{doi}
+      \verb https://doi.org/10.1115/1.4026911
+      \endverb
+    \endentry
+    \entry{Iqbal2023}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=02399fb270a842739ad2929f77d199e9}{%
+           family={Iqbal},
+           familyi={I\bibinitperiod},
+           given={Mohd},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5fdbaebe436e69131defd0c3607040af}{%
+           family={Kumar},
+           familyi={K\bibinitperiod},
+           given={Anil},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{f0c5658cd9f8765f2a8076f64f9e7197}
+      \strng{fullhash}{f0c5658cd9f8765f2a8076f64f9e7197}
+      \strng{fullhashraw}{f0c5658cd9f8765f2a8076f64f9e7197}
+      \strng{bibnamehash}{f0c5658cd9f8765f2a8076f64f9e7197}
+      \strng{authorbibnamehash}{f0c5658cd9f8765f2a8076f64f9e7197}
+      \strng{authornamehash}{f0c5658cd9f8765f2a8076f64f9e7197}
+      \strng{authorfullhash}{f0c5658cd9f8765f2a8076f64f9e7197}
+      \strng{authorfullhashraw}{f0c5658cd9f8765f2a8076f64f9e7197}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Materials Today: Proceedings}
+      \field{title}{Analysis of bending waves and parametric influence on band gaps in periodic track structure}
+      \field{volume}{113}
+      \field{year}{2024}
+      \field{pages}{235\bibrangedash 239}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1016/j.matpr.2023.08.364
+      \endverb
+    \endentry
+    \entry{Jahangiri2016}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=cf2d6913d417fa8fb6841c69019fd7e0}{%
+           family={Jahangiri},
+           familyi={J\bibinitperiod},
+           given={Vahid},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=45fb83b674787cc014618b91e752d6bc}{%
+           family={Mirab},
+           familyi={M\bibinitperiod},
+           given={Hadi},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5546e3444e1eb663a5df0373f3002a4b}{%
+           family={Fathi},
+           familyi={F\bibinitperiod},
+           given={Reza},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=26f624c2760912021809ccea511dff00}{%
+           family={Ettefagh},
+           familyi={E\bibinitperiod},
+           given={Mir\bibnamedelima Mohammad},
+           giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Scielo}%
+      }
+      \strng{namehash}{f85ad06199b7890f5a5dce8a89565569}
+      \strng{fullhash}{17fa8592a01e00a9eb14ba9ca01c1f01}
+      \strng{fullhashraw}{17fa8592a01e00a9eb14ba9ca01c1f01}
+      \strng{bibnamehash}{f85ad06199b7890f5a5dce8a89565569}
+      \strng{authorbibnamehash}{f85ad06199b7890f5a5dce8a89565569}
+      \strng{authornamehash}{f85ad06199b7890f5a5dce8a89565569}
+      \strng{authorfullhash}{17fa8592a01e00a9eb14ba9ca01c1f01}
+      \strng{authorfullhashraw}{17fa8592a01e00a9eb14ba9ca01c1f01}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Latin American Journal of Solids and Structures}
+      \field{number}{5}
+      \field{title}{TLP Structural Health Monitoring Based on Vibration Signal of Energy Harvesting System}
+      \field{volume}{13}
+      \field{year}{2016}
+      \field{pages}{897\bibrangedash 915}
+      \range{pages}{19}
+      \verb{doi}
+      \verb http://dx.doi.org/10.1590/1679-78252282
+      \endverb
+    \endentry
+    \entry{jang1989a}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=db0e8cb379323f7f2cec6c4f80429058}{%
+           family={Jang},
+           familyi={J\bibinitperiod},
+           given={S\bibnamedelima K},
+           giveni={S\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8dd2ff8acdf898c251d48b5d76b75733}{%
+           family={Bert},
+           familyi={B\bibinitperiod},
+           given={C\bibnamedelima W},
+           giveni={C\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{764fbac0f92ed148530a1c43d240d2ba}
+      \strng{fullhash}{764fbac0f92ed148530a1c43d240d2ba}
+      \strng{fullhashraw}{764fbac0f92ed148530a1c43d240d2ba}
+      \strng{bibnamehash}{764fbac0f92ed148530a1c43d240d2ba}
+      \strng{authorbibnamehash}{764fbac0f92ed148530a1c43d240d2ba}
+      \strng{authornamehash}{764fbac0f92ed148530a1c43d240d2ba}
+      \strng{authorfullhash}{764fbac0f92ed148530a1c43d240d2ba}
+      \strng{authorfullhashraw}{764fbac0f92ed148530a1c43d240d2ba}
+      \field{extraname}{1}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Sound and Vibration}
+      \field{number}{2}
+      \field{title}{Free vibration of stepped beams: Exact and numerical solutions}
+      \field{volume}{130}
+      \field{year}{1989}
+      \field{pages}{342\bibrangedash 346}
+      \range{pages}{5}
+    \endentry
+    \entry{jang1989b}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=db0e8cb379323f7f2cec6c4f80429058}{%
+           family={Jang},
+           familyi={J\bibinitperiod},
+           given={S\bibnamedelima K},
+           giveni={S\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8dd2ff8acdf898c251d48b5d76b75733}{%
+           family={Bert},
+           familyi={B\bibinitperiod},
+           given={C\bibnamedelima W},
+           giveni={C\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{764fbac0f92ed148530a1c43d240d2ba}
+      \strng{fullhash}{764fbac0f92ed148530a1c43d240d2ba}
+      \strng{fullhashraw}{764fbac0f92ed148530a1c43d240d2ba}
+      \strng{bibnamehash}{764fbac0f92ed148530a1c43d240d2ba}
+      \strng{authorbibnamehash}{764fbac0f92ed148530a1c43d240d2ba}
+      \strng{authornamehash}{764fbac0f92ed148530a1c43d240d2ba}
+      \strng{authorfullhash}{764fbac0f92ed148530a1c43d240d2ba}
+      \strng{authorfullhashraw}{764fbac0f92ed148530a1c43d240d2ba}
+      \field{extraname}{2}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Sound and Vibration}
+      \field{number}{1}
+      \field{title}{Free vibration of stepped beams: Higher mode frequencies and effects of steps on frequency}
+      \field{volume}{132}
+      \field{year}{1989}
+      \field{pages}{164\bibrangedash 168}
+      \range{pages}{5}
+    \endentry
+    \entry{Kandasamy2016}{article}{}{}
+      \name{author}{7}{}{%
+        {{un=0,uniquepart=base,hash=4b7b6833e2e1bf9353f2fd06d2d2a14b}{%
+           family={Kandasamy},
+           familyi={K\bibinitperiod},
+           given={Ramkumar},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2cbb7bb391c81fe35bd4513ad70cae90}{%
+           family={Cui},
+           familyi={C\bibinitperiod},
+           given={Fangsen},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=453503da804e0a6f8c191fb02cfe3d6f}{%
+           family={Townsend},
+           familyi={T\bibinitperiod},
+           given={Nicholas},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=56826cd2cd513a759673d130b45aad2a}{%
+           family={Foo},
+           familyi={F\bibinitperiod},
+           given={C.\bibnamedelimi C.},
+           giveni={C\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b82dee7316db66adb0fb5a465041b4e0}{%
+           family={Guo},
+           familyi={G\bibinitperiod},
+           given={Junyan},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7c1c2b25676f0b2e3d07337e8190cc36}{%
+           family={Shenoi},
+           familyi={S\bibinitperiod},
+           given={Ajit},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b1dbd7187cb791f52fa2e3c1a01c6a48}{%
+           family={Xiong},
+           familyi={X\bibinitperiod},
+           given={Yeping},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{8b6db74199b0a52552fe4b9f77b323fd}
+      \strng{fullhash}{06c767d809311e8ff3ce60ee654f3c51}
+      \strng{fullhashraw}{06c767d809311e8ff3ce60ee654f3c51}
+      \strng{bibnamehash}{8b6db74199b0a52552fe4b9f77b323fd}
+      \strng{authorbibnamehash}{8b6db74199b0a52552fe4b9f77b323fd}
+      \strng{authornamehash}{8b6db74199b0a52552fe4b9f77b323fd}
+      \strng{authorfullhash}{06c767d809311e8ff3ce60ee654f3c51}
+      \strng{authorfullhashraw}{06c767d809311e8ff3ce60ee654f3c51}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Ocean Engineering}
+      \field{title}{A review of vibration control methods for marine offshore structures}
+      \field{volume}{127}
+      \field{year}{2016}
+      \field{pages}{279\bibrangedash 297}
+      \range{pages}{19}
+      \verb{doi}
+      \verb http://dx.doi.org/10.1016/j.oceaneng.2016.10.001
+      \endverb
+    \endentry
+    \entry{koplow2006}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=fd37c22b14bea0d181eddd9cf5496a85}{%
+           family={Koplow},
+           familyi={K\bibinitperiod},
+           given={M\bibnamedelima A},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5849c9038498843b9de5403c4033f171}{%
+           family={Bhattacharyya},
+           familyi={B\bibinitperiod},
+           given={A},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5e07f751d4d059e5fac488f8d6cac584}{%
+           family={Mann},
+           familyi={M\bibinitperiod},
+           given={B\bibnamedelima P},
+           giveni={B\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{3557efab15638bb467af9835cdbcfef9}
+      \strng{fullhash}{3557efab15638bb467af9835cdbcfef9}
+      \strng{fullhashraw}{3557efab15638bb467af9835cdbcfef9}
+      \strng{bibnamehash}{3557efab15638bb467af9835cdbcfef9}
+      \strng{authorbibnamehash}{3557efab15638bb467af9835cdbcfef9}
+      \strng{authornamehash}{3557efab15638bb467af9835cdbcfef9}
+      \strng{authorfullhash}{3557efab15638bb467af9835cdbcfef9}
+      \strng{authorfullhashraw}{3557efab15638bb467af9835cdbcfef9}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Sound and Vibration}
+      \field{title}{Closed form solutions for the dynamics response of Euler-Bernoulli beams with step changes in cross section}
+      \field{volume}{295}
+      \field{year}{2006}
+      \field{pages}{214\bibrangedash 225}
+      \range{pages}{12}
+    \endentry
+    \entry{lu2009}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=76a7aa1f135e8a3b44c9f1b353d06ac7}{%
+           family={Lu},
+           familyi={L\bibinitperiod},
+           given={Z\bibnamedelima R},
+           giveni={Z\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=adbd0ac1cc513e30d814f59ea619661d}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={M},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3d51bad424b315f53563ecace481691d}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={J\bibnamedelima K},
+           giveni={J\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8533f961b25df3a4d550a7e43987b378}{%
+           family={Liao},
+           familyi={L\bibinitperiod},
+           given={W\bibnamedelima Y},
+           giveni={W\bibinitperiod\bibinitdelim Y\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{e0358e9fddc823d1b4b17c222e7566a0}
+      \strng{fullhash}{ec808cea836cbd81ac6366053729a70a}
+      \strng{fullhashraw}{ec808cea836cbd81ac6366053729a70a}
+      \strng{bibnamehash}{e0358e9fddc823d1b4b17c222e7566a0}
+      \strng{authorbibnamehash}{e0358e9fddc823d1b4b17c222e7566a0}
+      \strng{authornamehash}{e0358e9fddc823d1b4b17c222e7566a0}
+      \strng{authorfullhash}{ec808cea836cbd81ac6366053729a70a}
+      \strng{authorfullhashraw}{ec808cea836cbd81ac6366053729a70a}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Sound and Vibration}
+      \field{title}{Vibration analysis of multiple-stepped beams with the composite element model}
+      \field{volume}{322}
+      \field{year}{2009}
+      \field{pages}{1070\bibrangedash 1080}
+      \range{pages}{11}
+    \endentry
+    \entry{Maurin2016}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=8684960ebb44b583657dc40358594508}{%
+           family={Maurin},
+           familyi={M\bibinitperiod},
+           given={Florian},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3b1fa140846f97e933267f98b3a23f71}{%
+           family={Spadoni},
+           familyi={S\bibinitperiod},
+           given={Alessandro},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{b83775508e91ff1440d9aee0b738b85f}
+      \strng{fullhash}{b83775508e91ff1440d9aee0b738b85f}
+      \strng{fullhashraw}{b83775508e91ff1440d9aee0b738b85f}
+      \strng{bibnamehash}{b83775508e91ff1440d9aee0b738b85f}
+      \strng{authorbibnamehash}{b83775508e91ff1440d9aee0b738b85f}
+      \strng{authornamehash}{b83775508e91ff1440d9aee0b738b85f}
+      \strng{authorfullhash}{b83775508e91ff1440d9aee0b738b85f}
+      \strng{authorfullhashraw}{b83775508e91ff1440d9aee0b738b85f}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Wave Motion}
+      \field{title}{Wave propagation in periodic buckled beams. Part I: Analytical models and numerical simulations}
+      \field{volume}{66}
+      \field{year}{2016}
+      \field{pages}{190\bibrangedash 209}
+      \range{pages}{20}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.wavemoti.2016.05.008
+      \endverb
+    \endentry
+    \entry{meirovitch2001}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9d0a05c3b9d21b2ffcc538bca89b1176}{%
+           family={Meirovitch},
+           familyi={M\bibinitperiod},
+           given={Leonard},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {McGraw-Hill}%
+      }
+      \strng{namehash}{9d0a05c3b9d21b2ffcc538bca89b1176}
+      \strng{fullhash}{9d0a05c3b9d21b2ffcc538bca89b1176}
+      \strng{fullhashraw}{9d0a05c3b9d21b2ffcc538bca89b1176}
+      \strng{bibnamehash}{9d0a05c3b9d21b2ffcc538bca89b1176}
+      \strng{authorbibnamehash}{9d0a05c3b9d21b2ffcc538bca89b1176}
+      \strng{authornamehash}{9d0a05c3b9d21b2ffcc538bca89b1176}
+      \strng{authorfullhash}{9d0a05c3b9d21b2ffcc538bca89b1176}
+      \strng{authorfullhashraw}{9d0a05c3b9d21b2ffcc538bca89b1176}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Fundamentals of Vibrations}
+      \field{year}{2001}
+    \endentry
+    \entry{MirandaJr2017}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=80042d6231239be08c12a237091c3e84}{%
+           family={Miranda\bibnamedelima Jr.},
+           familyi={M\bibinitperiod\bibinitdelim J\bibinitperiod},
+           given={E.\bibnamedelimi J.\bibnamedelimi P.\bibnamedelimi de},
+           giveni={E\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim P\bibinitperiod\bibinitdelim d\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9fdeb1ad4249dfe2711565d7b4730c1f}{%
+           family={Santos},
+           familyi={S\bibinitperiod},
+           given={J.\bibnamedelimi M.\bibnamedelimi Campos\bibnamedelima dos},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim d\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{7caa4973c387ade24e31a6491518187a}
+      \strng{fullhash}{7caa4973c387ade24e31a6491518187a}
+      \strng{fullhashraw}{7caa4973c387ade24e31a6491518187a}
+      \strng{bibnamehash}{7caa4973c387ade24e31a6491518187a}
+      \strng{authorbibnamehash}{7caa4973c387ade24e31a6491518187a}
+      \strng{authornamehash}{7caa4973c387ade24e31a6491518187a}
+      \strng{authorfullhash}{7caa4973c387ade24e31a6491518187a}
+      \strng{authorfullhashraw}{7caa4973c387ade24e31a6491518187a}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Materials Research}
+      \field{number}{Suppl. 2}
+      \field{title}{Flexural Wave Band Gaps in Phononic Crystal Euler-Bernoulli Beams Using Wave Finite Element and Plane Wave Expansion Methods}
+      \field{volume}{20}
+      \field{year}{2017}
+      \verb{doi}
+      \verb https://doi.org/10.1590/1980-5373-MR-2016-0877
+      \endverb
+    \endentry
+    \entry{oyejobi2018}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=3b9d16a9ab569597f7073c1256518a06}{%
+           family={Oyejobi},
+           familyi={O\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1e4fe333ca481163e6e13d7d64bfc2f9}{%
+           family={Jameel},
+           familyi={J\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0e7f4c656eb924adf1c1398a137e7b0b}{%
+           family={Sulong},
+           familyi={S\bibinitperiod},
+           given={H.\bibnamedelimi R.},
+           giveni={H\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6cdcc3f270236a1033944be9ac6c864d}{%
+           family={Khan},
+           familyi={K\bibinitperiod},
+           given={N.\bibnamedelimi B.},
+           giveni={N\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{a8d3a21c31523e1f58860123a3aaf96a}
+      \strng{fullhash}{5de30827c2d09884b10594943cc1f336}
+      \strng{fullhashraw}{5de30827c2d09884b10594943cc1f336}
+      \strng{bibnamehash}{a8d3a21c31523e1f58860123a3aaf96a}
+      \strng{authorbibnamehash}{a8d3a21c31523e1f58860123a3aaf96a}
+      \strng{authornamehash}{a8d3a21c31523e1f58860123a3aaf96a}
+      \strng{authorfullhash}{5de30827c2d09884b10594943cc1f336}
+      \strng{authorfullhashraw}{5de30827c2d09884b10594943cc1f336}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings of the Institution of Mechanical Engineers Part M Journal of Engineering for the Maritime Environment}
+      \field{number}{4}
+      \field{title}{Investigation of Tendon Dynamics Effects on Tension Leg Platform Response in Random Seas}
+      \field{volume}{233}
+      \field{year}{2018}
+      \verb{doi}
+      \verb https://doi.org/10.1177/1475090218811718
+      \endverb
+    \endentry
+    \entry{RamosJunior2022}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=e5c2fbe06088557e51c494d233003a15}{%
+           family={Ramos\bibnamedelima Junior},
+           familyi={R\bibinitperiod\bibinitdelim J\bibinitperiod},
+           given={José\bibnamedelima Pereira},
+           giveni={J\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b723999eae856c45fd46cb3bec4b323c}{%
+           family={Abreu},
+           familyi={A\bibinitperiod},
+           given={Brendon\bibnamedelima Menezes},
+           giveni={B\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0,
+           prefix={de},
+           prefixi={d\bibinitperiod},
+           prefixun=0}}%
+        {{un=0,uniquepart=base,hash=9de53c1a2aa31ec7b5bf8ee5b73d1483}{%
+           family={Hoefel},
+           familyi={H\bibinitperiod},
+           given={Simone\bibnamedelimb dos\bibnamedelima Santos},
+           giveni={S\bibinitperiod\bibinitdelim d\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Teresina, PI, Brazil}%
+      }
+      \list{organization}{1}{%
+        {ABCM}%
+      }
+      \strng{namehash}{2a8f8b87a1aaf2aabe8aabaa57b05dcc}
+      \strng{fullhash}{2a8f8b87a1aaf2aabe8aabaa57b05dcc}
+      \strng{fullhashraw}{2a8f8b87a1aaf2aabe8aabaa57b05dcc}
+      \strng{bibnamehash}{2a8f8b87a1aaf2aabe8aabaa57b05dcc}
+      \strng{authorbibnamehash}{2a8f8b87a1aaf2aabe8aabaa57b05dcc}
+      \strng{authornamehash}{2a8f8b87a1aaf2aabe8aabaa57b05dcc}
+      \strng{authorfullhash}{2a8f8b87a1aaf2aabe8aabaa57b05dcc}
+      \strng{authorfullhashraw}{2a8f8b87a1aaf2aabe8aabaa57b05dcc}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Anais do XI Congresso Nacional de Engenharia Mecânica (CONEM 2022)}
+      \field{title}{Free Vibration Analysis of a Tension Leg Platform Tendon}
+      \field{year}{2022}
+    \endentry
+    \entry{rao2007}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=bc8e9a4de974090b1914093e719a785a}{%
+           family={Rao},
+           familyi={R\bibinitperiod},
+           given={Singiresu\bibnamedelima S.},
+           giveni={S\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {John Wiley \& Sons}%
+      }
+      \strng{namehash}{bc8e9a4de974090b1914093e719a785a}
+      \strng{fullhash}{bc8e9a4de974090b1914093e719a785a}
+      \strng{fullhashraw}{bc8e9a4de974090b1914093e719a785a}
+      \strng{bibnamehash}{bc8e9a4de974090b1914093e719a785a}
+      \strng{authorbibnamehash}{bc8e9a4de974090b1914093e719a785a}
+      \strng{authornamehash}{bc8e9a4de974090b1914093e719a785a}
+      \strng{authorfullhash}{bc8e9a4de974090b1914093e719a785a}
+      \strng{authorfullhashraw}{bc8e9a4de974090b1914093e719a785a}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Vibration of Continuous Systems}
+      \field{year}{2007}
+    \endentry
+    \entry{Reis2024}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=92995b2c2a81005aab075ab6b0edab8d}{%
+           family={Reis},
+           familyi={R\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c1bd53e65928a0ae41cef9c7c62b76ec}{%
+           family={Souza},
+           familyi={S\bibinitperiod},
+           given={I.},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0f953c84e9bccb9ab23a4e87adc6c9ef}{%
+           family={Hoefel},
+           familyi={H\bibinitperiod},
+           given={S},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Natal, RN, Brazil}%
+      }
+      \strng{namehash}{f1dc84b2df1dbcdd3078db8f2c929a5c}
+      \strng{fullhash}{f1dc84b2df1dbcdd3078db8f2c929a5c}
+      \strng{fullhashraw}{f1dc84b2df1dbcdd3078db8f2c929a5c}
+      \strng{bibnamehash}{f1dc84b2df1dbcdd3078db8f2c929a5c}
+      \strng{authorbibnamehash}{f1dc84b2df1dbcdd3078db8f2c929a5c}
+      \strng{authornamehash}{f1dc84b2df1dbcdd3078db8f2c929a5c}
+      \strng{authorfullhash}{f1dc84b2df1dbcdd3078db8f2c929a5c}
+      \strng{authorfullhashraw}{f1dc84b2df1dbcdd3078db8f2c929a5c}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Anais do XII Congresso Nacional de Engenharia Mecânica (CONEM 2024)}
+      \field{title}{Flexural wave propagation in a locally resonant beam}
+      \field{year}{2024}
+    \endentry
+    \entry{SenGupta1980}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c6c5307302f4a576ea5570399ce007bf}{%
+           family={Sengupta},
+           familyi={S\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c6c5307302f4a576ea5570399ce007bf}
+      \strng{fullhash}{c6c5307302f4a576ea5570399ce007bf}
+      \strng{fullhashraw}{c6c5307302f4a576ea5570399ce007bf}
+      \strng{bibnamehash}{c6c5307302f4a576ea5570399ce007bf}
+      \strng{authorbibnamehash}{c6c5307302f4a576ea5570399ce007bf}
+      \strng{authornamehash}{c6c5307302f4a576ea5570399ce007bf}
+      \strng{authorfullhash}{c6c5307302f4a576ea5570399ce007bf}
+      \strng{authorfullhashraw}{c6c5307302f4a576ea5570399ce007bf}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Shock and Vibration Digest}
+      \field{number}{3}
+      \field{title}{Vibration of Periodic Structures}
+      \field{volume}{12}
+      \field{year}{1980}
+      \field{pages}{17\bibrangedash 31}
+      \range{pages}{15}
+      \verb{doi}
+      \verb https://doi.org/10.1177/058310248001200303
+      \endverb
+    \endentry
+    \entry{Senjanovic2010}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=04ebd7fe292175759d6aa1a9176821d5}{%
+           family={Senjanović},
+           familyi={S\bibinitperiod},
+           given={Ivo},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{3}{}{%
+        {{hash=54b14ec5105cb6c9ebc34d0a45416b5b}{%
+           family={N.},
+           familyi={N\bibinitperiod},
+           given={Hadžić},
+           giveni={H\bibinitperiod}}}%
+        {{hash=167bd530d3125e8be077eac17003937e}{%
+           family={N.},
+           familyi={N\bibinitperiod},
+           given={Vladimir},
+           giveni={V\bibinitperiod}}}%
+        {{hash=ec77b3a666f5adae763307887270b68c}{%
+           family={Š.},
+           familyi={Š\bibinitperiod},
+           given={Malenica},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Zagreb, Croatia}%
+      }
+      \list{publisher}{2}{%
+        {University of Zagreb, Faculty of Mechanical Engineering}%
+        {Naval Architecture}%
+      }
+      \strng{namehash}{04ebd7fe292175759d6aa1a9176821d5}
+      \strng{fullhash}{04ebd7fe292175759d6aa1a9176821d5}
+      \strng{fullhashraw}{04ebd7fe292175759d6aa1a9176821d5}
+      \strng{bibnamehash}{04ebd7fe292175759d6aa1a9176821d5}
+      \strng{authorbibnamehash}{04ebd7fe292175759d6aa1a9176821d5}
+      \strng{authornamehash}{04ebd7fe292175759d6aa1a9176821d5}
+      \strng{authorfullhash}{04ebd7fe292175759d6aa1a9176821d5}
+      \strng{authorfullhashraw}{04ebd7fe292175759d6aa1a9176821d5}
+      \strng{editorbibnamehash}{ccf4f6c44a7f149a04a2efef8b88dc79}
+      \strng{editornamehash}{ccf4f6c44a7f149a04a2efef8b88dc79}
+      \strng{editorfullhash}{ccf4f6c44a7f149a04a2efef8b88dc79}
+      \strng{editorfullhashraw}{ccf4f6c44a7f149a04a2efef8b88dc79}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-953-7738-70-9}
+      \field{note}{Monograph published on the occasion of his 70th birthday}
+      \field{title}{Ivo Senjanović: Scientific Contribution to the Development of Ship and Offshore Structures}
+      \field{year}{2020}
+    \endentry
+    \entry{SN87}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=3c84cfd53b6c89e5ab716038d85089b4}{%
+           family={Subramanian},
+           familyi={S\bibinitperiod},
+           given={G},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7752ad1d6423f74f90de304a18118b2a}{%
+           family={Balasubramanian},
+           familyi={B\bibinitperiod},
+           given={T\bibnamedelima S},
+           giveni={T\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{5e730369d6cbc8005e9b9c7712bbae44}
+      \strng{fullhash}{5e730369d6cbc8005e9b9c7712bbae44}
+      \strng{fullhashraw}{5e730369d6cbc8005e9b9c7712bbae44}
+      \strng{bibnamehash}{5e730369d6cbc8005e9b9c7712bbae44}
+      \strng{authorbibnamehash}{5e730369d6cbc8005e9b9c7712bbae44}
+      \strng{authornamehash}{5e730369d6cbc8005e9b9c7712bbae44}
+      \strng{authorfullhash}{5e730369d6cbc8005e9b9c7712bbae44}
+      \strng{authorfullhashraw}{5e730369d6cbc8005e9b9c7712bbae44}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Sound and Vibration}
+      \field{number}{3}
+      \field{title}{Beneficial effects of steps on the free vibration characteristics of beams}
+      \field{volume}{118}
+      \field{year}{1987}
+      \field{pages}{555\bibrangedash 560}
+      \range{pages}{6}
+    \endentry
+    \entry{vaz2008}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=429272bca52885ac7c2a8f29980dd845}{%
+           family={Vaz},
+           familyi={V\bibinitperiod},
+           given={J\bibnamedelima C},
+           giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {Graduate Program in Mechanical Engineering, Federal University of Itajubá}%
+      }
+      \list{location}{1}{%
+        {Itajubá, Brasil}%
+      }
+      \strng{namehash}{429272bca52885ac7c2a8f29980dd845}
+      \strng{fullhash}{429272bca52885ac7c2a8f29980dd845}
+      \strng{fullhashraw}{429272bca52885ac7c2a8f29980dd845}
+      \strng{bibnamehash}{429272bca52885ac7c2a8f29980dd845}
+      \strng{authorbibnamehash}{429272bca52885ac7c2a8f29980dd845}
+      \strng{authornamehash}{429272bca52885ac7c2a8f29980dd845}
+      \strng{authorfullhash}{429272bca52885ac7c2a8f29980dd845}
+      \strng{authorfullhashraw}{429272bca52885ac7c2a8f29980dd845}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{bookpagination}{sheet}
+      \field{title}{Análise do Comportamento Dinâmico de uma Viga de Euler-Bernoulli Escalonada com Apoios Elasticamente Variáveis}
+      \field{type}{mathesis}
+      \field{year}{2008}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

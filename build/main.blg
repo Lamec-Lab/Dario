@@ -1,0 +1,33 @@
+[0] Config.pm:328> INFO - This is Biber 2.21
+[0] Config.pm:331> INFO - Logfile is 'build\main.blg'
+[143] biber-MSWIN64:342> INFO - === 
+[269] Biber.pm:421> INFO - Reading 'build\main.bcf'
+[431] Biber.pm:1002> INFO - Found 24 citekeys in bib section 0
+[447] Biber.pm:4487> INFO - Processing section 0
+[460] Biber.pm:4678> INFO - Looking for bibtex file 'references.bib' for section 0
+[569] bibtex.pm:1713> INFO - LaTeX decoding ...
+[671] bibtex.pm:1519> INFO - Found BibTeX data source 'references.bib'
+[903] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[904] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[906] Biber.pm:4307> INFO - Sorting list 'nty/global//global/global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[906] Biber.pm:4313> INFO - No sort tailoring available for locale 'en-US'
+[935] bbl.pm:676> INFO - Writing 'build\main.bbl' with encoding 'UTF-8'
+[952] bbl.pm:779> INFO - Output to build\main.bbl
+[953] Biber.pm:132> WARN - legacy month field 'ago.' in entry 'soares2016' is not an integer - this will probably not sort properly.
+[953] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\DAROCA~1\AppData\Local\Temp\biber_tmp_UMtj\33e59b5ca9ec342068223d604c3f8d55_13256.utf8, line 2, warning: 33 characters of junk seen at toplevel
+[953] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\DAROCA~1\AppData\Local\Temp\biber_tmp_UMtj\33e59b5ca9ec342068223d604c3f8d55_13256.utf8, line 14, warning: 25 characters of junk seen at toplevel
+[953] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\DAROCA~1\AppData\Local\Temp\biber_tmp_UMtj\33e59b5ca9ec342068223d604c3f8d55_13256.utf8, line 26, warning: 4 characters of junk seen at toplevel
+[954] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\DAROCA~1\AppData\Local\Temp\biber_tmp_UMtj\33e59b5ca9ec342068223d604c3f8d55_13256.utf8, line 37, warning: 4 characters of junk seen at toplevel
+[954] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\DAROCA~1\AppData\Local\Temp\biber_tmp_UMtj\33e59b5ca9ec342068223d604c3f8d55_13256.utf8, line 48, warning: 4 characters of junk seen at toplevel
+[954] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\DAROCA~1\AppData\Local\Temp\biber_tmp_UMtj\33e59b5ca9ec342068223d604c3f8d55_13256.utf8, line 58, warning: 4 characters of junk seen at toplevel
+[954] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\DAROCA~1\AppData\Local\Temp\biber_tmp_UMtj\33e59b5ca9ec342068223d604c3f8d55_13256.utf8, line 69, warning: 4 characters of junk seen at toplevel
+[954] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\DAROCA~1\AppData\Local\Temp\biber_tmp_UMtj\33e59b5ca9ec342068223d604c3f8d55_13256.utf8, line 82, warning: 4 characters of junk seen at toplevel
+[954] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\DAROCA~1\AppData\Local\Temp\biber_tmp_UMtj\33e59b5ca9ec342068223d604c3f8d55_13256.utf8, line 90, warning: 4 characters of junk seen at toplevel
+[954] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\DAROCA~1\AppData\Local\Temp\biber_tmp_UMtj\33e59b5ca9ec342068223d604c3f8d55_13256.utf8, line 98, warning: 4 characters of junk seen at toplevel
+[954] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\DAROCA~1\AppData\Local\Temp\biber_tmp_UMtj\33e59b5ca9ec342068223d604c3f8d55_13256.utf8, line 110, warning: 4 characters of junk seen at toplevel
+[954] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\DAROCA~1\AppData\Local\Temp\biber_tmp_UMtj\33e59b5ca9ec342068223d604c3f8d55_13256.utf8, line 122, warning: 4 characters of junk seen at toplevel
+[954] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\DAROCA~1\AppData\Local\Temp\biber_tmp_UMtj\33e59b5ca9ec342068223d604c3f8d55_13256.utf8, line 134, warning: 4 characters of junk seen at toplevel
+[955] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\DAROCA~1\AppData\Local\Temp\biber_tmp_UMtj\33e59b5ca9ec342068223d604c3f8d55_13256.utf8, line 143, warning: 4 characters of junk seen at toplevel
+[955] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\DAROCA~1\AppData\Local\Temp\biber_tmp_UMtj\33e59b5ca9ec342068223d604c3f8d55_13256.utf8, line 155, warning: 4 characters of junk seen at toplevel
+[955] Biber.pm:132> WARN - BibTeX subsystem: C:\Users\DAROCA~1\AppData\Local\Temp\biber_tmp_UMtj\33e59b5ca9ec342068223d604c3f8d55_13256.utf8, line 168, warning: 4 characters of junk seen at toplevel
+[955] Biber.pm:134> INFO - WARNINGS: 17

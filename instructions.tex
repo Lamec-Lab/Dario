@@ -1,0 +1,544 @@
+\section{INSTRUÇÕES}
+
+Este template foi originalmente desenvolvido por Halfling e posteriormente adaptado por Slepton até o formato atual. Ele possibilita a elaboração de artigos e diversos outros trabalhos acadêmicos em conformidade com as normas da ABNT: NBR 10520, NBR 14724, NBR 6022, NBR 6023, NBR 6024, NBR 6027, NBR 6028 e NBR 6034. Todas essas normas estão disponíveis na pasta intitulada normas. Em caso de inconsistência ou descumprimento de alguma delas, entre em contato pelo e-mail davika1442@gmail.com ou thierrymiqueias@gmail.com.
+
+O objetivo deste arquivo é gerar um PDF inicial que sirva como guia. Ele está estruturado em seis seções:
+
+\begin{enumerate}
+
+\item Oque é o \LaTeX;
+
+\item Introdução básica sobre oque é Visual Studio Code e outros editores de \LaTeX;
+
+\item Como instalar o vscode, strawberry perl e o milktex;
+
+\item Resumo de como começar a trabalhar usando o vscode;
+
+\item Explicação detalhada sobre o funcionamento do template;
+
+\item Síntese de uma lista de funções prontas, úteis durante o processo de escrita acadêmica.
+
+\end{enumerate}
+
+\subsection{SOBRE O \LaTeX}
+
+Antes de adentrar na parte de explicação sobre como usar o \LaTeX, é válido explicar o que exatamente é o mesmo. O \LaTeX \ é uma linguagem de programação de marcação voltada para a editoração científica e acadêmica. Ele nasceu como uma extensão do TeX, sistema criado por Donald Knuth no final da década de 1970, que tinha como objetivo oferecer um meio preciso e estável de compor textos matemáticos e científicos. Leslie Lamport, na década de 1980, desenvolveu o \LaTeX \ para facilitar o uso do TeX, adicionando comandos de mais alto nível e pacotes prontos que permitem aos usuários focar no conteúdo, sem precisar lidar diretamente com toda a complexidade tipográfica do TeX.
+
+Uma curiosidade é que o \LaTeX \ não é exatamente um editor, mas sim um conjunto de macros que processam texto simples e o transformam em documentos de alta qualidade tipográfica. Isso o torna diferente de softwares como Word ou LibreOffice, onde o foco está em editar visualmente o que será impresso. No \LaTeX , o autor descreve a estrutura do documento em um arquivo de texto puro (extensão .tex), e um compilador transforma esse código em arquivos PDF, DVI ou outros formatos. Essa separação entre conteúdo e forma é um dos grandes diferenciais da linguagem.
+
+Dentro do universo \LaTeX, existem diferentes motores de compilação, como o pdfLaTeX, o LuaLaTeX e o XeLaTeX. O pdfLaTeX é o mais tradicional e amplamente utilizado, sendo ideal para a maioria dos trabalhos acadêmicos, ele gera diretamente arquivos PDF a partir do código .tex, mas possui limitações quanto ao suporte nativo a fontes modernas do sistema operacional. Já o LuaLaTeX e o XeLaTeX são versões mais modernas: ambos permitem o uso direto de fontes TrueType ou OpenType instaladas no computador, além de oferecerem maior flexibilidade para linguagens com caracteres especiais (como chinês, árabe e hindi). O LuaLaTeX, em particular, integra a linguagem de programação Lua, permitindo automações mais complexas dentro do próprio documento.
+
+Em termos de comparação com editores de texto convencionais, como Word ou LibreOffice, o \LaTeX \ apresenta vantagens e desvantagens que merecem destaque. A principal vantagem está na qualidade tipográfica incomparável, especialmente em textos matemáticos e científicos, além da automação de referências, citações, índices e formatação complexa, o que garante documentos uniformes e prontos para atender normas acadêmicas rigorosas. Também se destaca a longevidade e portabilidade: um arquivo .tex é apenas texto puro, podendo ser aberto e editado em qualquer sistema, sem problemas de compatibilidade de versão. Por outro lado, sua principal desvantagem é a curva de aprendizado mais íngreme, já que o usuário precisa lidar com comandos e compilações, em vez de simplesmente editar de forma visual. Além disso, para documentos simples, o \LaTeX \ pode parecer excessivamente complexo, tornando editores WYSIWYG como o Word mais práticos em situações cotidianas.
+
+\subsection{SOBRE O VSCODE E OUTROS EDITORES}
+
+Existem diversos editores para criar arquivos em \LaTeX, como o próprio VS Code, TeXstudio, Overleaf, entre outros. Entre eles, os que mais se destacam, de acordo com experiência própria, são o Overleaf e o VS Code. O Overleaf é um editor online com compilador integrado, ideal para quem está começando no \LaTeX. Por ser baseado na web, não exige um computador potente e permite a criação de documentos até mesmo em dispositivos móveis. Sua principal vantagem é a possibilidade de múltiplos usuários editarem o mesmo arquivo simultaneamente, já que a compilação é realizada nos servidores do Overleaf, e não localmente. No entanto, essa característica também representa uma das suas maiores limitações, pois é necessária uma conexão constante com a internet. Além disso, o servidor só processa compilações por um tempo limitado: se o projeto demorar mais de dez segundos para compilar, o Overleaf cancela o processo e solicita a atualização para o plano pago.
+
+Devido a essas limitações, optou-se por migrar para o VS Code, uma alternativa gratuita e mais robusta em comparação ao Overleaf. Entre suas principais vantagens estão o maior controle sobre o ambiente de compilação e a possibilidade de trabalhar com projetos mais complexos sem restrições de tempo. Suas únicas desvantagens em relação ao Overleaf são a dificuldade de múltiplos usuários editarem simultaneamente o mesmo arquivo, embora alguns métodos para contornar essa questão sejam apresentados adiante, e a necessidade de um computador para rodar o editor.
+
+\subsection{INSTALAÇÃO}
+
+\begin{figure}[H]
+        \centering\includegraphics[width=0.5\textwidth]{images/programs.png}
+        \caption{Instalações necessárias para o uso do \LaTeX \ com VS code}
+        \label{programas}
+\end{figure}
+
+A figura (\ref{programas}) mostra os programas necessários para a utilização do \LaTeX, com o VS Code. O primeiro programa é o Strawberry Perl, uma versão da linguagem Perl, necessária para que a compilação automática de \LaTeX \ funcione corretamente no VS code. O segundo programa é o MikTeX, que é uma distribuição do \LaTeX, para Windows. O terceiro programa é o VS Code, que é um editor de texto leve e poderoso, que pode ser usado para escrever documentos em \LaTeX, assim como outras linguagens. A quarta instalação é o Latex Workshop, uma extensão do VS code que facilita a edição \LaTeX, adicionando snippets, atalhos e recursos.
+
+\begin{enumerate}
+    \item Para instalar o Strawberry Perl, acesse o site \url{https://strawberryperl.com/} e baixe a versão MSI mais recente. Veja a Fig. (\ref{strawberry}).
+    \begin{figure}[H]
+        \centering\includegraphics[width=0.5\textwidth]{images/perl.png}
+        \caption{Site do Strawberry Perl}
+        \label{strawberry}
+    \end{figure}
+    \item Para instalar o MikTeX, acesse o site \url{https://miktex.org/download} e baixe a versão mais recente para Windows. Veja a Fig. (\ref{miktex}). Durante a instalação faça a instalação completa, o qual é cerca de 8 GB, mas evita o trabalho de ficar sempre baixando pacotes.
+    \begin{figure}[H]
+        \centering\includegraphics[width=0.5\textwidth]{images/miktex.png}
+        \caption{Site do MikTeX}
+        \label{miktex}
+    \end{figure}
+    \item Para instalar o VS Code, acesse o site \url{https://code.visualstudio.com/Download} e baixe a versão mais recente para Windows. Veja a Fig. (\ref{vscode}).
+    \begin{figure}[H]
+        \centering\includegraphics[width=0.5\textwidth]{images/vscode.png}
+        \caption{Site do VS Code}
+        \label{vscode}
+    \end{figure}
+    \item Para instalar o Latex Workshop, abra o VS Code, clique no ícone de extensões na barra lateral esquerda (ou pressione Ctrl+Shift+X), pesquise por "LaTeX Workshop" e clique em "Install". Veja a Fig. (\ref{latexworkshop}).
+    \begin{figure}[H]
+        \centering\includegraphics[width=0.5\textwidth]{images/latexworkshop.png}
+        \caption{Extensão Latex Workshop no VS Code}
+        \label{latexworkshop}
+    \end{figure}
+\end{enumerate}
+
+Depois de instalados, abra o MikTex, vá em "Update" (Atualizar) e clique em "Check for updates" (Verificar atualizações). Se houver atualizações disponíveis, instale-as. 
+
+Ao tentar compilar um documento \LaTeX \ pela primeira vez, o MikTeX pode solicitar a instalação de pacotes adicionais. Permita que ele instale esses pacotes conforme necessário. Alguns pacotes do Overleaf não estão presentes no MikTex, sendo necessário removê-los ou substituí-los.
+
+\subsection{COMEÇAR A TRABALHAR USANDO O VSCODE}
+
+Após concluir a instalação do VS Code, do LaTeX Workshop, do MiKTeX e do Strawberry Perl, já é possível iniciar o trabalho com \LaTeX. Para começar, clique na opção “Open Folder...”, conforme ilustrado na figura abaixo:
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=.6\linewidth]{images/resumo_1.jpeg}
+    \end{figure}
+
+Se essa opção não estiver visível no VS Code, você pode utilizar o atalho Ctrl + K, Ctrl + O ou, alternativamente, acessar o menu no canto superior esquerdo em "File" → "Open Folder...". Em seguida, selecione a pasta onde está localizado o seu projeto. No caso deste template, a escolha deve ser feita de maneira semelhante ao exemplo apresentado a seguir:
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=.6\linewidth]{images/resumo_2.jpeg}
+    \end{figure}
+
+Por fim, acesse a aba lateral “Explorer” ou use o atalho Crtl + Shift + E, e selecione o arquivo em que deseja trabalhar. Ao fazer isso, será exibida uma guia semelhante à apresentada a seguir:
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=.6\linewidth]{images/resumo_3.jpeg}
+    \end{figure}
+
+De preferência, selecione um arquivo .tex para iniciar o LaTeX Workshop. Isso fará com que uma nova aba lateral, denominada “LaTeX”, seja adicionada ao VS Code. Para acessá-la, basta abri-la manualmente ou utilizar o atalho Ctrl + Alt + X. Feito isso, você verá uma guia semelhante à ilustrada a seguir:
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[angle=0,scale=.6]{images/resumo_4.png}
+    \end{figure}
+
+Selecione “View LaTeX PDF” → “View in VSCode tab” para visualizar o PDF gerado diretamente no editor. Após realizar as modificações desejadas no arquivo, compile o projeto escolhendo “Build LaTeX project” → “Recipe: lualatex...”.
+
+\subsection{SOBRE O TEMPLATE}
+
+Dentro do template estão incluídas sete extensões de arquivos que podem parecer novidade para quem está começando no \LaTeX; a seguir, apresentamos uma breve explicação sobre cada uma delas:
+
+\begin{enumerate} 
+
+\item .json: Arquivos JSON são usados para armazenar dados estruturados em formato de texto, geralmente para configuração ou integração com ferramentas externas ao \LaTeX, como pacotes que importam metadados.  
+
+\item .bbx: Arquivos BBX pertencem ao pacote \texttt{biblatex} e definem o estilo bibliográfico, ou seja, como a lista de referências será formatada.  
+
+\item .cbx: Arquivos CBX também fazem parte do \texttt{biblatex} e determinam o estilo de citação, controlando como as citações aparecem no corpo do texto.  
+
+\item .lbx: Arquivos LBX fornecem traduções e adaptações linguísticas para o \texttt{biblatex}, garantindo que expressões como “et al.”, “in”, “editor” e outros termos apareçam no idioma correto.  
+
+\item .sty: Arquivos STY são pacotes de estilo que adicionam funcionalidades extras ao LaTeX, como comandos personalizados, ambientes e configurações específicas.  
+
+\item .tex: Arquivos TEX são os arquivos-fonte principais do \LaTeX, escritos em texto puro, que contêm o conteúdo do documento (texto, fórmulas, comandos e estrutura).  
+
+\item .bib: Arquivos BIB compõem o banco de dados bibliográfico usado pelo BibTeX ou \texttt{biblatex}, armazenando referências em formato estruturado para serem citadas no documento.  
+
+\end{enumerate}
+
+Este template é organizado em cinco pastas, excluindo a pasta denominada “normas”, que pode ser removida, e em cinco arquivos separados. A seguir, apresenta-se uma explicação sobre cada item, incluindo seu uso e finalidade:
+
+\begin{enumerate} 
+
+\item pasta ".vscode": Pasta utilizada pelo próprio Visual Studio Code para armazenar arquivos de configuração. Nela encontra-se, por exemplo, um arquivo \texttt{.json} responsável por ajustar algumas preferências do template dentro desse editor. Caso você utilize outro editor de texto ou compilador \LaTeX, essa pasta não é necessária e pode ser removida sem prejuízo ao funcionamento do projeto.
+
+\item pasta "configDir": Esta pasta reúne todos os arquivos \texttt{.bbx}, \texttt{.cbx} e \texttt{.lbx}, responsáveis pela formatação das referências bibliográficas. Esses arquivos foram desenvolvidos por Daniel Ballester Marques e não é recomendada a sua alteração. Além deles, a pasta contém o arquivo \texttt{configurations.sty}, no qual estão definidas diversas configurações adicionais e algumas automações criadas especificamente para este template. Caso seja necessário modificar elementos como o modelo da capa, contra-capa ou outros ajustes estruturais do programa, é neste arquivo que as alterações devem ser realizadas.
+
+\item pastas "images" e "PDFs": Pastas destinadas exclusivamente à organização do projeto. A primeira armazena as figuras utilizadas no documento, enquanto a segunda guarda arquivos em formato PDF que possam ser inseridos ou referenciados ao longo do trabalho.
+
+\item pasta "Textual": Esta pasta contém a maior parte dos arquivos \texttt{.tex} do projeto, sendo o local onde o conteúdo principal será redigido. Nela encontram-se arquivos separados para cada seção do trabalho, como resumo em português, abstract, lista de siglas, lista de símbolos, introdução, objetivos, metodologia, resultados, conclusão e apêndices.
+
+\item arquivo "instructions.tex": Responsável por gerar o PDF inicial que você está lendo agora. Caso não seja necessário, esse arquivo pode ser removido; entretanto, recomenda-se mantê-lo, pois ao final contém uma lista útil de funções e exemplos disponíveis no template.
+
+\item arquivo "latexmkrc": Arquivo de configuração que permite ao compilador localizar e utilizar corretamente os estilos de referências armazenados na pasta \texttt{configDir}. É fundamental para o funcionamento adequado do template, portanto não deve ser deletado.
+
+\item arquivo "main.pdf": Documento final gerado a partir da compilação do projeto. Ele reflete todo o conteúdo que está sendo redigido nos arquivos \texttt{.tex} e é atualizado automaticamente a cada nova compilação, apresentando sempre a versão mais recente do trabalho.
+
+\item arquivo "main.tex": Arquivo principal do projeto e ponto de partida para a compilação. É nele que são chamados todos os demais arquivos mencionados anteriormente, além de definir os pacotes utilizados, as configurações iniciais e a estrutura geral do documento.
+
+\item arquivo "references.bib": Arquivo que armazena todas as informações referentes às suas fontes bibliográficas. Nele são cadastradas as referências em formato estruturado para que possam ser citadas no texto e automaticamente organizadas na bibliografia. As instruções sobre como preenchê-lo encontram-se ao final deste PDF.
+
+\end{enumerate}
+
+Considerando a complexidade presente no arquivo main.tex, é pertinente fornecer uma explicação detalhada sobre sua estrutura e funcionamento, a fim de facilitar a compreensão de seu papel na organização do projeto, a interação com os demais arquivos e a forma como os pacotes e comandos são utilizados para gerar o documento final.
+
+\begin{lstlisting}[firstnumber=last]
+\documentclass[
+	article,                     % Document class
+	a4paper,                     % Document size
+	12pt,                        % Main text size
+	oneside,                     % Only one side of paper
+  ]{abntex2}                   % ABNTtex2 for abnt norms
+\end{lstlisting}
+
+Esse trecho define a classe do documento com documentclass. Dentro dos colchetes estão as opções: article indica o tipo de estrutura base, a4paper ajusta o tamanho da folha, 12pt define o tamanho principal da fonte e oneside formata o documento apenas para impressão em um lado da página. Após isso, entre chaves, está a classe escolhida de fato: abntex2, que aplica automaticamente as normas da ABNT.
+
+\begin{lstlisting}[firstnumber=last]
+\usepackage{animate}           % GIF images
+\usepackage{subfiles}          % Better organization of subfiles
+\usepackage[final]{pdfpages}   % Add pdf pages in the work
+\usepackage{enumitem}          % Best enumetare
+\usepackage{polyglossia}       % Language package
+\usepackage{tikz}              % Draw package
+\setdefaultlanguage{english}   % Default document language
+\SetLanguageKeys{english}{indentfirst=true}
+\end{lstlisting}
+
+O animate permite inserir animações ou GIFs no PDF. O subfiles ajuda a organizar o documento em arquivos separados. O pdfpages insere páginas inteiras de outros PDFs, e o [final] garante que todas apareçam na versão final. O enumitem dá mais controle sobre listas e enumerações. O polyglossia gerencia idiomas, sendo o inglês definido como padrão com setdefaultlanguage{english} e com o primeiro parágrafo das seções indentado via SetLanguageKeys{english}{indentfirst=true}. Por fim, o tikz permite criar desenhos, gráficos e diagramas vetoriais diretamente no LaTeX.
+
+\begin{lstlisting}[firstnumber=last]
+\usepackage{titlesec}
+\usepackage{titletoc}
+\end{lstlisting}
+
+Esse trecho adiciona recursos para personalizar títulos e sumário. O titlesec permite modificar o estilo de seções, capítulos e subseções (como fonte, tamanho, espaçamento e formatação). Já o titletoc oferece controle sobre a aparência e a organização do sumário, possibilitando ajustar alinhamento, recuos e estilos dos itens listados.
+
+\begin{lstlisting}[firstnumber=last]
+\usepackage[no-math]{fontspec} % Add new fonts in document
+\setmainfont{Times New Roman}  % Main font of the document
+\end{lstlisting}
+
+Esse trecho usa o pacote fontspec para habilitar fontes modernas no documento LaTeX, sem interferir em símbolos matemáticos (no-math). Em seguida, setmainfont{Times New Roman} define que a fonte principal do texto será Times New Roman.
+
+\begin{lstlisting}[firstnumber=last]
+\usepackage{parskip}		       % Space in between paragraphs
+\usepackage{microtype} 	       % Improves general appearance
+\end{lstlisting}
+
+O parskip adiciona espaço entre parágrafos, evitando a necessidade de indentação ou melhorando a leitura. O microtype aprimora a aparência geral do texto, ajustando detalhes de espaçamento e hifenização para deixar o documento mais profissional e agradável visualmente.
+
+\begin{lstlisting}[firstnumber=last]
+\usepackage{newtx}             % Math times new roman font
+\usepackage{amsmath}           % Add many configurations in the math space 
+\usepackage{bm}                % Bold mathematics 
+\end{lstlisting}
+
+O newtx aplica a fonte Times New Roman também em expressões matemáticas, garantindo consistência com o texto. O amsmath oferece recursos avançados para escrever equações e manipular o ambiente matemático. O bm permite deixar símbolos matemáticos em negrito, útil para vetores ou matrizes.
+
+\begin{lstlisting}[firstnumber=last]
+\usepackage{tabularx}          % Add better tables
+\usepackage{subcaption}        % Add a subcaption for figure
+\usepackage{float}             % Make the image fixed [H]
+\usepackage{multicol}          % Multiple columns text
+\usepackage{multirow}          % Multiple rows text
+\usepackage{longtable}         % Tables oversized
+\end{lstlisting}
+
+O tabularx permite criar tabelas com largura ajustável automaticamente. O subcaption adiciona legendas individuais para subfiguras ou subgráficos. O float possibilita fixar figuras ou tabelas em uma posição específica usando [H]. O multicol permite dividir o texto em várias colunas. O multirow possibilita mesclar células em várias linhas dentro de uma tabela. Por fim, o longtable é usado para criar tabelas que se estendem por várias páginas.
+
+\begin{lstlisting}[firstnumber=last]
+\usepackage{hyperref}          % Create hyperlinks
+\usepackage{listings}          % Create algorithms
+\end{lstlisting}
+
+O hyperref permite criar links clicáveis no PDF, como referências, URLs e marcadores de seção. O listings possibilita inserir blocos de código, mostrando-os formatados dentro do documento, como se fossem trechos de programação, sem executar nada.
+
+\begin{lstlisting}[firstnumber=last]
+\usepackage[
+  style=abnt,
+  language=english, 
+  repeatfields,
+  backend=biber,
+  useprefix=false,
+  extrayear
+]{biblatex}
+\usepackage{csquotes} % Used for multiple languages styles
+\addbibresource{references.bib} % Add here your .bib archive
+\end{lstlisting}
+
+O pacote biblatex gerencia referências, com o estilo ABNT, idioma inglês, repetição de campos em citações subsequentes (repeatfields), uso do backend biber para processar a bibliografia, desativando prefixos (useprefix=false) e permitindo diferenciar obras do mesmo autor no mesmo ano (extrayear). O csquotes é usado para formatação de citações em múltiplos idiomas. Por fim, addbibresource{references.bib} indica o arquivo .bib onde estão todas as referências do trabalho.
+
+\begin{lstlisting}[firstnumber=last]
+\orientador{Profa. Dra. Simone dos Santos Hoefel} % Professor name
+\titulo{TEMPLATE NOVO} % Title
+\autor{Slepton \\ Masthierryi} % Author name
+\local{TERESINA $-$ PI} % Local
+\preambulo{ A natureza do trabalho fica aqui falando o curso e oque é esse trabalho} % Work nature text
+\end{lstlisting}
+
+Esse trecho define as informações principais do documento para compor a capa: o orientador, o título, os autores, o local de realização com local e a natureza do trabalho, como curso e tipo de documento.
+
+\begin{lstlisting}[firstnumber=last]
+\def\english{on}
+\end{lstlisting}
+
+Ao escrever qualquer coisa dentro desse comando, o idioma em diversos titulos e outras partes do documento será alterado para inglês. Caso queira que o idioma padrão seja o português, basta deixar as aspas vazias.
+
+\begin{lstlisting}[firstnumber=last]
+\usepackage{configDir/configurations}
+\end{lstlisting}
+
+Adiciona o arquivo configurations.sty, que contém diversas configurações e automações específicas para este template.
+
+\begin{lstlisting}[firstnumber=last]
+\begin{document} % DOCUMENT 
+% TEXTUAL SPACING ------------------------------------------
+\setSpacing{1.5} % Text spacing
+% COVERS AND PAGE NUMBERING --------------------------------
+\pagenumbering{gobble}\covercontent\newpage % Cover
+\pagenumbering{arabic}\backcovercontent\newpage % Back cover
+\aprocovercontent\newpage % Aprovement cover
+% ABSTRACT -------------------------------------------------
+\subfile{Textual/01_vernacular_abstract}\newpage
+\subfile{Textual/02_abstract}\newpage
+% LIST OF FIGURES AND TABLE --------------------------------
+\listoffigures* \newpage 
+\listoftables* \newpage
+\subfile{Textual/03_list_of_acronym}\newpage
+\subfile{Textual/04_list_of_variables}\newpage
+% SUMMARY --------------------------------------------------
+\tableofcontents*\newpage
+\end{lstlisting}
+
+Esse trecho inicia o documento e organiza sua estrutura básica. Primeiro, abre o conteúdo principal e define o espaçamento do texto para 1,5. Em seguida, são geradas capas e numeração de páginas: a capa, a contracapa e a folha de aprovação, cada uma em nova página. Depois vêm os resumos em diferentes idiomas, também separados por páginas. São listadas figuras e tabelas, seguidas pelas listas de acrônimos e de variáveis. Por fim, o sumário é criado, tudo de forma organizada e paginada. Se você não quiser usar alguma dessas seções, basta comentar a linha correspondente que define a mesma.
+
+\begin{lstlisting}[firstnumber=last]
+% TEXTUAL SPACE --------------------------------------------
+\textual % Textual start 
+\pagestyle{simple} % Header and footer style
+% TEXTUAL ELEMENTS -----------------------------------------
+\subfile{instructions.tex}
+%\subfile{Textual/05_introduction}         
+%\subfile{Textual/06_objective}  
+%\subfile{Textual/07_methodology}           
+%\subfile{Textual/08_results}
+%\subfile{Textual/09_conclusion}            
+% REFERENCES -----------------------------------------------
+\newpage\phantomsection
+\addcontentsline{toc}{section*}{\normalfont\bfseries \referenctitle}
+\printbibliography[title={\centering \referenctitle}]
+% APPENDICES AND ANNEXES -----------------------------------
+\subfile{Textual/10_appendix}              
+\end{document} % DOCUMENT 
+\end{lstlisting}
+
+Esse trecho inicia a parte textual do documento, definindo o estilo de cabeçalho e rodapé. Em seguida, são incluídos os elementos textuais: inicialmente o arquivo instructions.tex é carregado como guia. Para usar o documento propriamente dito, é recomendado comentar a linha do instructions.tex e descomentar as linhas correspondentes à introdução, objetivos, metodologia, resultados e conclusão. Depois vem a seção de referências, adicionando-a ao sumário e imprimindo a bibliografia. Por fim, são incluídos os apêndices e anexos, e o documento é finalizado.
+
+\subsection{LISTA DE COMANDOS UTEIS}
+
+
+\subsubsection{Inserção de Texto, seções e estrutura}
+Comandos básicos para formatar texto, como negrito, itálico, sublinhado, e listas. Como criar seções, subseções e subsubseções para organizar o documento.
+
+\begin{lstlisting}[caption={Comandos básicos de texto e seções}]
+% --- FORMATAÇÃO DE TEXTO ---
+\textbf{Texto em negrito}       % Negrito
+\textit{Texto em itálico}       % Itálico
+\underline{Texto sublinhado}    % Sublinhado
+
+% --- SEÇÕES ---
+\section{Título da Seção}       % Cria uma seção
+\subsection{Título da Subseção} % Cria uma subseção
+\subsubsection{Título da Subsubseção} % Cria uma subsubseção
+\paragraph{Parágrafo}            % Pequeno título dentro da subseção
+\subparagraph{Subparágrafo}     % Ainda menor
+\end{lstlisting}
+
+\subsubsection{Inserção de Figuras}
+Comandos para adicionar imagens, definir legendas, centralizar e controlar tamanho.
+
+\subsubsection{Tabelas}
+Como criar tabelas simples e avançadas, usar tabularx, multirow, multicolumn e longtable.
+
+\subsubsection{Equações e Matemática}
+Inserção de equações inline e display, uso de pacotes como amsmath, bm, newtx, alinhamento de equações.
+
+\subsubsection{Referências Bibliográficas}
+Como citar e gerar bibliografia com biblatex e biber, configurar estilo ABNT ou outro.
+
+\subsubsection{Listas e Enumerações}
+Como criar listas numeradas, com marcadores e personalizar com enumitem.
+
+\subsubsection{Hyperlinks e Navegação}
+Como criar links clicáveis dentro do PDF, referências, URLs e marcadores.
+
+\subsubsection{Apêndices e Anexos}
+Como incluir apêndices, anexos e configurar páginas separadas.
+
+\section{INTRODUÇÃO}
+
+\section{TEMPLATE DE CODIGOS} 
+% Criação de Dummy text ------------------------------------
+\newcommand{\dummytext}{Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit... }
+% ----------------------------------------------------------
+
+% CITATIONS ------------------------------------------------
+\subsection{CITAÇÕES}
+
+Citações inseridas no texto: De acordo com \textcite{exemplo}: \dummytext.
+
+Citações fora do texto: \dummytext \cite{exemplo}.
+
+Citação de citação: \dummytext \dcite{exemplo}{exemplo}.
+% Ao usar o \dcite use a citação original no segundo espaço
+% ----------------------------------------------------------
+
+% FIGURES --------------------------------------------------
+\subsection{FIGURAS E GIFS}
+
+Figura simples com referência automática
+
+    \begin{figure}[H]
+        \centering
+        \caption{Figura massa}
+        \includegraphics[angle=0,scale=.6]{images/aaa.pdf}
+        \source{exemplo} 
+        \label{fig1}
+    \end{figure}
+    
+Referencia manual 
+
+    \begin{figure}[H]
+        \centering
+        \caption{Figura massa}
+        \includegraphics[angle=0,scale=.6]{images/aaa.pdf}
+        \caption*{Fonte: Autoria propria} 
+        \label{fig2}
+    \end{figure}
+
+Figuras lado a lado
+
+\begin{figure}[H]
+    \centering
+    \caption{Terceiro e quarto frame} 
+    \subcaptionbox{Terceiro frame\label{frame3}}
+        {\includegraphics[scale=0.4]{images/aaa.pdf}}
+    \subcaptionbox{Quarto frame\label{frame4}}
+        {\includegraphics[scale=0.4]{images/locks.pdf}}\hspace{1cm}
+    \caption*{Fonte: Autoria propria} 
+    \label{fig3}
+\end{figure}
+
+% O gif esta comentado por questões de ser muito pesado.
+% Alem disso, ele n pode ser lido em qualquer leitor de pdf,
+% recomendo o Adobe reader para ler esses arquivos.
+\begin{comment}
+\begin{figure}[H]
+    \centering
+    \animategraphics[controls={play,step,stop},loop,autoplay,scale=.6]{10}{images/wave/frame-}{001}{200}
+    \caption{Caption}
+    \label{fig4}
+\end{figure}
+\end{comment}
+% ----------------------------------------------------------
+
+% TABLES ---------------------------------------------------
+\subsection{TABELAS}
+
+As tabelas variam muito conforme a necessidade do usuário, um exemplo simples usando algumas funcionalidades está presente abaixo:
+
+    \begin{table}[H]
+        \setlength{\tabcolsep}{3pt}
+        \begin{center}
+            \caption{\textbf{Razões de elos para movimentação linear tipo Hoeken.}}
+            {\fontsize{9}{12}\selectfont
+            \begin{tabular}{ccc|cccccc|cccccc}
+                \hline
+                \multicolumn{3}{c|}{Alcance} & \multicolumn{6}{c|}{Retilinidade} & \multicolumn{6}{c}{Velocidade constante}\\
+                \hline
+                $\Delta\beta^\circ$ & $\theta_{in}^\circ$ & \% de & Máximo & $\Delta V$ & $V_x$ & \multicolumn{3}{c|}{Razões de elos} &  Máximo & $\Delta C_y$ & $V_x$ & \multicolumn{3}{c}{Razões de elos}\\
+                graus & graus & ciclo & $\Delta C_y \%$ & $\%$ & $L_2$ & $\frac{L_1}{L_2}$ & $\frac{L_3}{L_2}$ &  $\frac{\Delta x}{L_2}$ & $\Delta V_x \%$ & $\%$ & $L_2$ & $\frac{L_1}{L_2}$ & $\frac{L_3}{L_2}$ &  $\frac{\Delta x}{L_2}$\\
+                \hline
+                20 & 170 & $5.6 \%$ & $0.00001 \%$ & $0.38 \%$& $1.725$& $2.975$& $3.963$& $0.601$& $0.006 \%$& $0.137 \%$& $1.374$& $2.075$&$2.613$&$0.480$\\
+                40 & 160 & $11.1 \%$ & $0.00004 \%$ & $1.53 \%$ & $1.717$& $2.950$& $3.925$& $1.193$& $0.038 \%$& $0.274 \%$& $1.361$& $2.050$&$2.575$&$0.950$\\
+                60 & 150 & $16.7 \%$ & $0.00027 \%$ & $3.48 \%$& $1.702$& $2.900$& $3.850$& $1.763$& $0.106 \%$& $0.387 \%$& $1.347$& $2.025$&$2.538$&$1.411$\\
+                80 & 140 & $22.2 \%$ & $0.001 \%$ & $6.27 \%$& $1.679$& $2.825$& $3.738$& $2.299$& $0.340 \%$& $0.503 \%$& $1.319$& $1.975$&$2.463$&$1.845$\\
+                100 & 130 & $27.8 \%$ & $0.004 \%$ & $9.90 \%$& $1.646$& $2.725$& $3.588$& $2.790$& $0.910 \%$& $0.640 \%$& $1.275$& $1.900$&$2.350$&$2.237$\\
+                120 & 120 & $33.3 \%$ & $0.010 \%$ & $14.68 \%$& $1.611$& $2.625$& $3.438$& $3.238$& $1.885 \%$& $0.752 \%$& $1.229$& $1.825$&$2.238$&$2.600$\\
+                140 & 110 & $38.9 \%$ & $0.023 \%$ & $20.48 \%$& $1.565$& $2.500$& $3.250$& $3.623$& $3.327 \%$& $0.888 \%$& $1.178$& $1.750$&$2.125$&$2.932$\\
+                160 & 100 & $44.4 \%$ & $0.047 \%$ & $27.15 \%$& $1.504$& $2.350$& $3.025$& $3.933$& $5.878 \%$& $1.067 \%$& $1.124$& $1.675$&$2.013$&$3.232$\\
+                180 & 90 & $50.0 \%$ & $0.096 \%$ & $35.31 \%$& $1.436$& $2.200$& $2.800$& $4.181$& $9.299 \%$& $1.446 \%$& $1.045$& $1.575$&$1.863$&$3.456$\\
+                \hline
+            \end{tabular}}\label{tab1}\hspace{.7cm}
+        \source{exemplo}
+        \end{center}
+    \end{table}
+
+% ----------------------------------------------------------
+
+% ITEMIZES -------------------------------------------------
+\subsection{LISTAS}
+
+Há três ambientes principais para listas, e os itens podem ser personalizados em qualquer um deles. No entanto, o ambiente mais indicado para itens personalizados é o "description". A seguir, é apresentado um exemplo de cada um:
+
+\begin{description}
+    \item[a] item 1
+
+    \item[b] item 2
+
+    \item[c] item 3
+\end{description}
+
+\begin{enumerate}
+    \item item 1
+
+    \item item 2
+
+    \item item 3
+\end{enumerate}
+
+\begin{itemize}
+    \item item 1
+
+    \item item 2
+
+    \item item 3
+\end{itemize}
+% ----------------------------------------------------------
+
+% BILLS AND RESOLUTIONS ------------------------------------
+\subsection{REGIMENTOS}
+
+Ambientes personalizados foram criados para redigir esse tipo de documento, vale ressaltar que esses ambientes tem "niveis" assim como as seções e subseções do \LaTeX, a seguir um exemplo e os niveis dos mesmos:
+
+\begin{description}
+    \item[nivel 1] ambiente "resolution"
+
+    \item[nivel 2] ambiente "article"
+
+    \item[nivel 3] ambiente "subarticle"
+
+    \item[nivel 3] ambiente "section"
+
+    \item[nivel 3] ambiente "paragraph"
+\end{description}
+
+\begin{resolution}
+
+\item Exemplo 1
+
+    \begin{article}
+
+    \item Primeiro artigo
+
+    \item Segundo artigo
+
+        \begin{subarticle}
+         
+        \item Primeiro subartigo
+
+        \item Segundo subartigo
+
+        \end{subarticle}
+
+    \end{article}
+
+\item Exemplo 2
+
+    \begin{article}
+
+    \item Primeiro artigo
+
+    \item Segundo artigo
+
+        \begin{ressection}
+         
+        \item Inciso
+
+        \end{ressection}
+
+        \begin{resparagraph}
+
+        \item Paragrafo
+
+        \end{resparagraph}
+
+    \end{article}
+
+\end{resolution}
+% ----------------------------------------------------------
