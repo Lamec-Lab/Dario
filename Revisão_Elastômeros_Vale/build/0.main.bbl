@@ -1,0 +1,435 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global/global}
+    \entry{campos2023}{inproceedings}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=e6bd50908dca282fe538a951edd65ca2}{%
+           family={Campos},
+           familyi={C\bibinitperiod},
+           given={Victor\bibnamedelimb Hugo\bibnamedelima Garcia},
+           giveni={V\bibinitperiod\bibinitdelim H\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0,
+           prefix={de},
+           prefixi={d\bibinitperiod},
+           prefixun=0}}%
+        {{un=0,uniquepart=base,hash=99cdeb41cc7d051fdc59753c23bfbec5}{%
+           family={Earl},
+           familyi={E\bibinitperiod},
+           given={Ryan\bibnamedelima David},
+           giveni={R\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fe8f16a9a8f543cff37f72a7f16a1592}{%
+           family={Bittencourt},
+           familyi={B\bibinitperiod},
+           given={Marco\bibnamedelima Lúcio},
+           giveni={M\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d2df422f9c74b8fe4a2323c835ebc1ac}{%
+           family={Baruffaldi},
+           familyi={B\bibinitperiod},
+           given={Leonardo\bibnamedelima Bartalini},
+           giveni={L\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b3d11320ce34e27af402efe042625e81}{%
+           family={Santos},
+           familyi={S\bibinitperiod},
+           given={Julismar\bibnamedelima Dadalto},
+           giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Florianópolis, SC, Brazil}%
+      }
+      \list{publisher}{2}{%
+        {Brazilian Society of Mechanical Sciences}%
+        {Engineering}%
+      }
+      \strng{namehash}{01abcb3d66c2c579ecb54b2931dd6d91}
+      \strng{fullhash}{9f6c07532a1f0282fc0da64371bc786b}
+      \strng{fullhashraw}{9f6c07532a1f0282fc0da64371bc786b}
+      \strng{bibnamehash}{01abcb3d66c2c579ecb54b2931dd6d91}
+      \strng{authorbibnamehash}{01abcb3d66c2c579ecb54b2931dd6d91}
+      \strng{authornamehash}{01abcb3d66c2c579ecb54b2931dd6d91}
+      \strng{authorfullhash}{9f6c07532a1f0282fc0da64371bc786b}
+      \strng{authorfullhashraw}{9f6c07532a1f0282fc0da64371bc786b}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{27th ABCM International Congress of Mechanical Engineering (COBEM 2023)}
+      \field{note}{COB-2023-1490}
+      \field{title}{Study Of The Elastic Behavior Of The Secondary Suspension Spring Set in The Y32 Bogie Utilized in Vale Passenger Car}
+      \field{year}{2023}
+    \endentry
+    \entry{kang2022}{article}{}{}
+      \name{author}{9}{}{%
+        {{un=0,uniquepart=base,hash=d137b8782933dd3a6b3be41c540c0ea8}{%
+           family={Kang},
+           familyi={K\bibinitperiod},
+           given={Wei},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d4d8cc84767b9771a7eafe85848152ea}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Jiefu},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a5a94e36625701b04b0f82e1d472fd69}{%
+           family={Xiong},
+           familyi={X\bibinitperiod},
+           given={Wei},
+           giveni={W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4741306bc7f0ad63accd6799555bb027}{%
+           family={You},
+           familyi={Y\bibinitperiod},
+           given={Tianyu},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7f85483ee81b31bd3ebec4cd9d42df6a}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Xinxin},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=dfe6acd150da6bcc5a16e810ba63e8ef}{%
+           family={Zeng},
+           familyi={Z\bibinitperiod},
+           given={Kexin},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=79c92b8ed99c0a4ba57fe23ddaf19a5d}{%
+           family={Deng},
+           familyi={D\bibinitperiod},
+           given={Yingao},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2ad372b42bada37622c1225706735427}{%
+           family={Guo},
+           familyi={G\bibinitperiod},
+           given={Zichao},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d0273f1d8e7afeb782688c03a9780dcb}{%
+           family={Yuan},
+           familyi={Y\bibinitperiod},
+           given={Ke},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{6ca901703610924c7d1581ffda5818d5}
+      \strng{fullhash}{f6f98f3e02edb0ec49db76c18613b2bd}
+      \strng{fullhashraw}{f6f98f3e02edb0ec49db76c18613b2bd}
+      \strng{bibnamehash}{6ca901703610924c7d1581ffda5818d5}
+      \strng{authorbibnamehash}{6ca901703610924c7d1581ffda5818d5}
+      \strng{authornamehash}{6ca901703610924c7d1581ffda5818d5}
+      \strng{authorfullhash}{f6f98f3e02edb0ec49db76c18613b2bd}
+      \strng{authorfullhashraw}{f6f98f3e02edb0ec49db76c18613b2bd}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Reviews on Advanced Materials Science}
+      \field{number}{1}
+      \field{title}{Basic mechanical and fatigue properties of rubber materials and components for railway vehicles: A literature survey}
+      \field{volume}{61}
+      \field{year}{2022}
+      \field{pages}{587\bibrangedash 610}
+      \range{pages}{24}
+      \verb{doi}
+      \verb 10.1515/rams-2022-0054
+      \endverb
+    \endentry
+    \entry{lalo2019}{article}{}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=4b3435504625d8660a13c66baead7a68}{%
+           family={Lalo},
+           familyi={L\bibinitperiod},
+           given={Debora\bibnamedelima Francisco},
+           giveni={D\bibinitperiod\bibinitdelim F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9cda0fd10611d16d34890bfecd00574c}{%
+           family={Greco},
+           familyi={G\bibinitperiod},
+           given={Marcelo},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=88bf1606a670f2d453507b72462ebe3c}{%
+           family={Meroniuc},
+           familyi={M\bibinitperiod},
+           given={Matias},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{29f2a4ffeea6372c7ecbe18aa4870606}
+      \strng{fullhash}{29f2a4ffeea6372c7ecbe18aa4870606}
+      \strng{fullhashraw}{29f2a4ffeea6372c7ecbe18aa4870606}
+      \strng{bibnamehash}{29f2a4ffeea6372c7ecbe18aa4870606}
+      \strng{authorbibnamehash}{29f2a4ffeea6372c7ecbe18aa4870606}
+      \strng{authornamehash}{29f2a4ffeea6372c7ecbe18aa4870606}
+      \strng{authorfullhash}{29f2a4ffeea6372c7ecbe18aa4870606}
+      \strng{authorfullhashraw}{29f2a4ffeea6372c7ecbe18aa4870606}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Mathematical Problems in Engineering}
+      \field{note}{Article ID 5182629}
+      \field{title}{Numerical Modeling and Experimental Characterization of Elastomeric Pads Bonded in a Conical Spring under Multiaxial Loads and Pre-Compression}
+      \field{volume}{2019}
+      \field{year}{2019}
+      \field{pages}{1\bibrangedash 14}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1155/2019/5182629
+      \endverb
+    \endentry
+    \entry{lei2013}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=0747ee8b32f11d5702821c50e1913c80}{%
+           family={Lei},
+           familyi={L\bibinitperiod},
+           given={Gang},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b6fff56e4c606d8c37bb384da63c33e3}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Qian},
+           giveni={Q\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d16056932a393b93367a5223974b55f6}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Ying},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ecdd601419a4308dd9967c229a8cf9c9}{%
+           family={Jiang},
+           familyi={J\bibinitperiod},
+           given={Jingjing},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{d6038bf91de45a3c07d67eab993fdd0a}
+      \strng{fullhash}{1cfba34ecf31fbe963eb198f18c6c657}
+      \strng{fullhashraw}{1cfba34ecf31fbe963eb198f18c6c657}
+      \strng{bibnamehash}{d6038bf91de45a3c07d67eab993fdd0a}
+      \strng{authorbibnamehash}{d6038bf91de45a3c07d67eab993fdd0a}
+      \strng{authornamehash}{d6038bf91de45a3c07d67eab993fdd0a}
+      \strng{authorfullhash}{1cfba34ecf31fbe963eb198f18c6c657}
+      \strng{authorfullhashraw}{1cfba34ecf31fbe963eb198f18c6c657}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Advances in Materials Science and Engineering}
+      \field{note}{Article ID 187636}
+      \field{title}{An Inverse Method to Reconstruct Complete Stiffness Information of Rubber Bushing}
+      \field{volume}{2013}
+      \field{year}{2013}
+      \field{pages}{1\bibrangedash 6}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1155/2013/187636
+      \endverb
+    \endentry
+    \entry{lima2022}{article}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=20c94c801e3f10866f0bfa1852172183}{%
+           family={Lima},
+           familyi={L\bibinitperiod},
+           given={E.\bibnamedelimi A.},
+           giveni={E\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6f257c719196c77c8f6062cc6a2698af}{%
+           family={Baruffaldi},
+           familyi={B\bibinitperiod},
+           given={L.\bibnamedelimi B.},
+           giveni={L\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7c7cad84d487e8a1bd0126227b160148}{%
+           family={Manetti},
+           familyi={M\bibinitperiod},
+           given={J.\bibnamedelimi L.\bibnamedelimi B.},
+           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1eacab9dabdc29c0e722783ef098924d}{%
+           family={Martins},
+           familyi={M\bibinitperiod},
+           given={T.\bibnamedelimi S.},
+           giveni={T\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2998c89d9a8ba9f12c8dcb575b483f51}{%
+           family={Santos},
+           familyi={S\bibinitperiod},
+           given={A.\bibnamedelimi A.},
+           giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{102d2ab50c70564d4df00cedceb99f78}
+      \strng{fullhash}{926a4237365a2a503df518d67f0aca0d}
+      \strng{fullhashraw}{926a4237365a2a503df518d67f0aca0d}
+      \strng{bibnamehash}{102d2ab50c70564d4df00cedceb99f78}
+      \strng{authorbibnamehash}{102d2ab50c70564d4df00cedceb99f78}
+      \strng{authornamehash}{102d2ab50c70564d4df00cedceb99f78}
+      \strng{authorfullhash}{926a4237365a2a503df518d67f0aca0d}
+      \strng{authorfullhashraw}{926a4237365a2a503df518d67f0aca0d}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Vehicle System Dynamics}
+      \field{number}{4}
+      \field{title}{Effect of truck shear pads on the dynamic behaviour of heavy haul railway cars}
+      \field{volume}{60}
+      \field{year}{2022}
+      \field{pages}{1188\bibrangedash 1208}
+      \range{pages}{21}
+      \verb{doi}
+      \verb 10.1080/00423114.2020.1858120
+      \endverb
+    \endentry
+    \entry{tang2014}{article}{}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=ec94a0eed7c173051bdbdeb3ea9edcd3}{%
+           family={Tang},
+           familyi={T\bibinitperiod},
+           given={Liang},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d14d813400632d1540675e5edb94d60a}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Jie},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=08061a887cd42fd3bcc7105b04d19e49}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Jinhao},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=72c0078b32bcad41684524a348dce53d}{%
+           family={Jiang},
+           familyi={J\bibinitperiod},
+           given={Cuicui},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cff56c5a47d7d590c86c31cb4ad63ad3}{%
+           family={Shangguan},
+           familyi={S\bibinitperiod},
+           given={Wen-Bin},
+           giveni={W\bibinithyphendelim B\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{2ad39e1978224869f04eb058f7499461}
+      \strng{fullhash}{02bd61b2efbacfe02adbdec2447ec993}
+      \strng{fullhashraw}{02bd61b2efbacfe02adbdec2447ec993}
+      \strng{bibnamehash}{2ad39e1978224869f04eb058f7499461}
+      \strng{authorbibnamehash}{2ad39e1978224869f04eb058f7499461}
+      \strng{authornamehash}{2ad39e1978224869f04eb058f7499461}
+      \strng{authorfullhash}{02bd61b2efbacfe02adbdec2447ec993}
+      \strng{authorfullhashraw}{02bd61b2efbacfe02adbdec2447ec993}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Advances in Mechanical Engineering}
+      \field{note}{Article ID 734568}
+      \field{title}{Topology Optimization and Performance Calculation for Control Arms of a Suspension}
+      \field{volume}{2014}
+      \field{year}{2014}
+      \field{pages}{1\bibrangedash 10}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1155/2014/734568
+      \endverb
+    \endentry
+    \entry{vinith2024}{article}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=b74def52adbb5d884380456869bd1b4e}{%
+           family={Vinith},
+           familyi={V\bibinitperiod},
+           given={KS\bibnamedelima Karthi},
+           giveni={K\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2e328195429b84ea1bf9181efa3786cd}{%
+           family={Sreenaveen},
+           familyi={S\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f5c6f4030e92a482b55f38e4dc944736}{%
+           family={Sarveshnarayanan},
+           familyi={S\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a6b0441e9247a52e36454850b8607408}{%
+           family={Muthukumar},
+           familyi={M\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{fec6a9d5dc287127034defeea0fbe4b6}
+      \strng{fullhash}{368e1a14127c5a54596c2f1735b2cf9f}
+      \strng{fullhashraw}{368e1a14127c5a54596c2f1735b2cf9f}
+      \strng{bibnamehash}{fec6a9d5dc287127034defeea0fbe4b6}
+      \strng{authorbibnamehash}{fec6a9d5dc287127034defeea0fbe4b6}
+      \strng{authornamehash}{fec6a9d5dc287127034defeea0fbe4b6}
+      \strng{authorfullhash}{368e1a14127c5a54596c2f1735b2cf9f}
+      \strng{authorfullhashraw}{368e1a14127c5a54596c2f1735b2cf9f}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Physics: Conference Series}
+      \field{number}{1}
+      \field{title}{Experimental Testing of Rubber Materials for Enhancement of Suspension Bush Performance}
+      \field{volume}{2837}
+      \field{year}{2024}
+      \field{pages}{012014}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1088/1742-6596/2837/1/012014
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

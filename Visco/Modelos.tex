@@ -1,0 +1,184 @@
+%===========================================================
+\chapter{Modelos Viscoelásticos Lineares Elementares}
+%===========================================================
+
+\section{Modelo de Kelvin--Voigt}
+
+O modelo de \textbf{Kelvin--Voigt} representa um material formado pela associação em \textbf{paralelo} de uma \textbf{mola elástica} (com constante $E$) e de um \textbf{amortecedor viscoso} (com coeficiente $\eta$), conforme a Figura~\ref{fig:kv_modelo}.
+
+%\begin{figure}[H]
+%\centering
+%\includegraphics[width=0.55\textwidth]{kelvin_voigt_esquema.png}
+%\caption{Representação esquemática do modelo de Kelvin--Voigt.}
+%\label{fig:kv_modelo}
+%\end{figure}
+
+%-----------------------------------------------------------
+\subsection*{Conceito físico}
+%-----------------------------------------------------------
+Como os dois elementos estão em \textbf{paralelo}, eles sofrem a \textbf{mesma deformação} $\varepsilon(t)$, mas as \textbf{tensões se somam}:
+
+\begin{equation}
+\sigma(t) = \sigma_E(t) + \sigma_\eta(t)
+\label{eq:kv_soma}
+\end{equation}
+
+onde:
+\begin{equation}
+\sigma_E(t) = E\,\varepsilon(t) 
+\quad \text{(tensão na mola)}, 
+\qquad
+\sigma_\eta(t) = \eta\,\dot{\varepsilon}(t)
+\quad \text{(tensão no amortecedor)}.
+\label{eq:kv_componentes}
+\end{equation}
+
+Somando as duas contribuições, obtém-se a \textbf{equação constitutiva} do modelo:
+\begin{equation}
+\sigma(t) = E\,\varepsilon(t) + \eta\,\dot{\varepsilon}(t)
+\label{eq:kv_constitutiva}
+\end{equation}
+
+A mola reage instantaneamente ao carregamento, enquanto o amortecedor resiste ao movimento (velocidade da deformação).  
+Assim, o material apresenta uma \textbf{resposta elástica retardada}: ele tende à deformação final de um sólido elástico, mas com atraso no tempo.
+
+%-----------------------------------------------------------
+\subsection*{Resposta a um degrau de tensão (fluência)}
+%-----------------------------------------------------------
+Suponha que uma tensão constante $\sigma_0$ seja aplicada repentinamente no instante $t=0$ e mantida depois disso:
+\begin{equation}
+\sigma(t) = \sigma_0\,H(t)
+\label{eq:kv_degrau}
+\end{equation}
+onde $H(t)$ é a função degrau unitário.
+
+Substituindo \eqref{eq:kv_degrau} em \eqref{eq:kv_constitutiva}, temos:
+\begin{equation}
+\sigma_0 = E\,\varepsilon(t) + \eta\,\dot{\varepsilon}(t)
+\label{eq:kv_EDO}
+\end{equation}
+
+Essa é uma equação diferencial linear de primeira ordem cuja solução é:
+\begin{equation}
+\varepsilon(t) = \frac{\sigma_0}{E}\left(1 - e^{-t/\tau}\right),
+\qquad 
+\tau = \frac{\eta}{E}
+\label{eq:kv_solucao}
+\end{equation}
+
+%-----------------------------------------------------------
+\subsubsection*{Interpretação física}
+%-----------------------------------------------------------
+O termo 
+\begin{equation}
+\tau = \frac{\eta}{E}
+\label{eq:kv_tau}
+\end{equation}
+é o \textbf{tempo de relaxação} do sistema — ele mede o quão rápido o material alcança a deformação final.
+
+\begin{itemize}
+    \item Para $t = 0$: $\varepsilon(0) = 0$ — o amortecedor impede deformação instantânea (resposta “dura”);
+    \item Para $t \to \infty$: $\varepsilon(t) \to \sigma_0/E$ — a deformação se estabiliza, como num sólido elástico;
+    \item Durante o intervalo intermediário ($t \approx \tau$): a deformação cresce gradualmente até atingir seu valor de equilíbrio.
+\end{itemize}
+
+Esse comportamento é chamado de \textbf{fluência limitada}, pois a deformação cresce com o tempo, mas tende a um valor finito.  
+Se a carga for removida, a mola e o amortecedor atuam em sentido inverso, e o material retorna gradualmente à forma inicial, caracterizando \textbf{recuperação completa}.
+
+%-----------------------------------------------------------
+\subsubsection*{Representação gráfica}
+%-----------------------------------------------------------
+A curva típica de deformação é exponencial crescente, conforme a Figura~\ref{fig:kv_creep}.
+
+%\begin{figure}[H]
+%\centering
+%\includegraphics[width=0.6\textwidth]{kelvin_voigt_creep.png}
+%\caption{Resposta de fluência (creep) do modelo de Kelvin--Voigt.}
+%\label{fig:kv_creep}
+%\end{figure}
+
+No gráfico:
+\begin{itemize}
+    \item O ponto final da curva ($\varepsilon_\infty = \sigma_0/E$) indica o valor de equilíbrio;
+    \item A inclinação inicial está relacionada à razão $\eta/E$ — maior viscosidade implica resposta mais lenta.
+\end{itemize}
+
+%-----------------------------------------------------------
+\subsubsection*{Significado físico geral}
+%-----------------------------------------------------------
+O modelo de Kelvin--Voigt descreve materiais que:
+\begin{itemize}
+    \item Resistentes à deformação instantânea (devido ao amortecedor);
+    \item Apresentam fluência limitada sob carga constante;
+    \item Recuperam totalmente a forma original quando descarregados.
+\end{itemize}
+
+Por isso, ele é adequado para representar \textbf{sólidos viscoelásticos} como borrachas e polímeros reticulados em baixas temperaturas, onde a recuperação elástica predomina sobre o escoamento.
+
+
+
+
+%=========MELHORAR+++++++++++++++
+
+\subsection{Maxwell (mola $E$ em série com amortecedor $\eta$)}
+\paragraph{Equação constitutiva (forma diferencial).}
+\[
+\dot{\varepsilon}(t)=\frac{\dot{\sigma}(t)}{E}+\frac{\sigma(t)}{\eta}
+\]
+
+\paragraph{Resposta a degrau de deformação (relaxação).}
+Para $\varepsilon(t)=\varepsilon_0\,H(t)$:
+\[
+\sigma(t)= E\,\varepsilon_0\,e^{-t/\tau},
+\qquad \tau=\frac{\eta}{E}
+\]
+\emph{Interpretação:} há \textbf{relaxação de tensões} exponencial até zero.
+
+\paragraph{Resposta a degrau de tensão.}
+Para $\sigma(t)=\sigma_0\,H(t)$:
+\[
+\varepsilon(t)=\frac{\sigma_0}{E}+\frac{\sigma_0}{\eta}\,t
+\]
+\emph{Interpretação:} \textbf{fluência infinita} (termo linear em $t$).
+
+\paragraph{Funções de material.}
+\[
+G(t)=E\,e^{-t/\tau}, \qquad
+J(t)=\frac{1}{E}+\frac{t}{\eta}
+\]
+
+\subsection{Quadro comparativo (respostas a degraus)}
+\begin{center}
+\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{|l|c|c|}
+\hline
+ & \textbf{Kelvin--Voigt} & \textbf{Maxwell} \\
+\hline
+Creep: $\sigma=\sigma_0 H(t)$ &
+$\displaystyle \varepsilon(t)=\frac{\sigma_0}{E}\!\left(1-e^{-t/\tau}\right)$ (limitado) &
+$\displaystyle \varepsilon(t)=\frac{\sigma_0}{E}+\frac{\sigma_0}{\eta}t$ (infinito) \\
+\hline
+Relaxação: $\varepsilon=\varepsilon_0 H(t)$ &
+$\sigma(t)\approx E\varepsilon_0$ (sem relaxar) &
+$\displaystyle \sigma(t)=E\varepsilon_0 e^{-t/\tau}$ (relaxa a 0) \\
+\hline
+Tempo característico &
+$\tau=\eta/E$ &
+$\tau=\eta/E$ \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsection{Comentário didático}
+\begin{itemize}
+  \item Kelvin--Voigt modela \textbf{creep limitado} e \textbf{recuperação} (bom para sólidos que “voltam”).
+  \item Maxwell modela \textbf{relaxação} e \textbf{escoamento a longo prazo} (bom para líquidos viscoelásticos).
+  \item Os dois são os \emph{extremos} dos modelos lineares; combinações geram o \textbf{SLS (Zener)} e os \textbf{modelos generalizados}, que aproximam qualquer $J(t)$ ou $G(t)$ medidos.
+\end{itemize}
+
+\subsection{Próximos passos}
+\begin{enumerate}
+  \item \textbf{Sólido Linear Padrão (Zener)}: mola em série com Kelvin--Voigt \(\Rightarrow\) creep limitado \emph{e} relaxação finita.
+  \item \textbf{Funções $J(t)$ e $G(t)$ e Superposição de Boltzmann}: forma integral com memória.
+  \item \textbf{Resposta dinâmica}: \(G^*(\omega)=G'(\omega)+iG''(\omega)\) e \(\tan\delta\).
+\end{enumerate}

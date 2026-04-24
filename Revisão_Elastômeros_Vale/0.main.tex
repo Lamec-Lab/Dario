@@ -1,0 +1,73 @@
+\documentclass[
+        a4paper,
+        12pt
+    ]{article}
+% BASIC PACKAGES ------------------------------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+% \usepackage[brazil]{babel}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{amsmath, amssymb}  % For maths
+% \usepackage{indentfirst}      % Indent paragraphs (not working?)
+% ---------------------------------------------------------------
+% FONTS CONFIGURATION -------------------------------------------
+\usepackage[no-math]{fontspec} % Add new fonts in document
+\setmainfont{Times New Roman}  % Main font of the document
+% ---------------------------------------------------------------
+% PARAGRAPHS ----------------------------------------------------
+\usepackage{parskip}		   % Space in between paragraphs
+\usepackage{microtype} 	       % Improves general appearance
+% ---------------------------------------------------------------
+% SECTION TITLE FORMAT AND TOC ----------------------------------
+\usepackage{titlesec}          % Change Section Titles 
+\usepackage{titletoc}          % Change Table Of Contents
+% ---------------------------------------------------------------
+% EXTRA PACKAGES ------------------------------------------------
+\usepackage{verbatim}
+% \usepackage{lipsum}
+% ---------------------------------------------------------------
+% IMAGES, POSICIONING AND LEGENDS -------------------------------
+% \usepackage{tabularx}          % Add better tables
+\usepackage{subcaption}        % Add a subcaption for figure
+\usepackage{float}             % Make the image fixed [H]
+\usepackage{multicol}          % Multiple columns text
+\usepackage{multirow}          % Multiple rows text
+\usepackage{longtable}         % Tables oversized
+\usepackage{graphicx}          % Add better figures
+% \graphicspath{{images/}}
+% % REFERENCES AND CITATIONS --------------------------------------
+\usepackage[
+      style=abnt,
+      language=english, 
+      repeatfields,
+      backend=biber,
+      useprefix=false,
+      extrayear
+    ]{biblatex}
+\usepackage{csquotes}           % Used for multiple languages styles
+\addbibresource{references.bib} % Add here your .bib archive
+\newcommand{\referenctitle}{REFERENCES}  % Ref section name
+% ---------------------------------------------------------------
+% Margens e espaçamento -----------------------------------------
+\geometry{ left=2.5cm, right=2.5cm, top=2.5cm, bottom=2.5cm }
+% ---------------------------------------------------------------
+% Cabeçalho -----------------------------------------------------
+\title{\textbf{Rubber Bushing Components For Train Suspension Systems}}
+\author{Dário C. Viveiros}
+\date{\today}
+% ---------------------------------------------------------------
+% 
+\begin{document}
+\maketitle\setstretch{1.5}  % Text spacing ----------------------
+% TEXT INPUT ----------------------------------------------------
+% \input{1.intro}
+\input{2.rev}
+% ---------------------------------------------------------------
+% REFERENCES ----------------------------------------------------
+% \newpage%\phantomsection
+\addcontentsline{toc}{section*}{\normalfont\bfseries \referenctitle}
+\printbibliography[title={\centering \referenctitle}]
+% ---------------------------------------------------------------
+\end{document}

@@ -1,0 +1,202 @@
+% Limpa cabeçalhos.
+% (solução para lidar com a númeração das páginas pré-textuais).
+\pagestyle{empty}
+
+% ----------------------------------------------------------
+% ELEMENTOS PRÉ-TEXTUAIS
+% ----------------------------------------------------------
+
+%====================== Início da capa =====================
+\begin{center}
+% ----------------------------------------------------------
+\begin{figure}[H]
+\center
+{\includegraphics[scale=0.2]{Figures/ufpi.jpg}}%
+\end{figure}
+\vspace{-0.5cm}
+\textbf{UNIVERSIDADE FEDERAL DO PIAUÍ\\
+CENTRO DE TECNOLOGIA\\
+BACHARELADO EM ENGENHARIA MECÂNICA\\}
+\vspace{3cm}
+%nome do aluno
+\textbf{ISADORA RODRIGUES DE SOUZA}\\
+\vspace{3cm}
+%título tcc
+\textbf{NUMERICAL ANALYSIS OF WAVE ATTENUATION IN PERIODIC BEAMS AND RAILWAY TRACKS USING WAVE AND FINITE ELEMENT METHOD}\\
+\vfill
+\textbf{TERESINA\\ 2025}\\
+\end{center}
+\cleardoublepage
+%======================= Fim da capa =======================
+% 
+%=============== Início da página de rosto =================
+\begin{center}
+% ----------------------------------------------------------
+\textbf{ISADORA RODRIGUES DE SOUZA}
+\par
+\vspace{4cm}
+\textbf{NUMERICAL ANALYSIS OF WAVE ATTENUATION IN PERIODIC BEAMS AND RAILWAY TRACKS USING WAVE AND FINITE ELEMENT METHOD}
+\end{center}
+\par
+\vspace{3cm}
+\hspace*{160pt}\parbox{9cm}{{Completion of course work presented as a partial requirement for obtaining the degree of Bachelor in Mechanical Engineering, by the Mechanical Engineering course of the Universidade Federal do Piauí - UFPI.}}
+\vspace{2cm}
+\par\hspace*{160pt}\parbox{9cm}{Advisor:\\ Profa. Dra. Simone dos Santos Hoefel}
+\vfill
+\begin{center}
+\textbf{TERESINA\\ 2025}\\
+\end{center}
+\newpage
+
+\includepdf[pages=-]{Articles/ficha_catalografica_575178.pdf}
+
+\newpage
+%================== Fim da página de rosto =================
+
+%============== Início da folha de aprovação ===============
+\begin{center}
+% ----------------------------------------------------------
+\textbf{ISADORA RODRIGUES DE SOUZA}
+\par
+\vspace{1.5cm}
+\textbf{NUMERICAL ANALYSIS OF WAVE ATTENUATION IN PERIODIC BEAMS AND RAILWAY TRACKS USING WAVE AND FINITE ELEMENT METHOD}
+\end{center}
+\par
+\vspace{1.5cm}
+\hspace*{160pt}\parbox{9cm}{{Completion of course work presented as a partial requirement for obtaining the degree of Bachelor in Mechanical Engineering, by the Mechanical Engineering course of the Universidade Federal do Piauí - UFPI.}}
+\vspace{1.5cm}
+\par\hspace*{160pt}\parbox{9cm}{Advisor:\\ Profa. Dra. Simone dos Santos Hoefel}
+\vspace{1cm}
+\begin{center}
+Approved on \rule{1cm}{1pt} of \rule{3cm}{1pt} of 2025.
+\vspace{2cm}
+
+EXAMINING BOARD
+\vspace{1cm}
+
+\rule{14cm}{1pt}\\
+Profa. Dra. Simone dos Santos Hoefel
+\vspace{1cm}
+
+\rule{14cm}{1pt}\\
+Dra. Ana Carolina Azevedo Vasconcelos
+\vspace{1cm}
+
+\rule{14cm}{1pt}\\
+Msc. Amanda Morais de Oliveira
+
+\end{center}
+
+
+\cleardoublepage
+%================ Fim da folha de aprovação ================
+
+% ------------ AGRADECIMENTO + RESUMO + ABSTRACT -----------
+
+% ==========================================================
+\begin{agradecimentos}
+
+\vspace{-0.75cm}
+
+%First, I would like to thank God for giving me life. I cannot stop thanking my parents. My mother Maria Resende, who is an example of a woman for her dedication, joy and strength that were dedicated to me during this time. To my father José Pereira, for his strength and courage to fight daily. To my siblings, Marcos Coelho, Marcia Coelho and Marcos José. And to the family members who believed in me. I would like to thank my advisor, Simone Hoefel, for her availability, understanding, demand and trust in me. To my friends at the Computational Modeling Methods Laboratory (LAMEC) who made this journey lighter and funnier, contributing to my personal and professional growth. The participation of each one was fundamental for me to move along the graduation. I thank ABCM (Associação Brasileira de Engenharia e Ciências Mecânicas) for the financial support through the ABCM Scientific Initiation Scholarship Notice 2021. Those who lived with me in the republic have their value. And to everyone who somehow participated in this trajectory, my sincere thanks.
+
+
+
+%A Deus, por me proporcionar perseverança durante toda a minha vida.
+
+
+
+%A Deus, pоr tеr permitido que eu tivesse saúde е determinação para não desanimar durante a realização deste trabalho. 
+
+I thank God for the strength and perseverance granted to me throughout my academic journey.
+My gratitude goes to my parents and siblings for their unwavering support and constant help, both of which were essential to the completion of this work.
+To my partner, a true expert in deciphering messages written in moments of exhaustion and filled with typos. % thank you for always responding with love and patience.
+
+I am also grateful to Professor Simone Hoefel, my advisor, for her dedication, availability, high standards, understanding, and the trust she has consistently placed in me.
+Special thanks to my friends at the Laboratory of Computational Modeling Methods (LAMEC), who made this journey lighter, more enjoyable, and truly enriching. Their presence greatly contributed to both my personal and professional growth.
+
+The participation of each one of you was essential for me to be able to move forward in my undergraduate studies.
+
+
+\end{agradecimentos}
+\newpage
+% ==========================================================
+
+% ==========================================================
+\begin{epigrafe}
+\vspace*{\fill}
+\begin{flushright}
+\textit{‘‘No one is so great that he cannot learn, \\ nor so small that he cannot teach.''\\
+(Esopo)}
+\end{flushright}
+\end{epigrafe}
+% ==========================================================
+
+
+% ==========================================================
+\begin{resumo}[Abstract]
+
+% >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+\begin{otherlanguage*}{english}
+
+
+In railway engineering, the control of vibrations generated by train traffic is essential to ensure the structural integrity of surrounding constructions and to minimize discomfort to the population. In this context, metamaterials and periodic structures have been studied for their ability to filter waves through the formation of bandgaps, frequency ranges where vibration transmission is significantly reduced.
+In this work, a numerical analysis of wave propagation was performed in two different configurations of periodic structures: a metamaterial beam coupled to periodically distributed resonators and a railway track with equally spaced supports. For this, the Wave and Finite Element Method were used, aiming to identify the bandgap occurrence ranges and evaluate the effect of different geometric and material parameters on the vibrational response.
+In the metamaterial beam, the influence of the number of resonators, the lattice constant and the material composition of the unit cell were analyzed. It was found that increasing the number of resonators generates new bandgaps by local resonance, while increasing the spacing reduces the width of these bands and shifts the Bragg bandgaps to lower frequencies. The use of different materials in the unit cell proved to be effective in adjusting the position and width of the attenuation bands.
+In the periodic railway track, the effect of the vertical and lateral stiffness of the support pads, as well as the spacing between sleepers, was studied. The results demonstrated that increasing the stiffness widens the bandgap occurrence ranges. The variation in the spacing allowed the bandgap frequency bands to be shifted, also changing their width. It is concluded that the appropriate design of periodic structures allows for significantly improving vibration isolation, being a promising strategy for applications in mechanical and railway systems.
+
+
+
+
+
+%<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+\noindent
+\textbf{Keywords}: Vibration attenuation, periodic structures, WFEM, bandgaps . % principal stresses
+
+\end{otherlanguage*}%{english}
+\end{resumo}
+\newpage
+% ==========================================================
+
+% ==========================================================
+\pdfbookmark{List of Figures}{lof} % Sets a PDF bookmark for the List of Figures
+\listoffigures*
+
+\clearpage
+%\pdfbookmark{List of Tables}{lot} % Sets a PDF bookmark for the List of Tables
+% \listoftables*
+
+% ---
+% inserir lista de símbolos
+% ---
+%\begin{simbolos}
+%  \item[$ A $] Área da seção transversal
+%  \item[$ C_s $] Calor sensível
+%  \item[$ C_l $] Calor latente
+%  \item[$ c_r $] Coeficiente de redução de carga de insolação para janelas
+%  \item[$ DT $] Diferença de temperatura em ºC
+%  \item[$ D $] Diâmetro
+%  \item[$ D_{eq}$] Diâmetro equivalente
+%  \item[$ g $ ] Aceleração da gravidade
+%  \item[$ \nu $ ] Viscosidade dinâmica
+%  \item[$ P_{ot} $] Potência de um equipamento
+%  \item[$ \rho $] Massa específica
+%  \item[$ \Delta P$] Perda de Carga
+%  \item[$ Q $] Fluxo de calor
+%  \item[$ q_{st} $]Calor sensível total do ambiente
+%  \item[$ R_e $ ] Número de Reynolds
+%  \item[$ T $] Temperatura
+%  \item[$ T_h $] Temperatura do meio quente
+%  \item[$ T_l $] Temperatura do meio frio
+%  \item[$\Delta t$] Acréscimo ao diferencial de temperatura
+%  \item[$ U $] Coeficiente global de transmissão de calor
+%  \item[$ V $] Velocidade
+%  \item[$ V_a $] Vazão
+%\end{simbolos}
+% ---
+
+\clearpage
+\pdfbookmark{\contentsname}{toc} % Sets a PDF bookmark for the Table of Contents
+\tableofcontents*
+% ==========================================================

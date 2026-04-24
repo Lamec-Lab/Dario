@@ -1,0 +1,103 @@
+{
+  "latex-workshop.latex.recipes": [
+    {
+        "name": "lualatex > bibtex > lualatex*2",
+        "tools": [
+            "lua_compat",
+            "bibtex",
+            "lua_compat",
+            "lua_compat",
+            "cleanup"
+        ]
+    },
+    {
+        "name": "lualatex > biber > lualatex*2",
+        "tools": [
+            "lualatex",
+            "biber",
+            "lualatex",
+            "lualatex",
+            "cleanup"
+        ]
+    },
+    {
+        "name": "lualatex*2",
+        "tools": [
+            "lualatex",
+            "lualatex"
+        ]
+    },
+  ],
+  "latex-workshop.latex.tools": [
+    {
+        "name": "lualatex",
+        "command": "lualatex",
+        "args": [
+            "-interaction=nonstopmode",
+            "-synctex=1",
+            "-output-directory=%OUTDIR%",
+            "%DOC%"
+        ]
+    },
+    {
+        "name": "lua_compat",
+        "command": "lualatex",
+        "args": [
+            "-interaction=nonstopmode",
+            "-synctex=1",
+            "%DOC%"
+        ]
+    },
+    {
+        "name": "xelatex",
+        "command": "xelatex",
+        "args": [
+            "-synctex=1",
+            "-interaction=nonstopmode",
+            "-file-line-error",
+            "-output-directory=%OUTDIR%",
+            "%DOC%"
+        ]
+    },
+    {
+        "name": "pdflatex", 
+        "command": "pdflatex",
+        "args": [
+            "-synctex=1",
+            "-interaction=nonstopmode",
+            "-file-line-error", 
+            "%DOC%"
+        ]
+    },
+    {
+        "name": "biber",
+        "command": "biber",
+        "args": [
+            "--output_directory",
+            "%OUTDIR%",
+            "%DOCFILE%"
+        ],
+        "cwd": "%OUTDIR%"
+    },
+    {
+        "name": "bibtex",
+        "command": "bibtex",
+        "args": [
+            "%DOCFILE%"
+        ],
+        "cwd": "%OUTDIR%"
+    },
+    {
+        "name": "cleanup",
+        "command": "cmd",
+        "args": [
+            "/C",
+            "del /Q *.aux *.bbl *.bcf *.blg *.run.xml *.lof *.log *.lot *.toc *.fls *.fdb_latexmk *.out *.nlo"
+        ],
+        "cwd": "%OUTDIR%"
+    },
+  ],
+  "latex-workshop.latex.autoBuild.run": "never",
+  "latex-workshop.latex.autoClean.run": "never",
+  "latex-workshop.latex.outDir": "./",
+}

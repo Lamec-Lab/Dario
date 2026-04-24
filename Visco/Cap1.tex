@@ -1,0 +1,697 @@
+\chapter{Viscoelasticidade}\label{Int}
+
+A teoria da viscoelasticidade linear descreve o comportamento mecânico de materiais cuja resposta combina características \textbf{elásticas} e \textbf{viscosas}. Nesses materiais, a deformação não depende apenas do estado de tensões instantâneo, mas também do \textbf{histórico de carregamento}. Assim, a relação constitutiva deixa de ser puramente instantânea e passa a incluir efeitos de \textbf{dissipação de energia} e \textbf{dependência temporal}.
+
+\section{Comportamento Geral}
+
+A resposta viscoelástica de um material combina os efeitos de \textbf{armazenamento} e \textbf{dissipação} de energia mecânica.  
+Enquanto um sólido puramente elástico responde de modo instantâneo ao carregamento aplicado, retornando integralmente à configuração inicial após sua remoção, um material viscoelástico apresenta uma resposta dependente do tempo, com atraso entre tensão e deformação.
+
+\begin{itemize}
+    \item \textbf{Componente elástica}: armazena energia potencial e produz deformação imediatamente proporcional à tensão;
+    \item \textbf{Componente viscosa}: introduz atraso temporal e dissipa parte da energia sob a forma de calor.
+\end{itemize}
+
+\section{Da elasticidade à viscoelasticidade.}
+Na elasticidade linear, a relação constitutiva é instantânea:
+\begin{equation}
+    \sigma(t) = E\,\varepsilon(t),
+    \label{eq:hooke_elastica}
+\end{equation}
+onde $E$ é o módulo de elasticidade (constante no tempo).  
+Contudo, experimentos mostram que, ao aplicar uma deformação constante $\varepsilon_0$ em um polímero ou borracha, a tensão correspondente \textbf{decai gradualmente} em vez de permanecer constante.  
+Esse fenômeno é denominado \textit{relaxação de tensões} e evidencia que o material “lembra” estados anteriores de deformação.
+
+%=============================================
+\subsection{Introdução do efeito de memória.}
+%=================================================
+Para representar essa dependência temporal, a constante $E$ é substituída por uma \textbf{função de relaxação} $E(t)$, que expressa a fração da tensão inicial ainda presente após um tempo $t$ decorrente da aplicação de uma deformação unitária.   A relação tensão–deformação passa a depender da \textbf{história} da deformação:
+
+\begin{equation}
+    \sigma(t) = \int_{0}^{t} E(t - \tau)\,\frac{d\varepsilon(\tau)}{d\tau}\,d\tau,
+    \label{conv}
+\end{equation}
+onde $E(t-\tau)$ atua como um \textbf{núcleo de memória}. O termo $\dot{\varepsilon}(\tau)\,d\tau$ representa um incremento infinitesimal de deformação aplicado no instante $\tau$, cuja contribuição para a tensão no tempo atual $t$ é ponderada por $E(t-\tau)$.
+
+
+\subsection{Exemplo físico: barra sujeita a força variável}
+Conseidere uma barra que uma barra, presa em uma extremidade, é tracionada por uma força $F(t)$ no tempo e que o alongamento total seja $u(t)$.
+O objetivo é descrever matematicamente como o histórico da força $F(\tau)$ afeta o deslocamento $u(t)$.
+
+\subsubsection*{a) Incremento infinitesimal de deformação}
+
+Imagine um pequeno incremento de força $\d frac{dF}{dt}\,d\tau$ aplicado em um instante $\tau$. Esse incremento provoca um pequeno alongamento incremental $du(t)$ que continua atuando até o instante atual $t$.
+
+A contribuição desse incremento para o alongamento total é proporcional a:
+
+\begin{equation}
+    du(t) = c(t - \tau)\,\frac{dF}{dt}(\tau)\,d\tau,
+\end{equation}
+
+onde:
+\begin{itemize}
+    \item $c(t - \tau)$ é uma \textbf{função de memória} --- mede o quanto um carregamento aplicado no passado ($\tau$) ainda influencia o comportamento atual ($t$);
+    \item $t - \tau$ é o \textbf{tempo decorrido} desde a aplicação do incremento.
+\end{itemize}
+
+\subsubsection*{b) Integral de memória (superposição de efeitos passados)}
+
+[PRINCÍPIO DE SUPERPOSIÇÃO DE BOLTZMAN]
+
+Somando todas as contribuições $du(t)$ desde o início do carregamento (tempo 0) até o instante atual $t$:
+% = \sum_{i=0}^{t} c(t - \tau)\,\frac{dF}{dt}(\tau)\,d\tau 
+
+\begin{equation}
+    u(t) = \int_{0}^{t} c(t - \tau)\,\frac{dF}{dt}(\tau)\,d\tau
+\end{equation}
+
+Essa é a \textbf{forma integral da viscoelasticidade linear}, que expressa a deformação atual como a soma ponderada de todos os incrementos passados de força, modulados pela função de memória $c(t - \tau)$.
+
+
+
+\subsubsection*{c) Relação inversa (tensão em função da deformação)}
+
+Por simetria, também é possível expressar a força atual $F(t)$ como resultado de todo o histórico de deformação $u(\tau)$:
+
+\begin{equation}
+    F(t) = \int_{0}^{t} k(t - \tau)\,\frac{du}{dt}(\tau)\,d\tau
+\end{equation}
+
+onde $k(t - \tau)$ é outra \textbf{função de memória}, agora associada à resposta do material (como um ``módulo dependente do tempo'').
+
+
+%====================================
+\subsubsection*{d) Significado físico}
+%====================================
+
+Essas expressões mostram que:
+\begin{itemize}
+    \item Um \textbf{material elástico} teria $c(t - \tau)$ como uma constante (sem memória);
+    \item Um \textbf{material viscoelástico} tem $c(t - \tau)$ que decai com o tempo --- ou seja, quanto mais antigo o carregamento, menor a influência sobre o presente.
+\end{itemize}
+
+Esse decaimento é justamente o que produz fenômenos como:
+\begin{itemize}
+    \item Relaxação de tensões (quando a deformação é mantida constante);
+    \item Fluência (quando a tensão é constante);
+    \item Histerese e dissipação de energia.
+\end{itemize}
+
+
+
+\section{ Equações Constitutivas }
+
+As \textbf{equações constitutivas} descrevem o comportamento macroscópico dos materiais em função de sua constituição interna, relacionando \textit{tensão}, \textit{deformação} e \textit{taxa de deformação}.  
+Como é inviável formular uma única equação que represente todos os materiais sob todas as condições, define-se o conceito de \textbf{materiais ideais} — modelos matemáticos que aproximam o comportamento real dentro de um intervalo limitado.
+
+Essas equações são fundamentais na mecânica dos meios contínuos, pois fazem a ponte entre as \textit{equações de movimento} e as observações experimentais do comportamento dos materiais.
+
+
+
+\subsection{Materiais Ideais}
+
+\subsection{Sólido Elástico Ideal (Hookeano)}
+
+O \textbf{sólido elástico ideal (Hookeano)} obedece à \textbf{Lei de Hooke generalizada}, segundo a qual:
+
+\[
+\sigma_{ij} = C_{ijkl}\,\varepsilon_{kl}
+\]
+
+onde:
+\begin{itemize}
+    \item $\sigma_{ij}$ é o \textit{tensor de tensões} (segunda ordem);
+    \item $\varepsilon_{kl}$ é o \textit{tensor de deformações};
+    \item $C_{ijkl}$ é o \textit{tensor constitutivo elástico} (quarta ordem), que contém as constantes elásticas do material.
+\end{itemize}
+
+Para um \textbf{material isotrópico}, as propriedades são iguais em todas as direções, então $C_{ijkl}$ pode ser expresso usando apenas \textbf{dois parâmetros independentes}:
+\[
+\text{o módulo de cisalhamento } G \text{ e o módulo volumétrico } K \text{ (ou, alternativamente, } E \text{ e } \nu\text{).}
+\]
+
+\subsection*{Decomposição da tensão}
+
+A tensão total é decomposta em duas partes:
+
+\[
+T_{ij} = T'_{ij} + p\,\delta_{ij}
+\]
+
+onde:
+\begin{itemize}
+    \item $T'_{ij}$ $\rightarrow$ parte \textbf{desviatória} (sem contribuição volumétrica, associada ao cisalhamento);
+    \item $p\,\delta_{ij}$ $\rightarrow$ parte \textbf{esférica} (pressão hidrostática, associada à variação de volume);
+    \item $p = -K\,e$, sendo $e = \varepsilon_{kk}$ a \textbf{deformação volumétrica média}.
+\end{itemize}
+
+Assim:
+
+\[
+T'_{ij} = 2G\,e'_{ij}
+\qquad \text{e} \qquad
+p = -K\,e
+\]
+
+onde $e'_{ij}$ é a parte desviatória da deformação, dada por:
+
+\[
+e'_{ij} = \varepsilon_{ij} - \frac{1}{3}\,\varepsilon_{kk}\,\delta_{ij}
+\]
+
+---
+
+\subsection*{Forma matricial dos tensores}
+
+Em três dimensões, os tensores podem ser representados na forma matricial (notação de Voigt):
+
+\[
+T_{ij} =
+\begin{bmatrix}
+\sigma_{xx} & \tau_{xy} & \tau_{xz} \\
+\tau_{yx} & \sigma_{yy} & \tau_{yz} \\
+\tau_{zx} & \tau_{zy} & \sigma_{zz}
+\end{bmatrix},
+\qquad
+T'_{ij} =
+\begin{bmatrix}
+\sigma'_{xx} & \tau'_{xy} & \tau'_{xz} \\
+\tau'_{yx} & \sigma'_{yy} & \tau'_{yz} \\
+\tau'_{zx} & \tau'_{zy} & \sigma'_{zz}
+\end{bmatrix},
+\qquad
+\delta_{ij} =
+\begin{bmatrix}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1
+\end{bmatrix}
+\]
+
+---
+
+\subsection*{Parte esférica e desviatória}
+
+A parte esférica é:
+\[
+p\,\delta_{ij} =
+\begin{bmatrix}
+p & 0 & 0 \\
+0 & p & 0 \\
+0 & 0 & p
+\end{bmatrix}
+\]
+
+A parte desviatória é:
+\[
+T'_{ij} =
+\begin{bmatrix}
+\sigma_{xx} - p & \tau_{xy} & \tau_{xz} \\
+\tau_{yx} & \sigma_{yy} - p & \tau_{yz} \\
+\tau_{zx} & \tau_{zy} & \sigma_{zz} - p
+\end{bmatrix}
+\]
+
+Assim, a soma das duas partes resulta em:
+\[
+T_{ij} = T'_{ij} + p\,\delta_{ij} =
+\begin{bmatrix}
+\sigma_{xx} & \tau_{xy} & \tau_{xz} \\
+\tau_{yx} & \sigma_{yy} & \tau_{yz} \\
+\tau_{zx} & \tau_{zy} & \sigma_{zz}
+\end{bmatrix}
+\]
+
+\subsection*{Deformação desviatória em forma matricial}
+
+A deformação total e sua parte desviatória são expressas como:
+
+\[
+\varepsilon_{ij} =
+\begin{bmatrix}
+\varepsilon_{xx} & \varepsilon_{xy} & \varepsilon_{xz} \\
+\varepsilon_{yx} & \varepsilon_{yy} & \varepsilon_{yz} \\
+\varepsilon_{zx} & \varepsilon_{zy} & \varepsilon_{zz}
+\end{bmatrix}
+\qquad \Rightarrow \qquad
+e'_{ij} =
+\begin{bmatrix}
+\varepsilon_{xx} - \tfrac{1}{3}\varepsilon_{kk} & \varepsilon_{xy} & \varepsilon_{xz} \\
+\varepsilon_{yx} & \varepsilon_{yy} - \tfrac{1}{3}\varepsilon_{kk} & \varepsilon_{yz} \\
+\varepsilon_{zx} & \varepsilon_{zy} & \varepsilon_{zz} - \tfrac{1}{3}\varepsilon_{kk}
+\end{bmatrix}
+\]
+
+onde:
+\[
+\varepsilon_{kk} = \varepsilon_{xx} + \varepsilon_{yy} + \varepsilon_{zz}
+\]
+é a soma das deformações normais (traço do tensor).
+
+---
+
+\subsection*{Resumo físico}
+
+\begin{itemize}
+    \item $T'_{ij} = 2G\,e'_{ij}$ → resposta \textbf{cisalhante pura}, sem variação de volume;
+    \item $p = -K\,e$ → resposta \textbf{volumétrica pura}, sem cisalhamento;
+    \item $T_{ij} = T'_{ij} + p\,\delta_{ij}$ → soma das contribuições desviatória e esférica.
+\end{itemize}
+
+Essas expressões mostram que o comportamento elástico isotrópico pode ser interpretado como a combinação de duas respostas independentes: uma ao \textbf{cisalhamento} e outra à \textbf{mudança de volume}.
+
+
+
+%====
+% \section*{\hspace{0.5em}3. Forma expandida (em 3D)}
+\subsection{Forma expandida tridimensional}
+
+Substituindo as relações da decomposição da tensão,
+\[
+T'_{ij} = 2G\,e'_{ij}
+\quad \text{e} \quad
+p = -K\,e,
+\]
+na expressão geral
+\[
+T_{ij} = T'_{ij} + p\,\delta_{ij},
+\]
+temos:
+\[
+T_{ij} = 2G\,e'_{ij} - K\,e\,\delta_{ij}.
+\]
+
+Sabendo que:
+\[
+e'_{ij} = \varepsilon_{ij} - \frac{1}{3}\,\varepsilon_{kk}\,\delta_{ij}
+\quad \text{e} \quad
+e = \varepsilon_{kk},
+\]
+substituímos $e'_{ij}$ na equação anterior:
+
+\[
+T_{ij} = 2G\left(\varepsilon_{ij} - \frac{1}{3}\varepsilon_{kk}\delta_{ij}\right) - K\,\varepsilon_{kk}\delta_{ij}.
+\]
+
+Distribuindo os termos:
+\[
+T_{ij} = 2G\,\varepsilon_{ij} - \frac{2}{3}G\,\varepsilon_{kk}\delta_{ij} - K\,\varepsilon_{kk}\delta_{ij}.
+\]
+
+Agrupando os termos volumétricos (aqueles que multiplicam $\varepsilon_{kk}\delta_{ij}$):
+\[
+T_{ij} = 2G\,\varepsilon_{ij} + \left(-K - \frac{2}{3}G\right)\varepsilon_{kk}\delta_{ij}.
+\]
+
+Convenciona-se definir:
+\[
+\lambda = K - \frac{2}{3}G,
+\]
+onde $\lambda$ é a \textbf{constante de Lamé}. Assim, a equação assume a forma final e mais usual:
+
+\[
+\sigma_{ij} = 2G\,\varepsilon_{ij} + \lambda\,\varepsilon_{kk}\,\delta_{ij}.
+\]
+
+---
+
+\subsection*{Interpretação física}
+
+\begin{itemize}
+    \item O termo $2G\,\varepsilon_{ij}$ representa o \textbf{componente cisalhante} da tensão;
+    \item O termo $\lambda\,\varepsilon_{kk}\,\delta_{ij}$ representa o \textbf{componente volumétrico} (mudança de volume);
+    \item $G$ e $\lambda$ são as duas \textbf{constantes elásticas de Lamé}, que determinam a rigidez do material.
+\end{itemize}
+
+---
+
+\subsection*{Forma matricial (Lei de Hooke isotrópica 3D)}
+
+Usando a notação de Voigt, a equação constitutiva pode ser escrita como:
+
+\[
+\begin{bmatrix}
+\sigma_{xx} \\[4pt]
+\sigma_{yy} \\[4pt]
+\sigma_{zz} \\[4pt]
+\tau_{xy} \\[4pt]
+\tau_{yz} \\[4pt]
+\tau_{zx}
+\end{bmatrix}
+=
+\begin{bmatrix}
+\lambda + 2G & \lambda & \lambda & 0 & 0 & 0 \\[4pt]
+\lambda & \lambda + 2G & \lambda & 0 & 0 & 0 \\[4pt]
+\lambda & \lambda & \lambda + 2G & 0 & 0 & 0 \\[4pt]
+0 & 0 & 0 & G & 0 & 0 \\[4pt]
+0 & 0 & 0 & 0 & G & 0 \\[4pt]
+0 & 0 & 0 & 0 & 0 & G
+\end{bmatrix}
+\begin{bmatrix}
+\varepsilon_{xx} \\[4pt]
+\varepsilon_{yy} \\[4pt]
+\varepsilon_{zz} \\[4pt]
+2\varepsilon_{xy} \\[4pt]
+2\varepsilon_{yz} \\[4pt]
+2\varepsilon_{zx}
+\end{bmatrix}
+\]
+
+---
+
+\subsection*{Versão em função de $E$ e $\nu$}
+
+Usando as relações entre as constantes elásticas:
+\[
+G = \frac{E}{2(1+\nu)}, 
+\qquad
+\lambda = \frac{E\nu}{(1+\nu)(1-2\nu)},
+\]
+a matriz constitutiva pode ser escrita como:
+
+\[
+\begin{bmatrix}
+\sigma_{xx} \\[4pt]
+\sigma_{yy} \\[4pt]
+\sigma_{zz} \\[4pt]
+\tau_{xy} \\[4pt]
+\tau_{yz} \\[4pt]
+\tau_{zx}
+\end{bmatrix}
+=
+\frac{E}{(1+\nu)(1-2\nu)}
+\begin{bmatrix}
+1-\nu & \nu & \nu & 0 & 0 & 0 \\[4pt]
+\nu & 1-\nu & \nu & 0 & 0 & 0 \\[4pt]
+\nu & \nu & 1-\nu & 0 & 0 & 0 \\[4pt]
+0 & 0 & 0 & \tfrac{1-2\nu}{2} & 0 & 0 \\[4pt]
+0 & 0 & 0 & 0 & \tfrac{1-2\nu}{2} & 0 \\[4pt]
+0 & 0 & 0 & 0 & 0 & \tfrac{1-2\nu}{2}
+\end{bmatrix}
+\begin{bmatrix}
+\varepsilon_{xx} \\[4pt]
+\varepsilon_{yy} \\[4pt]
+\varepsilon_{zz} \\[4pt]
+2\varepsilon_{xy} \\[4pt]
+2\varepsilon_{yz} \\[4pt]
+2\varepsilon_{zx}
+\end{bmatrix}
+\]
+
+---
+
+\subsection*{Resumo}
+
+A equação
+\[
+\sigma_{ij} = 2G\,\varepsilon_{ij} + \lambda\,\varepsilon_{kk}\,\delta_{ij}
+\]
+representa a \textbf{Lei de Hooke generalizada para materiais elásticos isotrópicos em 3D},  
+onde:
+\begin{itemize}
+    \item O termo com $2G$ responde por deformações \textbf{de cisalhamento};
+    \item O termo com $\lambda$ responde por deformações \textbf{volumétricas};
+    \item A matriz constitutiva 6×6 relaciona todas as componentes de tensão e deformação do estado tridimensional.
+\end{itemize}
+
+\subsection{Exemplo numérico (matriz constitutiva em 3D)}
+
+Considere um material elástico isotrópico com:
+\[
+E = 210~\text{GPa}, \qquad \nu = 0{,}30.
+\]
+
+As constantes derivadas são:
+\[
+G = \frac{E}{2(1+\nu)} = \frac{210}{2(1{,}3)} \approx 80{,}769~\text{GPa},
+\]
+\[
+\lambda = \frac{E\,\nu}{(1+\nu)(1-2\nu)} 
+= \frac{210\times 0{,}30}{1{,}3\times 0{,}4}
+\approx 121{,}154~\text{GPa},
+\]
+\[
+K = \frac{E}{3(1-2\nu)} = \frac{210}{3\times 0{,}4} \approx 175{,}000~\text{GPa}.
+\]
+
+A lei de Hooke isotrópica na forma de Lamé é escrita como:
+\[
+\boldsymbol{\sigma} = [\mathbf{C}]\,\boldsymbol{\varepsilon}.
+\]
+
+O tensor constitutivo $[\mathbf{C}]$ é dado por:
+
+\begingroup
+\setlength{\arraycolsep}{6pt}
+\renewcommand{\arraystretch}{1.15}
+
+\[
+[\mathbf{C}] =
+\begin{bmatrix}
+\lambda + 2G & \lambda     & \lambda     & 0 & 0 & 0 \\
+\lambda       & \lambda + 2G & \lambda     & 0 & 0 & 0 \\
+\lambda       & \lambda     & \lambda + 2G & 0 & 0 & 0 \\
+0             & 0           & 0           & G & 0 & 0 \\
+0             & 0           & 0           & 0 & G & 0 \\
+0             & 0           & 0           & 0 & 0 & G \\
+\end{bmatrix},
+\qquad
+\boldsymbol{\varepsilon} =
+\begin{bmatrix}
+\varepsilon_{xx} \\
+\varepsilon_{yy} \\
+\varepsilon_{zz} \\
+2\varepsilon_{xy} \\
+2\varepsilon_{yz} \\
+2\varepsilon_{zx}
+\end{bmatrix},
+\qquad
+\boldsymbol{\sigma} =
+\begin{bmatrix}
+\sigma_{xx} \\
+\sigma_{yy} \\
+\sigma_{zz} \\
+\tau_{xy} \\
+\tau_{yz} \\
+\tau_{zx}
+\end{bmatrix}.
+\]
+\endgroup
+
+---
+
+\subsection*{Substituindo valores numéricos (em GPa)}
+
+Com $G = 80{,}769~\text{GPa}$ e $\lambda = 121{,}154~\text{GPa}$, temos:
+
+\[
+[\mathbf{C}] =
+\begin{bmatrix}
+282{,}692 & 121{,}154 & 121{,}154 & 0 & 0 & 0\\
+121{,}154 & 282{,}692 & 121{,}154 & 0 & 0 & 0\\
+121{,}154 & 121{,}154 & 282{,}692 & 0 & 0 & 0\\
+0 & 0 & 0 & 80{,}769 & 0 & 0\\
+0 & 0 & 0 & 0 & 80{,}769 & 0\\
+0 & 0 & 0 & 0 & 0 & 80{,}769
+\end{bmatrix}
+\quad [\text{GPa}]
+\]
+
+---
+
+\subsection*{Interpretação física}
+
+\begin{itemize}
+    \item As três primeiras linhas representam as \textbf{tensões normais} associadas às deformações normais e acoplamentos volumétricos.
+    \item As três últimas representam as \textbf{tensões de cisalhamento}, proporcionais apenas às deformações de cisalhamento.
+    \item O termo $G$ governa o comportamento \textbf{cisalhante}, enquanto $\lambda$ e $K$ governam o comportamento \textbf{volumétrico}.
+\end{itemize}
+
+---
+
+\subsection*{Observação sobre convenções}
+
+A forma vetorial usada acima segue a \textbf{convenção de engenharia}:
+\[
+\varepsilon_4 = 2\varepsilon_{xy}, \qquad
+\varepsilon_5 = 2\varepsilon_{yz}, \qquad
+\varepsilon_6 = 2\varepsilon_{zx}.
+\]
+Com essa convenção, os termos de cisalhamento aparecem como $G$ (e não $2G$) na matriz constitutiva.
+
+
+\subsection{Fluido Newtoniano Ideal}
+
+O \textbf{fluido newtoniano ideal} é o material cuja tensão é \textbf{proporcional à taxa de deformação}, e não à deformação acumulada.  
+Isso significa que ele \textbf{não possui memória} — sua resposta depende apenas do estado instantâneo de escoamento.
+
+A relação constitutiva é dada por:
+
+\[
+T'_{ij} = 2\mu D'_{ij}
+\]
+
+onde:
+\begin{itemize}
+    \item $T'_{ij}$ é o \textit{tensor de tensões desviatórias};
+    \item $D'_{ij}$ é o \textit{tensor de taxa de deformação desviatória};
+    \item $\mu$ é a \textit{viscosidade dinâmica}, uma constante de proporcionalidade que mede a resistência interna ao escoamento.
+\end{itemize}
+
+---
+
+\subsection*{a) Interpretação Física}
+
+Quando uma camada de fluido se desloca em relação à outra, surge uma tensão de cisalhamento proporcional à velocidade de deslizamento.  
+Esse comportamento pode ser ilustrado no caso unidimensional simples:
+
+\[
+\tau = \mu \frac{du}{dy}
+\]
+
+onde $du/dy$ é o gradiente de velocidade.  
+Assim, quanto maior a taxa de deformação, maior a tensão necessária para manter o escoamento.
+
+\begin{itemize}
+    \item Se $\mu$ é constante, o fluido é \textbf{newtoniano} (ex.: água, ar, óleo mineral);
+    \item Se $\mu$ varia com a taxa de deformação, o fluido é \textbf{não-newtoniano} (ex.: mel, sangue, polímeros fundidos).
+\end{itemize}
+
+---
+
+\subsection*{b) Forma Tensorial Completa}
+
+Em três dimensões, a equação constitutiva de um fluido newtoniano incompressível é escrita como:
+
+\[
+T_{ij} = -p\,\delta_{ij} + 2\mu D'_{ij}
+\]
+
+onde:
+\begin{itemize}
+    \item $p$ é a \textit{pressão termodinâmica média};
+    \item $\delta_{ij}$ é o delta de Kronecker (1 se $i=j$, 0 caso contrário);
+    \item $2\mu D'_{ij}$ representa as tensões desviatórias (cisalhantes).
+\end{itemize}
+
+Assim, a parte esférica $(-p\,\delta_{ij})$ corresponde à pressão isotrópica, enquanto a parte desviatória ($2\mu D'_{ij}$) descreve a dissipação por cisalhamento.
+
+---
+
+\subsection*{c) Forma Matricial}
+
+\begingroup
+\setlength{\arraycolsep}{6pt}
+\renewcommand{\arraystretch}{1.15}
+\[
+\begin{bmatrix}
+\tau_{xx} \\[3pt]
+\tau_{yy} \\[3pt]
+\tau_{zz} \\[3pt]
+\tau_{xy} \\[3pt]
+\tau_{yz} \\[3pt]
+\tau_{zx}
+\end{bmatrix}
+=
+2\mu
+\begin{bmatrix}
+D'_{xx} \\[3pt]
+D'_{yy} \\[3pt]
+D'_{zz} \\[3pt]
+D'_{xy} \\[3pt]
+D'_{yz} \\[3pt]
+D'_{zx}
+\end{bmatrix}
+\]
+\endgroup
+
+Essa forma mostra que a viscosidade $\mu$ é o análogo, para fluidos, do módulo de cisalhamento $G$ em sólidos.
+
+\subsection{Comparação com o Sólido de Hooke}
+
+A Tabela~\ref{tab:hooke_newton} resume as principais diferenças entre o comportamento de um \textbf{sólido elástico ideal (Hookeano)} e de um \textbf{fluido newtoniano ideal}.  
+Enquanto o sólido armazena energia e retorna à forma original, o fluido dissipa energia continuamente sob tensão constante.
+
+\begin{table}[bht]
+\centering
+\caption{Comparação entre o Sólido de Hooke e o Fluido Newtoniano Ideal}
+\label{tab:hooke_newton}
+\renewcommand{\arraystretch}{1.3}
+\setlength{\tabcolsep}{6pt}
+\begin{tabularx}{0.95\textwidth}{|>{\raggedright\arraybackslash}p{3cm}|>{\raggedright\arraybackslash}X|>{\raggedright\arraybackslash}X|}
+\hline
+\textbf{Propriedade} & \textbf{Sólido Elástico (Hookeano)} & \textbf{Fluido Newtoniano Ideal} \\
+\hline
+\textbf{Variável controladora} & Deformação $\varepsilon_{ij}$ & Taxa de deformação $D_{ij}$ \\
+\hline
+\textbf{Constante material} & Módulo de cisalhamento $G$ & Viscosidade dinâmica $\mu$ \\
+\hline
+\textbf{Resposta temporal} & Instantânea (depende da deformação atual) & Instantânea (depende da taxa atual) \\
+\hline
+\textbf{Armazena energia?} & Sim — energia elástica reversível & Não — dissipa energia em forma de calor \\
+\hline
+\textbf{Lei constitutiva} & $T'_{ij} = 2G\,e'_{ij}$ & $T'_{ij} = 2\mu\,D'_{ij}$ \\
+\hline
+\end{tabularx}
+\end{table}
+
+
+\subsection{Dissipação de Energia}
+
+O trabalho realizado pelas tensões viscosas transforma-se integralmente em calor.  
+A taxa de dissipação de energia por unidade de volume é:
+
+\[
+\dot{W}_\text{visc} = T'_{ij} D'_{ij} = 2\mu D'_{ij}D'_{ij} > 0
+\]
+
+Esse termo é sempre positivo, indicando que a energia mecânica é \textbf{dissipada irreversivelmente}.  
+Por isso, o fluido newtoniano é um \textit{material puramente dissipativo}, ao contrário do sólido elástico, que é \textit{puramente conservativo}.
+
+
+
+\subsection{Interpretação Temporal}
+
+O comportamento do fluido newtoniano pode ser entendido como o limite de um sólido elástico com resposta cada vez mais lenta:
+
+\[
+\lim_{t \to \infty} \frac{G}{t} = \mu.
+\]
+
+Isso significa que, se um material elástico fosse capaz de se deformar indefinidamente sob uma tensão constante, ele se comportaria como um fluido newtoniano.
+
+
+
+\subsection{Síntese Conceitual}
+
+\begin{center}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Aspecto} & \textbf{Fluido Newtoniano Ideal} \\
+\hline
+Lei constitutiva & $T_{ij} = -p\delta_{ij} + 2\mu D'_{ij}$ \\
+\hline
+Responde a & Taxa de deformação \\
+\hline
+Memória & Nenhuma — resposta instantânea \\
+\hline
+Energia & Dissipada (não armazenada) \\
+\hline
+Natureza do material & Dissipativo, irreversível \\
+\hline
+Exemplos & Água, ar, óleos minerais \\
+\hline
+\end{tabular}
+\end{center}
+
+
+
+\subsection{Conclusão}
+
+O fluido newtoniano ideal representa o extremo oposto ao sólido de Hooke:
+\begin{itemize}
+    \item O sólido \textbf{armazena} energia e tenta retornar à forma inicial;
+    \item O fluido \textbf{dissipa} energia e flui indefinidamente sob tensão constante.
+\end{itemize}
+
+Essa distinção fundamenta o conceito de \textbf{viscoelasticidade}, que combina ambos os efeitos — armazenamento e dissipação — e é tratada nas seções seguintes.

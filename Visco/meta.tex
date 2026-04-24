@@ -1,0 +1,225 @@
+%%% Pacotes utilizados %%%
+
+% Codificação do arquivo
+\usepackage[utf8]{inputenc}
+
+% Indenta o primeiro parágrafo de cada seção.
+\usepackage{indentfirst}
+\usepackage{pdfpages}
+\usepackage{subcaption}
+\usepackage{float}
+% Para adicionar link
+\usepackage{hyperref}
+
+% pacote cancel
+\usepackage{cancel}
+
+% Mapear caracteres especiais no PDF
+\usepackage{cmap}
+
+% Inserir PDF
+\usepackage{pdfpages}
+
+% Codificação da fonte
+
+% ----------------------------------------------------------
+\usepackage[T1]{fontenc}
+\renewcommand{\rmdefault}{phv} % Arial
+\renewcommand{\sfdefault}{phv} % Arial
+% ----------------------------------------------------------
+
+% Essencial para colocar funções e outros símbolos matemáticos
+%\usepackage{amsmath,amssymb,amsfonts,textcomp}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{amssymb,amsfonts,textcomp}
+\usepackage{float}
+\usepackage{calligra}
+\usepackage{calrsfs}
+\DeclareFontShape{T1}{calligra}{m}{n}{<->s*[1.4]callig15}{}
+\DeclareMathAlphabet{\mathcalligra}{T1}{calligra}{m}{n}
+\usepackage[mathscr]{euscript}
+\usepackage{eqnarray}
+
+% Para definir espaçamento entre as linhas
+\usepackage{setspace}
+
+% Espaçamento do texto para o frame
+\setlength{\fboxsep}{1em} % 
+
+%% Elementos Gráficos
+% Para incluir figuras (pacote extendido)
+\usepackage[]{graphicx}
+
+%% Suporte a cores
+\usepackage{color}
+% Os argumentos declaram nomes novos, como Cyan e Crimson
+% (ver documentação do pacote).
+%\usepackage[usenames,dvipsnames,svgnames]{xcolor}
+
+% Caso queira guardar as figuras em uma pasta separada
+% (descomente e) defina o caminho para o diretório:
+\graphicspath{{Imagens/}}
+\usepackage{tabu}
+\usepackage{bm}
+\usepackage[labelfont=bf]{caption}
+
+% Customizar as legendas de figuras e tabelas
+\usepackage{caption}
+
+% Customizar o tamanho de tabelas grandes
+\usepackage{adjustbox}
+
+%pacotes novos
+\usepackage{siunitx,booktabs} 
+
+% Criar ambientes com 2 ou mais linhas
+\usepackage{multirow}
+
+% Criar ambientes com 2 ou mais colunas
+\usepackage{multicol}
+
+%% Tabelas
+% Elementos extras para formatação de tabelas
+\usepackage{array}
+
+% Tabelas com qualidade de publicação
+\usepackage{booktabs}
+
+% Para criar tabelas maiores que uma página
+\usepackage{longtable}
+
+% adicionar tabelas e figuras como landscape
+\usepackage{lscape}
+
+%% Lista de Abreviações
+% Cria lista de abreviações
+\usepackage[notintoc,portuguese]{nomencl}
+\makenomenclature
+
+%% Notas de rodapé
+% Lidar com notas de rodapé em diversas situações
+\usepackage{footnote}
+
+% Notas criadas nas tabelas ficam no fim das tabelas
+\makesavenoteenv{tabular}
+
+% Conta o número de páginas
+\usepackage{lastpage}
+
+\usepackage{verbatim} %Comenta em bloco {02/01/2023}
+
+% Verbatim com math mode
+\usepackage{listings}
+\lstset{
+  basicstyle=\ttfamily,
+  mathescape
+}
+
+% ----------------------------------------------------------
+% Pacotes de citações
+% ----------------------------------------------------------
+\usepackage[brazilian,hyperpageref]{backref}	 % Paginas com as citações na bibl
+\usepackage[alf]{abntex2cite}	% Citações padrão ABNT
+
+
+
+
+%\bibliographystyle{apalike2345}
+%\bibliographystyle{apalike}
+
+
+% ----------------------------------------------------------
+% CONFIGURAÇÕES DE PACOTES
+% ----------------------------------------------------------
+
+% ----------------------------------------------------------
+% Configurações do pacote backref
+% Usado sem a opção hyperpageref de backref
+\renewcommand{\backrefpagesname}{Citado na(s) página(s):~}
+% Texto padrão antes do número das páginas
+\renewcommand{\backref}{}
+% Define os textos da citação
+\renewcommand*{\backrefalt}[4]{
+	\ifcase #1 %
+		Nenhuma citação no texto. % 
+	\or
+		Citado na página #2.%
+	\else
+		Citado #1 vezes nas páginas #2.%
+	\fi}%
+% ----------------------------------------------------------
+
+%% Pontuação e unidades
+% Posicionar inteligentemente a vírgula como separador decimal
+\usepackage{icomma}
+
+\usepackage{subfig} %Subfiguras
+
+% Formatar as unidades com as distâncias corretas
+% \usepackage[tight]{units} % 02/01/2023
+
+
+% Dados do projeto
+\newcommand{\nomedoaluno}{José Pereira Ramos Junior}
+
+%% Comandos customizados
+
+\newcommand{\mychapter}[2]{
+    \setcounter{chapter}{#1}
+    \setcounter{section}{0}
+    \chapter*{#2}
+    \addcontentsline{toc}{chapter}{#2}
+}
+
+% TIPOGRAFIA CUSTOMIZADA
+% ----------------------------------------------------------
+\renewcommand{\ABNTEXchapterfontsize}{\Large\bfseries}
+\renewcommand{\ABNTEXsectionfontsize}{\Large\bfseries}
+\renewcommand{\ABNTEXsubsectionfontsize}{\large}
+\renewcommand{\ABNTEXsubsubsectionfontsize}{\large}
+% ----------------------------------------------------------
+
+% Espécie e abreviação
+\newcommand{\subde}{\emph{Clypeaster subdepressus}}
+\newcommand{\subsus}{\emph{C.~subdepressus}}
+
+\titulo{Notas de Estudo de Viga}
+\autor{\nomedoaluno}
+\local{Brasil}
+\data{2015}
+
+% O tamanho do parágrafo é dado por:
+\setlength{\parindent}{1.3cm}
+
+% Controle do espaçamento entre um parágrafo e outro:
+\setlength{\parskip}{0.2cm}  % tente também \onelineskip
+
+% alterando o aspecto da cor azul
+\definecolor{blue}{RGB}{41,5,195}
+
+\makeatletter
+\renewcommand{\@chapapp}{} % Not necessary...
+\newenvironment{chapquote}[2][2em]
+  {\setlength{\@tempdima}{#1}%
+   \def\chapquote@author{#2}%
+   \parshape 1 \@tempdima \dimexpr\textwidth-2\@tempdima\relax%
+   \itshape}
+  {\par\normalfont\hfill--\ \chapquote@author\hspace*{\@tempdima}\par\bigskip}
+
+\hypersetup{
+     	%pagebackref=true,
+		pdftitle={\@title}, 
+		pdfauthor={\@author},
+    	pdfsubject={\imprimirpreambulo},
+	    pdfcreator={LaTeX with abnTeX2},
+		pdfkeywords={abnt}{latex}{abntex}{abntex2}{trabalho acadêmico}, 
+		colorlinks=true,       		% false: boxed links; true: colored links
+    	linkcolor=black,          	% color of internal links
+    	citecolor=black,        	% color of links to bibliography
+    	filecolor=black,      		% color of file links
+		urlcolor=black,
+		bookmarksdepth=4
+}
+\makeatother
+% ----------------------------------------------------------

@@ -1,0 +1,85 @@
+{
+  "latex-workshop.latex.tools": [
+    {
+        "name": "lualatex",
+        "command": "lualatex",
+        "args": [
+            "-interaction=nonstopmode",
+            "-synctex=1",
+            "%DOC%"
+        ]
+    },
+    {
+        "name": "xelatex",
+        "command": "xelatex",
+        "args": [
+            "-synctex=1",
+            "-interaction=nonstopmode",
+            "-file-line-error",
+            "%DOC%"
+        ]
+    },
+    {
+        "name": "pdflatex", 
+        "command": "pdflatex",
+        "args": [
+            "-synctex=1",
+            "-interaction=nonstopmode",
+            "-file-line-error", 
+            "%DOC%"
+        ]
+    },
+    {
+        "name": "biber",
+        "command": "biber",
+        "args": [
+            "%DOCFILE%"
+        ]
+    },
+    {
+        "name": "bibtex",
+        "command": "bibtex",
+        "args": [
+            "%DOC%"
+        ]
+    },
+    {
+        "name": "cleanup",
+        "command": "cmd",
+        "args": [
+            "/C",
+            "del /Q *.aux *.bbl *.bcf *.blg *.run.xml *.lof *.log *.lot *.toc *.synctex.gz *.fls *.fdb_latexmk *.out *.nlo"
+        ]
+    },
+  ],
+  "latex-workshop.latex.recipes": [
+    {
+        "name": "lualatex > bibtex > lualatex*2 > cleanup",
+        "tools": [
+            "lualatex",
+            "bibtex",
+            "lualatex",
+            "lualatex",
+            "cleanup"
+        ]
+    },
+    {
+        "name": "lualatex > biber > lualatex*2 > cleanup",
+        "tools": [
+            "lualatex",
+            "biber",
+            "lualatex",
+            "lualatex",
+            "cleanup"
+        ]
+    },
+    {
+        "name": "lualatex -> cleanup",
+        "tools": [
+            "lualatex",
+            "cleanup"
+        ]
+    },
+  ],
+  "latex-workshop.latex.autoBuild.run": "never"
+}

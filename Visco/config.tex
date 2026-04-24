@@ -1,0 +1,32 @@
+% %======================= CONFIGURAÇÃO DE PARÁGRAFO
+% % O tamanho do parágrafo é dado por
+% \setlength{\parindent}{1.3cm}
+
+% % Controle do espaçamento entre um parágrafo e outro:
+% \setlength{\parskip}{0cm}
+% %=======================
+\usepackage[alf]{abntex2cite}	% Citações padrão ABNT
+\usepackage{indentfirst}
+
+\usepackage{hyperref}
+%======================= HYPERLINKS + METADADOS
+% ABNTEX2 JÁ IMPORTA hyperref POR PADRÃO
+\hypersetup{
+	hyperindex=true,
+    %pdfinfo={
+    %    CreationDate={D:20230101101010}, % MUDA DATA DE CRIAÇÃO DO ARQUIVO
+    %    ModDate={D:20230101101010},      % MUDA DATA DE MODIFICAÇÃO DO ARQUIVO
+    %} % NO OVERLEAF, ACRESCENTE 3 HORAS A MAIS PRA COMPENSAR O FUSO HORÁRIO
+	pdftitle={},
+	pdfauthor={},
+	pdfsubject={},
+	pdfkeywords={},
+	pdfcreator={},
+	pdfproducer={},
+	colorlinks=false,
+	breaklinks=true,
+	linkbordercolor={1 1 1},
+	citebordercolor={1 1 1},
+	urlbordercolor={1 1 1},
+}
+%=======================

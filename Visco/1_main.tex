@@ -1,0 +1,62 @@
+% Classe do documento
+\documentclass[
+    chapter=TITLE,
+    book,
+    oneside,
+    a4paper,
+    12pt,
+    english,
+    brazil]{abntex2} % INGLES
+ \usepackage{amsmath}
+% Pacotes e comandos customizados
+%\input{2_meta.tex} % {Add 29/12/2022}
+
+\input{config}
+
+
+% Início do texto
+\begin{document}
+
+% Elementos pré-textuais
+% ----------------------------------------------------------
+%\include{3_pre}   % Capa, prefácio e afins [ok]
+% ----------------------------------------------------------
+
+% Marca o ponto onde se começa a incluir o número das páginas
+
+\textual
+ 
+ % Determina o tipo de algarismo na numeração das pgs
+\pagenumbering{arabic}
+
+% Corrige o espaçamento entre os capítulos
+\setlength\afterchapskip{\lineskip} 
+
+% Elementos textuais ---------------------------------------
+
+\include{Cap1} % 
+\include{Modelos} % 
+ 
+% ----------------------------------------------------------
+
+% % Referência Bibliográfica ---------------------------------
+\setlength\afterchapskip{1.5cm} % Modifica o espaçamento para as referências
+\bibliography{abntex2-referencia} % Referências
+% % ----------------------------------------------------------
+
+% Apêndice(s)
+% ----------------------------------------------------------
+% \apendices
+% \include{8_apendices} % Apêndice com os Artigos [ok]
+% ----------------------------------------------------------
+
+% Anexo(s)
+% ----------------------------------------------------------
+% \setlength\afterchapskip{\lineskip}
+% \include{8_anexos}   % Anexo com materiais extras [ok]
+% ----------------------------------------------------------
+
+%===========================================================
+
+% Fim do texto
+\end{document}
